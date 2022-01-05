@@ -1,0 +1,14 @@
+{
+  "name": "xiuxian",
+  "version": "1.0.1",
+  "factorio_version": "1.1",
+  "title": "Cultivate",
+  "author": "plexpt",
+  "contact": "plexpt",
+  "homepage": "https://github.com/PlexPt",
+  "dependencies": [
+    "base >= 1.1.0"
+  ],
+  "description": "Try to make and then take pills of immortality and cultivate oneself to become on immortal."
+}
+
