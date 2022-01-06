@@ -20,7 +20,7 @@ data:extend({
         icon = "__xiuxian__/graphics/icons/lingshi-gold-ore.png",
         flags = { "placeable-neutral" },
         order = "a-b-a",
-        map_color = { r = 0.90, g = 0.90, b = 0.80 },
+        map_color = { r = 255/255, g = 215/255, b = 0 },
         minable = {
             hardness = 1,
             mining_particle = "lingshi-gold-ore-particle",
