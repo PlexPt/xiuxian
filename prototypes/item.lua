@@ -4,7 +4,7 @@ data:extend(
                 type = "item", --类型为物品属性
                 name = "alchemy-furnace-9", --物体内部名称〖11〗
                 --物体在背包显示的图标
-                icon = "__base__/graphics/icons/stone-furnace.png",
+                icon = "__xiuxian__/graphics/icons/danlu.png",
                 icon_size = 64, icon_mipmaps = 4,
                 subgroup = "smelting-machine",
                 order = "a[stone-furnace]", --物品在分组中排列顺序〖14〗

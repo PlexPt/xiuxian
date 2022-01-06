@@ -8,7 +8,7 @@ data:extend({
         icon_size = 64, icon_mipmaps = 4,
         flags = { "placeable-neutral", "placeable-player", "player-creation" },
         minable = { mining_time = 0.2, result = "alchemy-furnace-9" },
-        max_health = 200,
+        max_health = 20000,
         corpse = "stone-furnace-remnants",
         dying_explosion = "stone-furnace-explosion",
         --repair_sound = sounds.manual_repair,

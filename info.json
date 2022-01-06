@@ -1,11 +1,11 @@
 {
   "name": "xiuxian",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "factorio_version": "1.1",
   "title": "Cultivate",
   "author": "plexpt",
   "contact": "plexpt",
-  "homepage": "https://github.com/PlexPt",
+  "homepage": "https://github.com/PlexPt/xiuxian",
   "dependencies": [
     "base >= 1.1.0"
   ],

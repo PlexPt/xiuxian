@@ -1,4 +1,5 @@
 require("prototypes.entity")
-require("prototypes.lingshi-ore")
+require("prototypes.lingshi-gold-ore")
+require("prototypes.lingshi-gold-ore-particle")
 require("prototypes.item")
 require("prototypes.recipe")
