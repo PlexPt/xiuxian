@@ -1,6 +1,6 @@
 {
   "name": "xiuxian",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "factorio_version": "1.1",
   "title": "Cultivate",
   "author": "plexpt",
@@ -9,6 +9,6 @@
   "dependencies": [
     "base >= 1.1.0"
   ],
-  "description": "Try to make and then take pills of immortality and cultivate oneself to become on immortal."
+  "description": "Try to make and then take pills of immortality and cultivate oneself to become on immortal.\n炼丹、炼器、符箓、妖兽、阵法、御兽、功法、灵脉、宗门、拍卖会。\n\n群289362487"
 }
 

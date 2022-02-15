@@ -1,5 +1,6 @@
--- RENAMING VANILLA SCIENCE PACKS
+-- 改名
 
+-- 改名科技包
 -- Automation science pack
 data.raw.tool["automation-science-pack"].localised_name = { "item-name.juqi-dan" }
 
@@ -28,7 +29,7 @@ data.raw.tool["space-science-pack"].localised_name = { "item-name.zhaohua-dan" }
 data.raw.technology["space-science-pack"].localised_name = { "item-name.zhaohua-dan" }
 data.raw.technology["space-science-pack"].localised_description = { "technology-description.zhaohua-dan" }
 
--- RENAMING VANILLA BUILDINGS
+-- 建筑
 
 -- Pumpjack
 data.raw["mining-drill"]["pumpjack"].localised_name = { "entity-name.xx-oil-pumpjack" }
@@ -41,3 +42,15 @@ data.raw.item["pumpjack"].localised_name = { "entity-name.xx-oil-pumpjack" }
 
 -- VEHICLES
 data.raw.car["tank"].localised_name = { "entity-name.xx-feijian" }
+
+data.raw.radar.radar.localised_name = { "entity-name.xx-feijian" }
+
+
+
+
+
+-- 改改图标
+local modtool = require("modtool")
+
+modtool.icons.setItemIcon("automation-science-pack",   "__xiuxian__/graphics/icons/danyao/dan-juqi.png", 128, 1)
+modtool.icons.setItemIcon("utility-science-pack",   "__xiuxian__/graphics/icons/danyao/object_PINGdanyao01.png", 45, 1)

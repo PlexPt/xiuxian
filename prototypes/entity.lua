@@ -1,4 +1,4 @@
-require ("util")
+require("util")
 
 local sounds = require("__base__/prototypes/entity/sounds")
 
@@ -213,14 +213,14 @@ data:extend({
         icon = "__xiuxian__/graphics/icons/danlu.png",
         icon_size = 455,
         max_health = 50000,
-        repair_sound = {filename = "__base__/sound/manual-repair-simple.ogg"},
-        mined_sound = {filename = "__base__/sound/deconstruct-bricks.ogg",volume = 0.8},
+        repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
+        mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg", volume = 0.8 },
         vehicle_impact_sound = sounds.generic_impact,
         open_sound = sounds.machine_open,
         close_sound = sounds.machine_close,
         tile_width = 15, tile_height = 15,
-        flags = {"not-rotatable", "placeable-neutral", "placeable-player", "player-creation", "not-flammable", "not-upgradable"},
-        minable = {mining_time = 5, result= "alchemy-furnace-8"},
+        flags = { "not-rotatable", "placeable-neutral", "placeable-player", "player-creation", "not-flammable", "not-upgradable" },
+        minable = { mining_time = 5, result = "alchemy-furnace-8" },
         --working_sound = {
         --    sound = {
         --        filename = "__xiuxian__/sounds/reactor-running.ogg",
@@ -229,10 +229,10 @@ data:extend({
         --    fade_in_ticks = 30,
         --    fade_out_ticks = 10
         --},
-        crafting_categories = {"julingzhen"},
+        crafting_categories = { "julingzhen" },
         crafting_speed = 1,
-        collision_box = {{-7.25, -7.25}, {7.25, 7.25}},
-        selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
+        collision_box = { { -7.25, -7.25 }, { 7.25, 7.25 } },
+        selection_box = { { -7.5, -7.5 }, { 7.5, 7.5 } },
         scale_entity_info_icon = true,
         fluid_boxes = {
             --{
@@ -249,9 +249,9 @@ data:extend({
             {
                 base_area = 1,
                 base_level = 1,
-                pipe_covers = pipecoverspictures(),
+                --pipe_covers = pipecoverspictures(),
                 pipe_connections = {
-                    {type = "output", position = {0, 8}}
+                    { type = "output", position = { 0, 8 } }
                 },
                 production_type = "output",
             },
@@ -287,23 +287,29 @@ data:extend({
             --    production_type = "input"
             --}
         },
-        working_visualisations = {{animation = {
-            filename = "__xiuxian__/graphics/entity/danlu.png",
-            size = 455,
-            scale = 0.5,
-        }, fadeout = true}},
+        working_visualisations = { { animation =   {
+            width = 152,
+            height = 120,
+            line_length = 5,
+            frame_count = 60,
+            shift = {-0.53125, -0.4375},
+            priority = "high",
+            animation_speed = 0.5,
+            filename = "__base__/graphics/entity/smoke/smoke.png",
+            flags = { "smoke" }
+        }, fadeout = true } },
         always_draw_idle_animation = true,
         idle_animation = {
             layers = {
                 {
-                    filename = "__xiuxian__/graphics/entity/danlu.png",
-                    size = 455,
+                    filename = "__xiuxian__/graphics/entity/building_danlu8.png",
+                    size = 594,
                     scale = 0.5,
                 }
             }
         },
         energy_usage = "100W",
-        energy_source = {type = "void"},
+        energy_source = { type = "void" },
         result_inventory_size = 1000,
         source_inventory_size = 1000,
         se_allow_in_space = true
@@ -316,14 +322,14 @@ data:extend({
         icon = "__xiuxian__/graphics/icons/julingzhen.png",
         icon_size = 80,
         max_health = 50000,
-        repair_sound = {filename = "__base__/sound/manual-repair-simple.ogg"},
-        mined_sound = {filename = "__base__/sound/deconstruct-bricks.ogg",volume = 0.8},
+        repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
+        mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg", volume = 0.8 },
         vehicle_impact_sound = sounds.generic_impact,
         open_sound = sounds.machine_open,
         close_sound = sounds.machine_close,
         tile_width = 15, tile_height = 15,
-        flags = {"not-rotatable", "placeable-neutral", "placeable-player", "player-creation", "not-flammable", "not-upgradable"},
-        minable = {mining_time = 5, result= "julingzhen"},
+        flags = { "not-rotatable", "placeable-neutral", "placeable-player", "player-creation", "not-flammable", "not-upgradable" },
+        minable = { mining_time = 5, result = "julingzhen" },
         --working_sound = {
         --    sound = {
         --        filename = "__xiuxian__/sounds/reactor-running.ogg",
@@ -332,10 +338,10 @@ data:extend({
         --    fade_in_ticks = 30,
         --    fade_out_ticks = 10
         --},
-        crafting_categories = {"julingzhen"},
+        crafting_categories = { "julingzhen" },
         crafting_speed = 1,
-        collision_box = {{-7.25, -7.25}, {7.25, 7.25}},
-        selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
+        collision_box = { { -7.25, -7.25 }, { 7.25, 7.25 } },
+        selection_box = { { -7.5, -7.5 }, { 7.5, 7.5 } },
         scale_entity_info_icon = true,
         fluid_boxes = {
             --{
@@ -352,9 +358,9 @@ data:extend({
             {
                 base_area = 1,
                 base_level = 1,
-                pipe_covers = pipecoverspictures(),
+                --pipe_covers = pipecoverspictures(),
                 pipe_connections = {
-                    {type = "output", position = {0, 8}}
+                    { type = "output", position = { 0, 8 } }
                 },
                 production_type = "output",
             },
@@ -390,25 +396,25 @@ data:extend({
             --    production_type = "input"
             --}
         },
-        working_visualisations = {{animation = {
+        working_visualisations = { { animation = {
             filename = "__xiuxian__/graphics/entity/star-working.png",
-            size = 800,
+            size = 900,
             shift = util.by_pixel(0, 0),
             scale = 0.5,
-        }, fadeout = true}},
+        }, fadeout = true } },
         always_draw_idle_animation = true,
         idle_animation = {
             layers = {
                 {
                     filename = "__xiuxian__/graphics/entity/star800.png",
-                    size = 800,
+                    size = 900,
                     shift = util.by_pixel(0, 0),
                     scale = 0.5,
                 }
             }
         },
         energy_usage = "100W",
-        energy_source = {type = "void"},
+        energy_source = { type = "void" },
         result_inventory_size = 0,
         source_inventory_size = 0,
         se_allow_in_space = true

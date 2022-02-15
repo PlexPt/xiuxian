@@ -36,7 +36,7 @@ data:extend({
             name = "lingshi-gold-ore",
             order = "b-z",
             base_density = 4,
-            has_starting_area_placement = mods["Krastorio2"] and true,
+            has_starting_area_placement =  true,
             regular_rq_factor_multiplier = 1.2
         },
 
