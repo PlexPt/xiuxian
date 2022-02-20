@@ -1,6 +1,71 @@
 require("util")
 
+local util = require("util")
+
 local sounds = require("__base__/prototypes/entity/sounds")
+local GraphicsEnum = require("prototypes.enums.GraphicsEnum")
+
+local sticker = {
+    type = "sticker",
+    name = "秘境-sticker",
+    flags = {},
+    animation = GraphicsEnum.trans32,
+    duration_in_ticks = 1,
+    --target_movement_modifier = 1
+}
+
+local mijing_flying_text = util.table.deepcopy(data.raw["flying-text"]["tutorial-flying-text"])
+mijing_flying_text.name = "mijing-flying-text"
+
+data:extend({
+    sticker,
+    mijing_flying_text,
+    {
+        type = "land-mine",
+        name = "秘境入口",
+        localised_name = "秘境入口",
+        icon = GraphicsEnum.entity.mijing,
+        icon_size = 512,
+        trigger_radius = 5,
+        timeout = 5 * 60,
+        max_health = 100000,
+        dying_explosion = nil,
+        force_die_on_attack = false,
+        trigger_force = "all",
+        picture_safe = {
+            filename = GraphicsEnum.entity.mijing,
+            priority = "medium",
+            width = 512,
+            height = 512,
+
+        },
+        picture_set = {
+            filename = GraphicsEnum.entity.mijing,
+            priority = "medium",
+            width = 512,
+            height = 512,
+        },
+        minable = nil,
+        collision_box = { { -1, -1 }, { 1, 1 } },
+        selection_box = { { -1, -1 }, { 1, 1 } },
+        map_color = { r = 0.5, g = 1, b = 1 },
+        action = {
+            type = "direct",
+            action_delivery = {
+                type = "instant",
+                target_effects = {
+                    {
+                        type = "create-sticker",
+                        sticker = "秘境-sticker",
+                        trigger_created_entity = true
+                    }
+                }
+            }
+        },
+
+    }
+}
+)
 
 data:extend({
     {

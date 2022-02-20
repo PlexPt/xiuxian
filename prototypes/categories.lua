@@ -41,6 +41,12 @@ data:extend({
         order = "d-d"
     },
     {
+        type = "item-subgroup",
+        name = "隐藏",
+        group = "xiuxian",
+        order = "a-a"
+    },
+    {
         type = "module-category",
         name = "地火"
     },
