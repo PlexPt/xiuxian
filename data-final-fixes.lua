@@ -22,7 +22,7 @@ for k, v in pairs(data.raw["recipe"]) do
         end
         if not already_needs_lingshi then
             if not data.raw["recipe"][k]["main_product"] and data.raw["recipe"][k]["results"] then
-                data.raw["recipe"][k]["main_product"] = data.raw["recipe"][k]["results"][1].name
+                --data.raw["recipe"][k]["main_product"] = data.raw["recipe"][k]["results"][1].name
             end
 
             table.insert(

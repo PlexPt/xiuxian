@@ -287,12 +287,12 @@ data:extend({
             --    production_type = "input"
             --}
         },
-        working_visualisations = { { animation =   {
+        working_visualisations = { { animation = {
             width = 152,
             height = 120,
             line_length = 5,
             frame_count = 60,
-            shift = {-0.53125, -0.4375},
+            shift = { -0.53125, -0.4375 },
             priority = "high",
             animation_speed = 0.5,
             filename = "__base__/graphics/entity/smoke/smoke.png",
@@ -312,6 +312,10 @@ data:extend({
         energy_source = { type = "void" },
         result_inventory_size = 1000,
         source_inventory_size = 1000,
+        module_specification = {
+            module_slots = 1
+        },
+        allowed_effects = { 'consumption', 'speed', 'pollution' },
         se_allow_in_space = true
     },
     -- 聚灵阵 --
