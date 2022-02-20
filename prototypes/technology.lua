@@ -1,4 +1,5 @@
 local danlu1 = "__xiuxian__/graphics/technology/danlu-1.png"
+local lianqi_pic = "__xiuxian__/graphics/technology/炼器.png"
 
 data:extend({
     {
@@ -31,7 +32,26 @@ data:extend({
             { type = "unlock-recipe", recipe = "清虚丹" },
             { type = "unlock-recipe", recipe = "火阳丹" },
             { type = "unlock-recipe", recipe = "碧焰丹" },
-
+        },
+        --prerequisites = { "robotics", "advanced-electronics-2", "low-density-structure" },
+        --必须
+        unit = {
+            count = 100,
+            ingredients = {
+                { "automation-science-pack", 1 }
+            },
+            time = 30
+        }
+    },
+    {
+        type = "technology",
+        name = "炼器师",
+        localised_name = "炼器师",
+        localised_description = "炼器和真实的铁匠流程上类似：提纯材料，制造胚子，附加辅材。区别是：\n修仙的炼器，都是使用真火，地火或天火\n使用的材料是可以承载灵力或仙力的，可以被驾驭\n很多法宝是需要认主或收入体内继续祭炼的\n后期可以将兽魂等灵魂打入法宝中，作为器灵\n很多时候为了让法宝具备某些功能或融合某些辅材，需要铭文或法阵的辅助",
+        icon_size = 512,
+        --icon_mipmaps = 1,
+        icon = lianqi_pic,
+        effects = {
 
             { type = "unlock-recipe", recipe = "地火" },
             { type = "unlock-recipe", recipe = "真火" },
@@ -47,7 +67,7 @@ data:extend({
         --prerequisites = { "robotics", "advanced-electronics-2", "low-density-structure" },
         --必须
         unit = {
-            count = 100,
+            count = 200,
             ingredients = {
                 { "automation-science-pack", 1 }
             },
