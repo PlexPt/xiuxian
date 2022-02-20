@@ -1,5 +1,5 @@
 local function teleport_player_safely(player, surface, position)
-    if player and player.character then
+    if player and surface and player.character then
         position = surface.find_non_colliding_position(
                 player.character.name, position, 5, 0.5, false
         ) or position
@@ -7,6 +7,12 @@ local function teleport_player_safely(player, surface, position)
     player.teleport(position, surface)
     --global.last_player_teleport[player.index] = game.tick
     --update_camera(player)
+end
+
+local init = function()
+    global.mijing = global.mijing or game.create_surface("mijing", { width = 200, height = 200 })
+    global.mijing.daytime = 0.5
+    global.mijing.freeze_daytime = true
 end
 
 local teleporter_triggered = function(entity, character)
@@ -28,6 +34,9 @@ local teleporter_triggered = function(entity, character)
     --entity.timeout = entity.prototype.timeout
 
     --character.active = false
+
+    init()
+
     teleport_player_safely(player, global.mijing, { 0, 0 })
 end
 
@@ -51,13 +60,6 @@ script.on_event(defines.events.on_trigger_created_entity, function(event)
 
 end)
 
-local init = function()
-    global.mijing = global.mijing or game.create_surface("mijing", { width = 200, height = 200 })
-    global.mijing.daytime = 0.5
-    global.mijing.freeze_daytime = true
-end
-
 script.on_init(init)
-script.on_load(init)
 
 
