@@ -1,5 +1,10 @@
 require('__stdlib__/stdlib/data/data').Util.create_data_globals()
 
+require("prototypes.enums.ConstEnum")
+require("prototypes.enums.GraphicsEnum")
+
+require("prototypes.lib.animation_util")
+require("prototypes.lib.entity_util")
 
 require("prototypes.fonts")
 require("prototypes.categories")
@@ -23,8 +28,6 @@ require("prototypes.lingshi.lingshi-fire-ore-particle")
 
 require("prototypes.lingshi.lingshi-earth-ore")
 require("prototypes.lingshi.lingshi-earth-ore-particle")
-
-
 
 require("prototypes.auto.AutoGroups")
 require("prototypes.auto.AutoSubGroups")

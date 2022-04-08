@@ -40,7 +40,7 @@ local teleporter_triggered = function(entity, character)
     teleport_player_safely(player, global.mijing, { 0, 0 })
 end
 
-script.on_event(defines.events.on_trigger_created_entity, function(event)
+Event.register(defines.events.on_trigger_created_entity, function(event)
     local entity = event.entity
     if not (entity and entity.valid) then
         return
@@ -60,6 +60,6 @@ script.on_event(defines.events.on_trigger_created_entity, function(event)
 
 end)
 
-script.on_init(init)
+Event.on_init(init)
 
 

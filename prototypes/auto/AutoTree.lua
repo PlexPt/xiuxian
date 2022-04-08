@@ -507,6 +507,8 @@ ENTITY {
 			{type = "item", name = "邪雾草", amount_min = 1, amount_max = 100, probability = 0.002},
 			{type = "item", name = "金棘草", amount_min = 1, amount_max = 100, probability = 0.002},
 			{type = "item", name = "黑莲花", amount_min = 1, amount_max = 100, probability = 0.002},
+			{type = "item", name = "树", amount_min = 1, amount_max = 100, probability = 0.002},
+			{type = "item", name = "彼岸花", amount_min = 1, amount_max = 100, probability = 0.002},
 		}
 	},
 	autoplace = ap,

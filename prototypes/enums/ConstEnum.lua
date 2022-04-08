@@ -1,4 +1,4 @@
-local ConstEnum = {}
+ConstEnum = ConstEnum or {}
 
 ---基本参数
 ConstEnum.modPrefix = "xx-"
@@ -16,5 +16,7 @@ ConstEnum.collisionMaskAllowInGround = { "water-tile", "object-layer", "train-la
 ConstEnum.collisionMaskAllowInGroundAndSpace = { "object-layer", "train-layer", "floor-layer", "water-tile" }
 
 ConstEnum.collisionMaskAllowInWater = { "object-layer", "train-layer", "floor-layer" }
+
+ConstEnum.flying = {   }
 
 return ConstEnum

@@ -51,7 +51,7 @@ end
 
 -- ON TICK --
 
-script.on_event(defines.events.on_tick, function(event)
+Event.register(defines.events.on_tick, function(event)
     local factories = global.mijing
 
     -- Teleport players

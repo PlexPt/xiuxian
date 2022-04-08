@@ -1,4 +1,4 @@
-TypeEnum = {}
+TypeEnum = TypeEnum or {}
 
 TypeEnum.accumulator = "accumulator"
 TypeEnum.achievement = "achievement"

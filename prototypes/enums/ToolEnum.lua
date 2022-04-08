@@ -1,4 +1,4 @@
-ToolEnum = {}
+ToolEnum = ToolEnum or {}
 
 ToolEnum.automationSciencePack = "automation-science-pack"
 ToolEnum.chemicalSciencePack = "chemical-science-pack"

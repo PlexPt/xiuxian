@@ -8,12 +8,19 @@ TECHNOLOGY {
     effects = {},
     localised_name = "未知宇宙能量探索",
     prerequisites = {
+        "space-science-pack",
     },
     unit = {
-        count = 100,
-        time = 300,
+        count = 900,
+        time = 9000,
         ingredients = {
-            { name = "测试科研包", amount = 1},
+            { name = "测试科研包", amount = 900},
+            { name = "space-science-pack", amount = 900},
+            { name = "utility-science-pack", amount = 900},
+            { name = "automation-science-pack", amount = 900},
+            { name = "logistic-science-pack", amount = 900},
+            { name = "military-science-pack", amount = 900},
+            { name = "production-science-pack", amount = 900},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -627,5 +634,118 @@ TECHNOLOGY {
     },
     icon = baseIconPath .. "打坐.png",
     icon_size = 512,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "道圣",
+    effects = {},
+    localised_name = "道圣",
+    prerequisites = {
+        "道祖",
+    },
+    unit = {
+        count = 100,
+        time = 30,
+        ingredients = {
+            { name = "测试科研包", amount = 1},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "混沌",
+    effects = {},
+    localised_name = "混沌",
+    prerequisites = {
+        "道圣",
+    },
+    unit = {
+        count = 100,
+        time = 30,
+        ingredients = {
+            { name = "测试科研包", amount = 1},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "虚无",
+    effects = {},
+    localised_name = "虚无",
+    prerequisites = {
+        "混沌",
+    },
+    unit = {
+        count = 100,
+        time = 30,
+        ingredients = {
+            { name = "测试科研包", amount = 1},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "space-science-pack",
+    effects = {},
+    localised_name = "太空研究包（白瓶）",
+    prerequisites = {
+        "advanced-electronics",
+    },
+    unit = {
+        count = 9000,
+        time = 900,
+        ingredients = {
+            { name = "utility-science-pack", amount = 900},
+            { name = "automation-science-pack", amount = 900},
+            { name = "chemical-science-pack", amount = 900},
+            { name = "logistic-science-pack", amount = 900},
+            { name = "military-science-pack", amount = 900},
+            { name = "production-science-pack", amount = 900},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "蛊科技",
+    effects = {},
+    localised_name = "蛊科技",
+    prerequisites = {
+        "灵气复苏",
+        "引气入体",
+        "练气入门",
+    },
+    unit = {
+        count = 900,
+        time = 600,
+        ingredients = {
+            { name = "测试科研包", amount = 900},
+            { name = "space-science-pack", amount = 1000},
+            { name = "断肠丹", amount = 1000},
+            { name = "三步丧命丹", amount = 1000},
+            { name = "解毒丹", amount = 1000},
+            { name = "production-science-pack", amount = 1000},
+            { name = "military-science-pack", amount = 1000},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
 
 }

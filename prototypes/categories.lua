@@ -26,6 +26,10 @@ data:extend({
         group = "xiuxian",
         order = "a-a"
     },
+    {
+        type = "recipe-category",
+        name = "空组",
+    }
     --{
     --    type = "module-category",
     --    name = "地火"

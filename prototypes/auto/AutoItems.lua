@@ -4424,7 +4424,7 @@ ITEM {
     localised_name = "树",
     icon = baseIconPath .. "item/item_0084.png",
     icon_size = 128,
-    subgroup = "杂项",
+    subgroup = "灵药",
     stack_size = 100,
     fuel_category = "化学",
     fuel_value = "3MJ",
@@ -4438,6 +4438,299 @@ ITEM {
     icon = baseIconPath .. "item/item_7.png",
     icon_size = 128,
     subgroup = "杂项",
+    stack_size = 100,
+}
+
+-- "一"
+ITEM {
+    type = "tool",
+    name = "引气丹",
+    localised_name = "引气丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "tool",
+    stack_size = 100,
+    durability = 1,
+}
+
+-- "1"
+ITEM {
+    type = "tool",
+    name = "复苏丹",
+    localised_name = "复苏丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "tool",
+    stack_size = 100,
+    durability = 1,
+}
+
+-- "二"
+ITEM {
+    type = "tool",
+    name = "飞升丹",
+    localised_name = "飞升丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "tool",
+    stack_size = 100,
+    durability = 1,
+}
+
+-- "三"
+ITEM {
+    type = "tool",
+    name = "起源丹",
+    localised_name = "起源丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "tool",
+    stack_size = 100,
+    durability = 1,
+}
+
+-- "四"
+ITEM {
+    type = "item",
+    name = "炼气丹",
+    localised_name = "炼气丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "tool",
+    stack_size = 100,
+}
+
+ITEM {
+    type = "item",
+    name = "种蛊",
+    localised_name = "子蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+
+ITEM {
+    type = "item",
+    name = "噬心蛊",
+    localised_name = "噬心蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+
+ITEM {
+    type = "item",
+    name = "失心蛊",
+    localised_name = "失心蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+
+ITEM {
+    type = "item",
+    name = "饥饿蛊",
+    localised_name = "饥饿蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+
+ITEM {
+    type = "item",
+    name = "暴食蛊",
+    localised_name = "暴食蛊",
+    icon = baseIconPath .. "item/item_29.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+
+ITEM {
+    type = "item",
+    name = "蛊罐",
+    localised_name = "蛊罐",
+    icon = baseIconPath .. "item/item_14.png",
+    icon_size = 128,
+    subgroup = "修仙材料",
+    stack_size = 100,
+    place_result = "蛊罐",
+}
+
+ITEM {
+    type = "item",
+    name = "噬情蛊",
+    localised_name = "噬情蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+
+ITEM {
+    type = "item",
+    name = "失情蛊",
+    localised_name = "失情蛊",
+    icon = baseIconPath .. "item/item_30.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+
+ITEM {
+    type = "item",
+    name = "毒蛊",
+    localised_name = "毒蛊",
+    icon = baseIconPath .. "cfitem/item_4329.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+
+ITEM {
+    type = "item",
+    name = "药蛊",
+    localised_name = "药蛊",
+    icon = baseIconPath .. "item/item_853.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+
+ITEM {
+    type = "item",
+    name = "控心蛊",
+    localised_name = "控心蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+
+ITEM {
+    type = "item",
+    name = "蚀骨蛊",
+    localised_name = "蚀骨蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 100,
+}
+
+ITEM {
+    type = "item",
+    name = "噬魂蛊",
+    localised_name = "噬魂蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 100,
+}
+
+ITEM {
+    type = "item",
+    name = "复制蛊",
+    localised_name = "复制蛊",
+    icon = baseIconPath .. "item/item_855.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 100,
+}
+
+ITEM {
+    type = "tool",
+    name = "断肠丹",
+    localised_name = "断肠丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 100,
+    durability = 1,
+}
+
+ITEM {
+    type = "tool",
+    name = "三步丧命丹",
+    localised_name = "三步丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 100,
+    durability = 1,
+}
+
+ITEM {
+    type = "tool",
+    name = "解毒丹",
+    localised_name = "解毒丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 100,
+    durability = 1,
+}
+
+ITEM {
+    type = "item",
+    name = "黄泉水",
+    localised_name = "黄泉水",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "修仙流体",
+    stack_size = 1000,
+}
+
+ITEM {
+    type = "item",
+    name = "彼岸花",
+    localised_name = "彼岸花",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+
+ITEM {
+    type = "item",
+    name = "大补丹（一）",
+    localised_name = "大补丹（一）",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "普通丹药",
+    stack_size = 100,
+}
+
+ITEM {
+    type = "item",
+    name = "大补丹（二）",
+    localised_name = "大补丹（二）",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "普通丹药",
+    stack_size = 100,
+}
+
+ITEM {
+    type = "item",
+    name = "大补丹（三）",
+    localised_name = "大补丹（",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "普通丹药",
+    stack_size = 100,
+}
+
+ITEM {
+    type = "item",
+    name = "终极大补丹",
+    localised_name = "终极大补丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "普通丹药",
     stack_size = 100,
 }
 

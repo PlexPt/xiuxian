@@ -20,6 +20,16 @@ data:extend({
         result = "八品炼丹炉"
     },
     {
+        type = "recipe", --丹炉8
+        name = "法阵",
+        enabled = true,
+        ingredients = { { "stone", 100 },
+                        { "iron-ore", 100 },
+                        { "火灵石矿", 100 },
+                        { "土灵石矿", 100 } },
+        result = "法阵"
+    },
+    {
         type = "recipe",
         name = "聚灵阵",
         icon = "__xiuxian-graphics__/graphics/icons/julingzhen.png",

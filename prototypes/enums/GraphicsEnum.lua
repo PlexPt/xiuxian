@@ -1,6 +1,6 @@
 local ConstEnum = require("prototypes.enums.ConstEnum")
 
-local GraphicsEnum = {}
+GraphicsEnum = GraphicsEnum or {}
 GraphicsEnum.entity = {}
 GraphicsEnum.icons = {}
 GraphicsEnum.technology = {}

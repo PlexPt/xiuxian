@@ -1,5 +1,8 @@
 local mod_gui = require("mod-gui")
 require "util"
+
+local Event = require('__stdlib__/stdlib/event/event')
+
 --require "particles"
 local LevelEnum = require("prototypes.enums.LevelEnum")
 -- 真实一天的tick
@@ -87,11 +90,10 @@ end
 
 
 -- CUSTOM EVENT HANDLING --
---(remote interface is lower in the file, there I describe how to subscribe to my events)
--- if your mod alters the character bonus settings, then you should get_on_player_updated_status to make required adjusts to your mod, if necessary
-local on_player_updated_status = script.generate_event_name() --uint
-local on_player_level_up = script.generate_event_name() --uint
+--local on_player_updated_status = script.generate_event_name() --uint
+--local on_player_level_up = script.generate_event_name() --uint
 
+--Event.register(Event.generate_event_name("my_custom_event"), handler)
 
 function printXP(player, XP)
     if player and player.valid then
@@ -473,7 +475,7 @@ function XP_PlayerLv_upd()
                 --mod_gui.get_button_flow(player).focus()
                 --player.gui.top.xx_age_bar.focus()
                 player.play_sound { path = 'player_level_up', volume_modifier = 0.85 }
-                script.raise_event(on_player_level_up, { player_index = player.index, player_level = global.personalxp.Level[name] })
+                --script.raise_event(on_player_level_up, { player_index = player.index, player_level = global.personalxp.Level[name] })
             end
             UpdatePanel(player)
         end
@@ -1069,7 +1071,7 @@ function LevelUPPlayer(player, btname)
                 player.character.character_health_bonus = player.character.character_health_bonus + global.RPG_Bonus[attrib]
             end
 
-            script.raise_event(on_player_updated_status, { player_index = player.index, player_level = global.personalxp.Level[name], attribute = attrib })
+            --script.raise_event(on_player_updated_status, { player_index = player.index, player_level = global.personalxp.Level[name], attribute = attrib })
 
             break
         end
@@ -1087,7 +1089,7 @@ function LevelUPPlayer(player, btname)
 end
 
 --TODO
-script.on_nth_tick(60 * 5, function(event)
+Event.on_nth_tick(60 * 5, function(event)
     if true then
         return
     end
@@ -1147,21 +1149,21 @@ function on_configuration_changed(data)
     XPModSetup()
 end
 
-script.on_event(defines.events.on_player_created, age_player_created)
+Event.register(defines.events.on_player_created, age_player_created)
 
-script.on_event(defines.events.on_player_joined_game, onPlayerJoin)
+Event.register(defines.events.on_player_joined_game, onPlayerJoin)
 
-script.on_event(defines.events.on_runtime_mod_setting_changed, ReadRunTimeSettings)
+Event.register(defines.events.on_runtime_mod_setting_changed, ReadRunTimeSettings)
 
---script.on_event(defines.events.on_tick, on_tick )
+--Event.register(defines.events.on_tick, on_tick )
 
-script.on_event(defines.events.on_force_created, on_force_created)
+Event.register(defines.events.on_force_created, on_force_created)
 
-script.on_configuration_changed(on_configuration_changed)
-script.on_init(On_Init)
+Event.on_configuration_changed(on_configuration_changed)
+Event.on_init(On_Init)
 
 --TODO
---script.on_event("key-I", function(event)
+--Event.register("key-I", function(event)
 --    if true then
 --        return
 --    end
@@ -1170,7 +1172,7 @@ script.on_init(On_Init)
 
 
 --TODO E时关闭面板 E
-script.on_event(defines.events.on_gui_opened, function(event)
+Event.register(defines.events.on_gui_opened, function(event)
     if true then
         return
     end
@@ -1256,7 +1258,7 @@ end
 
 -- ANTI RESPAWN EVENT DEPENDENCY
 --[[
-script.on_nth_tick(60*21, function (event)
+Event.on_nth_tick(60*21, function (event)
 for p, PL in pairs (game.connected_players) do
 	if PL.valid and PL.character and PL.character.valid then
 		local name = PL.name
@@ -1269,11 +1271,11 @@ end)
 ]]
 
 --点击
-script.on_event(defines.events.on_gui_click, on_gui_click)
+Event.register(defines.events.on_gui_click, on_gui_click)
 
 
 --TODO 复活 丢失所有境界
-script.on_event(defines.events.on_player_respawned, function(event)
+Event.register(defines.events.on_player_respawned, function(event)
     if true then
         return
     end
@@ -1283,7 +1285,7 @@ script.on_event(defines.events.on_player_respawned, function(event)
 end)
 
 --TODO 快坐化
-script.on_event(defines.events.on_pre_player_died, function(event)
+Event.register(defines.events.on_pre_player_died, function(event)
     if true then
         return
     end
@@ -1389,52 +1391,52 @@ function GetXPByKill(entity, killer, force)
 end
 
 --TODO 杀敌
-script.on_event(defines.events.on_entity_died, function(event)
-    if true then
-        return
-    end
-
-    if not event.force then
-        return
-    end
-
-    local force = event.force  -- force that kill
-    local killer = event.cause
-
-
-    --if event.entity.force.name == 'enemy' and force~='neutral' and force~='enemy' then --aliens
-    if killer and killer.valid and global.kills_units[force.name] and event.entity.force ~= game.forces.neutral then
-        if event.entity.prototype and event.entity.prototype.max_health and (not force.get_friend(event.entity.force)) then
-
-            if killer.type == 'car' then
-                if killer.get_driver() and killer.get_driver().valid then
-                    killer = killer.get_driver()
-                elseif killer.get_passenger() and killer.get_passenger().valid then
-                    killer = killer.get_passenger()
-                end
-            end
-            GetXPByKill(event.entity, killer, force)
-        end
-    end
-
-    if not killer then
-        if global.kills_units[force.name] and event.entity.force ~= game.forces.neutral then
-            GetXPByKill(event.entity, killer, force)
-        end
-    end
-
-end,
-        { { filter = "type", type = "unit" }, { filter = "type", type = "unit-spawner" },
-          { filter = "type", type = "spider-vehicle" },
-          { filter = "type", type = "car" }, { filter = "type", type = "electric-turret" },
-          { filter = "type", type = "artillery-turret" }, { filter = "type", type = "ammo-turret" },
-          { filter = "type", type = "fluid-turret" }, { filter = "type", type = "turret" },
-          { filter = "type", type = "character" } }
-) -- event filters
+--Event.register(defines.events.on_entity_died, function(event)
+--    if true then
+--        return
+--    end
+--
+--    if not event.force then
+--        return
+--    end
+--
+--    local force = event.force  -- force that kill
+--    local killer = event.cause
+--
+--
+--    --if event.entity.force.name == 'enemy' and force~='neutral' and force~='enemy' then --aliens
+--    if killer and killer.valid and global.kills_units[force.name] and event.entity.force ~= game.forces.neutral then
+--        if event.entity.prototype and event.entity.prototype.max_health and (not force.get_friend(event.entity.force)) then
+--
+--            if killer.type == 'car' then
+--                if killer.get_driver() and killer.get_driver().valid then
+--                    killer = killer.get_driver()
+--                elseif killer.get_passenger() and killer.get_passenger().valid then
+--                    killer = killer.get_passenger()
+--                end
+--            end
+--            GetXPByKill(event.entity, killer, force)
+--        end
+--    end
+--
+--    if not killer then
+--        if global.kills_units[force.name] and event.entity.force ~= game.forces.neutral then
+--            GetXPByKill(event.entity, killer, force)
+--        end
+--    end
+--
+--end,
+--        { { filter = "type", type = "unit" }, { filter = "type", type = "unit-spawner" },
+--          { filter = "type", type = "spider-vehicle" },
+--          { filter = "type", type = "car" }, { filter = "type", type = "electric-turret" },
+--          { filter = "type", type = "artillery-turret" }, { filter = "type", type = "ammo-turret" },
+--          { filter = "type", type = "fluid-turret" }, { filter = "type", type = "turret" },
+--          { filter = "type", type = "character" } }
+--) -- event filters
 
 
 --TODO 研究完成 境界提升
-script.on_event(defines.events.on_research_finished, function(event)
+Event.register(defines.events.on_research_finished, function(event)
     if event then
         return
     end
@@ -1480,7 +1482,7 @@ function mine_age_use(player, entity)
 end
 
 -- 挖矿
-script.on_event(defines.events.on_player_mined_entity, function(event)
+Event.register(defines.events.on_player_mined_entity, function(event)
     --if global.setting_allow_wakuangzhesou then
     local player = game.players[event.player_index]
     if not player.valid then
@@ -1502,7 +1504,7 @@ end
 )
 
 -- 吃东西
-script.on_event(defines.events.on_player_used_capsule, function(event)
+Event.register(defines.events.on_player_used_capsule, function(event)
     if event then
         return
     end
