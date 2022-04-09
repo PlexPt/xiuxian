@@ -6029,7 +6029,7 @@ RECIPE {
     name = "黄泉水",
     category = "chemistry",
     enabled = false,
-    energy_required = 600.00,
+    energy_required = 4444.00,
     ingredients = {
         { type = "item", name = "彼岸花", amount = 4444 },
         { type = "item", name = "断肠丹", amount = 4444 },

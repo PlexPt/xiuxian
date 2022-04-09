@@ -1,0 +1,44 @@
+--
+--data:extend(
+--        {
+--
+--            {
+--                type = "projectile",
+--                name = "飞箭-追星踏月箭",
+--                flags = { "not-on-map" },
+--                acceleration = 0.01,
+--                action = {
+--                    type = "direct",
+--                    action_delivery = {
+--                        type = "instant",
+--                        target_effects = {
+--                            {
+--                                type = "damage",
+--                                damage = { amount = 1000, type = "physical" }
+--                            },
+--                            {
+--                                type = "damage",
+--                                damage = { amount = 20, type = "穿甲" }
+--                            },
+--
+--                        }
+--                    }
+--                },
+--                light = { intensity = 1,
+--                          color = { r = 0.1, g = 0.1, b = 0.9 },
+--                          size = 15 },
+--                animation = {
+--                    filename = ConstEnum.entity .. "/bow/arrow-projectile.png",
+--                    frame_count = 8,
+--                    line_length = 8,
+--                    width = 9,
+--                    height = 35,
+--                    shift = { 0, 0 },
+--                    priority = "high"
+--                },
+--
+--            }
+--        }
+--)
+--
+--

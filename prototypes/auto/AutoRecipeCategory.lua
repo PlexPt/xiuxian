@@ -72,3 +72,15 @@ data:extend(
         }
 )
 
+
+data:extend(
+        {
+            {
+                type = "recipe-category",
+                name = "lab",
+                localised_name = "研究实验室",
+                localised_description = "原版研究实验室",
+            }
+        }
+)
+

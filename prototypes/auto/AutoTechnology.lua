@@ -81,11 +81,12 @@ TECHNOLOGY {
         "advanced-electronics",
     },
     unit = {
-        count = 100,
+        count = 1000,
         time = 40,
         ingredients = {
             { name = "起源包3", amount = 4000},
             { name = "练气瓶", amount = 4000},
+            { name = "测试科研包", amount = 4000},
         },
     },
     icon = baseIconPath .. "打坐.png",

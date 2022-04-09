@@ -8,6 +8,7 @@ require("prototypes.lib.entity_util")
 
 require("prototypes.fonts")
 require("prototypes.categories")
+require("prototypes.damage-type")
 require("prototypes.entity.entity")
 require("prototypes.item")
 require("prototypes.item.huanhundan")
@@ -40,3 +41,4 @@ require("prototypes.auto.AutoTechnology")
 require("prototypes.auto.AutoRecipe")
 
 require("prototypes.entity.heye")
+require("prototypes.item.bow.bow")
