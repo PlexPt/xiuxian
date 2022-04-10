@@ -1,5 +1,25 @@
 local ConstEnum = require("prototypes.enums.ConstEnum")
 
+function create_simple(name, path, frame_count)
+
+    data:extend({
+        {
+            type = "animation",
+            name = name,
+            size = 256,
+            width = 256,
+            height = 256,
+            frame_count = 118,
+            animation_speed = 0.5,
+            priority = "high",
+            --shift = util.by_pixel(0, -80),
+            slice = 1,
+            stripes = getStripes(),
+            scale = 1.0
+        }
+    })
+end
+
 function getStripes(path, max)
 
     local stripes = {}

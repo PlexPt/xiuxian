@@ -65,9 +65,25 @@ function create_jian(name, damage, damageType, light)
                     },
                     magazine_size = 10,
                     subgroup = "ammo",
-                    order = "a[basic-clips]-b[piercing-rounds-magazine]",
+                    order = "b[basic-clips]-c[piercing-rounds-magazine]",
                     stack_size = 50
                 },
+                {
+                    type = "recipe",
+                    category = "crafting",
+                    name = name,
+                    enabled = true, -- craft time
+                    energy_required = damage / 10,
+                    ingredients = {
+                        { "wood", damage },
+                        { "灵石", damage },
+                        { "彩凤羽", 4 },
+                        { "陨铁", 1 },
+                        { "灵铁", 1 },
+                        { "铁木灵叶", 1 },
+                    },
+                    result = name,
+                }
             }
     )
 end
@@ -82,11 +98,11 @@ function create_bow(name, range, icon, icon_size)
                     icon = icon or ConstEnum.icons .. "/弓箭/arm_2104.png",
                     icon_size = icon_size or 128,
                     subgroup = "gun",
-                    order = "a[basic-clips]-b[vehicle-machine-gun]",
+                    order = "gong" .. range,
                     attack_parameters = {
                         type = "projectile",
                         ammo_category = "箭-ammo",
-                        cooldown = 90,
+                        cooldown = 30,
                         movement_slow_down_factor = 0.25,
                         shell_particle = {
                             name = "shell-particle",
@@ -108,6 +124,24 @@ function create_bow(name, range, icon, icon_size)
                         },
                     },
                     stack_size = 1
+                },
+                {
+                    type = "recipe",
+                    category = "crafting",
+                    name = name,
+                    enabled = true, -- craft time
+                    energy_required = range,
+                    ingredients = {
+
+                        { "wood", range },
+                        { "元精铜", range },
+                        { "玄铁", range * 2 },
+                        { "冰丝草", range },
+                        { "灵铁", 2 },
+                        { "玉", 2 },
+                        { "勾陈须", range * 2 },
+                    },
+                    result = name
                 },
             }
     )

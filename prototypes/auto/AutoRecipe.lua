@@ -5,6 +5,7 @@ local baseIconPath = "__xiuxian-graphics__/graphics/icons/"
 RECIPE {
     type = "recipe",
     name = "灵铁",
+    xiuxian = true,
     localised_description = "再放进熔炉，使用其他火焰会有相应效果加成，与冲突",
     category = "chemistry",
     energy_required = 20.00,
@@ -22,6 +23,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "风行符",
+    xiuxian = true,
     category = "炼器室",
     enabled = false,
     energy_required = 50.00,
@@ -40,8 +42,9 @@ RECIPE {
 -- "自动生成,看到请修改原料"
 RECIPE {
     type = "recipe",
-    name = "测试科研包",
-    localised_name = "测试科研瓶",
+    name = "培元丹",
+    xiuxian = true,
+    localised_name = "培元丹",
     category = "chemistry",
     enabled = false,
     energy_required = 6000.00,
@@ -52,11 +55,11 @@ RECIPE {
         { type = "item", name = "凡火", amount = 40000 },
     },
     results = {
-        { type = "item", name = "测试科研包", amount = 1, probability = 0.005  },
+        { type = "item", name = "培元丹", amount = 1, probability = 0.005  },
         { type = "item", name = "亢龙角", amount = 4, probability = 0.05  },
         { type = "item", name = "灵石", amount = 1000, probability = 0.945  },
     },
-    main_product = "测试科研包",
+    main_product = "培元丹",
     always_show_products = true,
 }:add_unlock("advanced-electronics")
 
@@ -64,6 +67,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "推背图(残)",
+    xiuxian = true,
     category = "炼器室",
     energy_required = 100000.00,
     ingredients = {
@@ -84,6 +88,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "推背图(全)",
+    xiuxian = true,
     category = "炼器室",
     energy_required = 10000.00,
     ingredients = {
@@ -105,6 +110,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "易经",
+    xiuxian = true,
     category = "chemistry",
     energy_required = 1000000.00,
     ingredients = {
@@ -126,6 +132,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "纸张",
+    xiuxian = true,
     category = "smelting",
     energy_required = 10.00,
     ingredients = {
@@ -141,6 +148,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "玉",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -154,6 +162,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "朱砂",
+    xiuxian = true,
     category = "smelting",
     energy_required = 100.00,
     ingredients = {
@@ -172,6 +181,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "阵法-阵元",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -185,6 +195,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "阵法-阵纹",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -198,6 +209,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "八卦盘",
+    xiuxian = true,
     category = "炼器室",
     energy_required = 300.00,
     ingredients = {
@@ -219,6 +231,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "符箓笔",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -234,6 +247,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "石头符",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -247,6 +261,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "锐利",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -260,6 +275,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "菜刀符",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -273,6 +289,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "轩辕剑",
+    xiuxian = true,
     category = "chemistry",
     enabled = false,
     energy_required = 100.00,
@@ -293,6 +310,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "乾坤秘境",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -306,6 +324,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "麒麟印",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -319,6 +338,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "海底秘境",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -332,6 +352,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "野草",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -345,6 +366,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "陨铁",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -358,6 +380,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "北冥见闻",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -371,6 +394,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "西海见闻",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -384,6 +408,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "元精铜",
+    xiuxian = true,
     category = "smelting",
     energy_required = 10.00,
     ingredients = {
@@ -399,6 +424,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "松纹剑",
+    xiuxian = true,
     category = "chemistry",
     enabled = false,
     energy_required = 10.00,
@@ -418,6 +444,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "阴阳镯",
+    xiuxian = true,
     category = "炼器室",
     energy_required = 1.00,
     ingredients = {
@@ -435,6 +462,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "落魂花",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -448,6 +476,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "登云履",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -461,6 +490,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "长生鉴",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -474,6 +504,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "黑魂石",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -487,6 +518,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "天晶玉",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -500,6 +532,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫铃花",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -513,6 +546,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "乳斑石",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -526,6 +560,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "诛仙剑",
+    xiuxian = true,
     category = "chemistry",
     enabled = false,
     energy_required = 1000.00,
@@ -547,6 +582,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "度厄镯",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -560,6 +596,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "碧海鉴",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -573,6 +610,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "晨露花",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -586,6 +624,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "青冥铁",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -599,6 +638,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "幽冥草",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -612,6 +652,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "八荒玉",
+    xiuxian = true,
     category = "smelting",
     energy_required = 10.00,
     ingredients = {
@@ -629,6 +670,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "乾坤八卦阵",
+    xiuxian = true,
     category = "炼器室",
     energy_required = 100000.00,
     ingredients = {
@@ -653,6 +695,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "红莲草",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -666,6 +709,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "缚魂镯",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -679,6 +723,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "炎阳金",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -692,6 +737,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "神魂果",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -705,6 +751,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫云晶",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -718,6 +765,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "熔山石",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -731,6 +779,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "烛阴泪",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -744,6 +793,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "夔牛蹄",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -757,6 +807,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "狰狞骨",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -770,6 +821,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "亢龙角",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -783,6 +835,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "苍龙爪",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -796,6 +849,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "逆龙鳞",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -809,6 +863,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "勾陈须",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -822,6 +877,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "腾蛇翼",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -835,6 +891,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "彩凤羽",
+    xiuxian = true,
     category = "crafting",
     energy_required = 1.00,
     ingredients = {
@@ -848,6 +905,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "风灵月影剑",
+    xiuxian = true,
     category = "chemistry",
     energy_required = 6000.00,
     ingredients = {
@@ -878,6 +936,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "结晶石",
+    xiuxian = true,
     localised_name = "混沌结晶石",
     category = "chemistry",
     enabled = false,
@@ -898,6 +957,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "盘古开天斧",
+    xiuxian = true,
     category = "chemistry",
     enabled = false,
     energy_required = 120000.00,
@@ -922,6 +982,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫铃花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -935,6 +996,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "晨露花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -948,6 +1010,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "幽冥草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -961,6 +1024,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "红莲草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -974,6 +1038,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "神魂果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -987,6 +1052,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "烛阴泪-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1000,6 +1066,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "人元果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1013,6 +1080,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "九阳神草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1026,6 +1094,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫金龙参-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1039,6 +1108,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "火灵天果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1052,6 +1122,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "回气果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1065,6 +1136,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "赤红花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1078,6 +1150,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "雪狐草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1091,6 +1164,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "阴暗花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1104,6 +1178,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "通灵草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1117,6 +1192,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "金叶通灵草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1130,6 +1206,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "冰玉莲子-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1143,6 +1220,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "烈阳果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1156,6 +1234,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "硬树脂-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1169,6 +1248,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "星果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1182,6 +1262,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "消元果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1195,6 +1276,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "精元果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1208,6 +1290,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "赤月果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1221,6 +1304,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "玉蛇兰-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1234,6 +1318,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "九叶神凰草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1247,6 +1332,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "源龙果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1260,6 +1346,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "玄武藤-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1273,6 +1360,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "火神源-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1286,6 +1374,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "朱果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1299,6 +1388,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "凤朱果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1312,6 +1402,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "七色彩芝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1325,6 +1416,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "绝寒盛炎花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1338,6 +1430,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "梦露草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1351,6 +1444,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "龙舌草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1364,6 +1458,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "龙血草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1377,6 +1472,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "野钢花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1390,6 +1486,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "虚空草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1403,6 +1500,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "宁神草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1416,6 +1514,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "凝神草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1429,6 +1528,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "泰罗果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1442,6 +1542,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "蛇魔果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1455,6 +1556,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "幽灵菇-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1468,6 +1570,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "火萝果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1481,6 +1584,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "止血草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1494,6 +1598,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "甘草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1507,6 +1612,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "青木藤-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1520,6 +1626,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "干莓果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1533,6 +1640,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "雪骨参-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1546,6 +1654,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "青焰草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1559,6 +1668,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "千灵草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1572,6 +1682,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "龙血芝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1585,6 +1696,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫叶兰草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1598,6 +1710,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "蛇涎果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1611,6 +1724,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "聚灵草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1624,6 +1738,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "回灵赤果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1637,6 +1752,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "血莲精-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1650,6 +1766,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "冰灵焰草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1663,6 +1780,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "赤血珊瑚-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1676,6 +1794,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "黄精-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1689,6 +1808,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "还魂草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1702,6 +1822,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "凝神露-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1715,6 +1836,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫玉灵芝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1728,6 +1850,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "玄云果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1741,6 +1864,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "青虹草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1754,6 +1878,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "活气果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1767,6 +1892,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "水莲子-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1780,6 +1906,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "黄血精-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1793,6 +1920,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "青炎草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1806,6 +1934,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "灵兰草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1819,6 +1948,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "千林草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1832,6 +1962,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "烈焰菇-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1845,6 +1976,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "荆棘藻-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1858,6 +1990,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫莲花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1871,6 +2004,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "跌打草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1884,6 +2018,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "银叶草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1897,6 +2032,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "地根草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1910,6 +2046,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "梦叶草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1923,6 +2060,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "鸡血藤-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1936,6 +2074,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "五灵脂-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1949,6 +2088,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "百芯草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1962,6 +2102,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "连根草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1975,6 +2116,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "龙弦草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -1988,6 +2130,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "玉麟果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2001,6 +2144,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "龙血果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2014,6 +2158,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "活根草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2027,6 +2172,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "黄金参-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2040,6 +2186,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "精妖果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2053,6 +2200,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "三叶青芝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2066,6 +2214,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "火阳灵叶-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2079,6 +2228,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "骨灵果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2092,6 +2242,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "赤火果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2105,6 +2256,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "幻灵草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2118,6 +2270,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "双彩灵婴果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2131,6 +2284,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "龙须草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2144,6 +2298,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "冰丝草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2157,6 +2312,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "冰魂草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2170,6 +2326,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "墨莲花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2183,6 +2340,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "冰魄雪莲-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2196,6 +2354,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "金斑蛇香草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2209,6 +2368,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "星辰蓝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2222,6 +2382,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "寒冰箭草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2235,6 +2396,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "腐骨灵花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2248,6 +2410,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "青龙参-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2261,6 +2424,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "蚀心菇-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2274,6 +2438,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "千金藤-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2287,6 +2452,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "幻心草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2300,6 +2466,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "千幻伽蓝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2313,6 +2480,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "九尾龙葵花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2326,6 +2494,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "芝雪草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2339,6 +2508,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "云霖花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2352,6 +2522,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫丹参-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2365,6 +2536,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "芙苓-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2378,6 +2550,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "红萼梅-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2391,6 +2564,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "杜松果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2404,6 +2578,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "杜松莓-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2417,6 +2592,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "百里香-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2430,6 +2606,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "白榆果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2443,6 +2620,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫韵龙皇参-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2456,6 +2634,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "极地之手-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2469,6 +2648,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "暗夜之露-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2482,6 +2662,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "百草露-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2495,6 +2676,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "天仙子-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2508,6 +2690,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "千载雪蚕-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2521,6 +2704,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "飞花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2534,6 +2718,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "星灵草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2547,6 +2732,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "毒魔藤-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2560,6 +2746,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "寒炎之泪-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2573,6 +2760,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "魔心草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2586,6 +2774,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "天心花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2599,6 +2788,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "仙灵果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2612,6 +2802,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫火花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2625,6 +2816,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "落英花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2638,6 +2830,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "龙象角-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2651,6 +2844,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "凝露草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2664,6 +2858,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "乌舌兰-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2677,6 +2872,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "玉珊瑚-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2690,6 +2886,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "地炎胆-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2703,6 +2900,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "天刑草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2716,6 +2914,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "地藏花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2729,6 +2928,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "业火红莲-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2742,6 +2942,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "混元青莲-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2755,6 +2956,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫兰叶草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2768,6 +2970,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "洗骨花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2781,6 +2984,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "墨叶莲-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2794,6 +2998,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "凝血草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2807,6 +3012,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "生骨花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2820,6 +3026,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "罂栗花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2833,6 +3040,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "黄莲精-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2846,6 +3054,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "白兰果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2859,6 +3068,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫蓝叶-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2872,6 +3082,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "白灵参果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2885,6 +3096,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "雪莲子-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2898,6 +3110,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "醉龙草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2911,6 +3124,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "蛇欲果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2924,6 +3138,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫烟果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2937,6 +3152,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "厌食花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2950,6 +3166,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "祝余草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2963,6 +3180,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "沙木根-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2976,6 +3194,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "乌酸果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -2989,6 +3208,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "蛮歌花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3002,6 +3222,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "常青花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3015,6 +3236,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "赤血灵果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3028,6 +3250,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "天蝉灵叶-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3041,6 +3264,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫血灵芝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3054,6 +3278,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "火心七叶花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3067,6 +3292,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "血晶草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3080,6 +3306,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "蓝岩心石-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3093,6 +3320,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "沙之曼陀罗-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3106,6 +3334,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "地火莲子-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3119,6 +3348,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "清心三叶草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3132,6 +3362,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "佛心果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3145,6 +3376,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "吸灵叶-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3158,6 +3390,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "铁木灵叶-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3171,6 +3404,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "三尾风叶-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3184,6 +3418,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "云草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3197,6 +3432,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "离土果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3210,6 +3446,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "厚土芝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3223,6 +3460,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "黑天麻-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3236,6 +3474,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "八陵魔针果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3249,6 +3488,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "木灵三针花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3262,6 +3502,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "地心火芝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3275,6 +3516,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "龙须冰火果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3288,6 +3530,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "青木仙藤-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3301,6 +3544,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "天翡果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3314,6 +3558,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "冰灵叶三花草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3327,6 +3572,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "蚀心茹-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3340,6 +3586,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "火莲果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3353,6 +3600,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "速龙涎-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3366,6 +3614,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "夜灵叶-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3379,6 +3628,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "赤血神龙草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3392,6 +3642,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "望忧绝魂草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3405,6 +3656,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "雷炎暴龙参-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3418,6 +3670,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "赤炼金参-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3431,6 +3684,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "龙异花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3444,6 +3698,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "爆炎茹-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3457,6 +3712,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "地心淬地乳-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3470,6 +3726,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "香蚀草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3483,6 +3740,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "青莲果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3496,6 +3754,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "蛇脱花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3509,6 +3768,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "佛焰根-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3522,6 +3782,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "阴含魔焰草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3535,6 +3796,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫灵塑体花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3548,6 +3810,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "寒血果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3561,6 +3824,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "血蟒枝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3574,6 +3838,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "铁经参-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3587,6 +3852,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "红砂叶-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3600,6 +3866,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "玉肌花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3613,6 +3880,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "火灵根-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3626,6 +3894,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "阴神花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3639,6 +3908,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "雪玉骨参-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3652,6 +3922,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "玉龙涎-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3665,6 +3936,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "极寒灵芝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3678,6 +3950,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "冰火蛇鳞果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3691,6 +3964,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "青冥果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3704,6 +3978,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "寿王浆-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3717,6 +3992,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "万年青藤-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3730,6 +4006,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "菩提化体涎-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3743,6 +4020,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "血灵草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3756,6 +4034,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "青岚草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3769,6 +4048,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "凤火灵果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3782,6 +4062,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "千灵参-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3795,6 +4076,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "魔灵谷草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3808,6 +4090,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "玉骨果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3821,6 +4104,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "青岩木-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3834,6 +4118,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "培髄根-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3847,6 +4132,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "寒髄枝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3860,6 +4146,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "玄天青藤-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3873,6 +4160,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "清体草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3886,6 +4174,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "水灵莲-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3899,6 +4188,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "寒炎融魂果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3912,6 +4202,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "还魂妖果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3925,6 +4216,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "命魂鬼脸花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3938,6 +4230,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "血精妖果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3951,6 +4244,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "龙心九叶芝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3964,6 +4258,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "魔血灵果浆-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3977,6 +4272,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "升仙草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -3990,6 +4286,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "地皇精-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4003,6 +4300,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "地心魂髓-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4016,6 +4314,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "丹灵浆-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4029,6 +4328,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "醉云仙树-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4042,6 +4342,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "水云果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4055,6 +4356,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "腾龙心芯-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4068,6 +4370,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "赤炎果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4081,6 +4384,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "硫炎灵涎-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4094,6 +4398,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "天麻翡石精-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4107,6 +4412,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "七彩月兰-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4120,6 +4426,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "魂婴果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4133,6 +4440,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "灵龙天芝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4146,6 +4454,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "地心灵浆-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4159,6 +4468,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "断龙根-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4172,6 +4482,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "回罡草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4185,6 +4496,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "朱血果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4198,6 +4510,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "青婴花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4211,6 +4524,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫衣草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4224,6 +4538,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "寒心果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4237,6 +4552,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "蛇缠藤-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4250,6 +4566,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "五柳根-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4263,6 +4580,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "醉鱼草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4276,6 +4594,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "星辰天元果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4289,6 +4608,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "寒灵幽魂花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4302,6 +4622,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "煌炎血心芝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4315,6 +4636,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "黑心魔魂花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4328,6 +4650,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫灵悠云菊-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4341,6 +4664,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "宁神花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4354,6 +4678,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "魔皇草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4367,6 +4692,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "石楠草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4380,6 +4706,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "雨燕草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4393,6 +4720,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "皇血草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4406,6 +4734,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "野刚花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4419,6 +4748,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "金线莲-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4432,6 +4762,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "金线参-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4445,6 +4776,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "火龙果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4458,6 +4790,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "千年雪莲-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4471,6 +4804,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "寒冰草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4484,6 +4818,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "丹参-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4497,6 +4832,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "冰棘草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4510,6 +4846,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "巫妖花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4523,6 +4860,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "夏枯草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4536,6 +4874,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "何首乌-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4549,6 +4888,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "北草乌-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4562,6 +4902,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "金银花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4575,6 +4916,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "罗汉果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4588,6 +4930,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "毒芹-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4601,6 +4944,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "石吊兰-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4614,6 +4958,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "无花果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4627,6 +4972,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "无根藤-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4640,6 +4986,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "火树银花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4653,6 +5000,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "玉髓花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4666,6 +5014,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "邪蒲藤-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4679,6 +5028,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "龙蕨草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4692,6 +5042,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "蒿荻雪胆-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4705,6 +5056,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "靛蓝僵蚕-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4718,6 +5070,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "紫仙花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4731,6 +5084,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "固元芝-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4744,6 +5098,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "玉融水-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4757,6 +5112,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "圣灵果-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4770,6 +5126,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "冬刺草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4783,6 +5140,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "冰盖草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4796,6 +5154,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "噩梦藤-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4809,6 +5168,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "墓地苔-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4822,6 +5182,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "太阳草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4835,6 +5196,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "山鼠草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4848,6 +5210,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "枯叶草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4861,6 +5224,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "梦露花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4874,6 +5238,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "法力蓟-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4887,6 +5252,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "火焰花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4900,6 +5266,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "瘟疫花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4913,6 +5280,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "盲目草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4926,6 +5294,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "石南草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4939,6 +5308,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "虚空花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4952,6 +5322,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "血蓟-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4965,6 +5336,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "远古苔-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4978,6 +5350,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "邪雾草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -4991,6 +5364,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "金棘草-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -5004,6 +5378,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "黑莲花-种植",
+    xiuxian = true,
     category = "灵药种植",
     energy_required = 600.00,
     ingredients = {
@@ -5016,6 +5391,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "五行石",
+    xiuxian = true,
     localised_name = "五灵石",
     category = "chemistry",
     enabled = false,
@@ -5040,6 +5416,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "雷灵石",
+    xiuxian = true,
     localised_name = "雷灵石",
     category = "chemistry",
     enabled = false,
@@ -5059,6 +5436,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "暗灵石",
+    xiuxian = true,
     localised_name = "暗灵石",
     category = "chemistry",
     enabled = false,
@@ -5079,6 +5457,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "风灵石",
+    xiuxian = true,
     localised_name = "风灵石",
     category = "chemistry",
     enabled = false,
@@ -5099,6 +5478,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "龙血",
+    xiuxian = true,
     localised_name = "龙血",
     category = "chemistry",
     energy_required = 50.00,
@@ -5119,6 +5499,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "三色石",
+    xiuxian = true,
     localised_name = "三色晶石",
     category = "chemistry",
     enabled = false,
@@ -5141,6 +5522,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "水与火",
+    xiuxian = true,
     localised_name = "水与火",
     category = "chemistry",
     enabled = false,
@@ -5160,6 +5542,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "金灵石",
+    xiuxian = true,
     localised_name = "金灵石",
     category = "chemistry",
     energy_required = 5.00,
@@ -5176,6 +5559,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "木灵石",
+    xiuxian = true,
     localised_name = "木灵石",
     category = "chemistry",
     energy_required = 5.00,
@@ -5192,6 +5576,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "水灵石",
+    xiuxian = true,
     localised_name = "水灵石",
     category = "chemistry",
     energy_required = 5.00,
@@ -5208,6 +5593,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "火灵石",
+    xiuxian = true,
     localised_name = "火灵石",
     category = "chemistry",
     energy_required = 5.00,
@@ -5225,6 +5611,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "土灵石",
+    xiuxian = true,
     localised_name = "土灵石",
     category = "chemistry",
     energy_required = 5.00,
@@ -5241,6 +5628,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "五水",
+    xiuxian = true,
     localised_name = "五行提炼流体",
     category = "chemistry",
     enabled = false,
@@ -5260,6 +5648,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "光灵石",
+    xiuxian = true,
     localised_name = "光灵石",
     category = "chemistry",
     energy_required = 20.00,
@@ -5277,6 +5666,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "阴阳球",
+    xiuxian = true,
     localised_name = "阴阳灵石",
     category = "chemistry",
     enabled = false,
@@ -5298,12 +5688,13 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "神级研究瓶",
+    xiuxian = true,
     localised_name = "神级科研包",
     category = "chemistry",
     enabled = false,
     energy_required = 3000.00,
     ingredients = {
-        { type = "item", name = "测试科研包", amount = 1000 },
+        { type = "item", name = "培元丹", amount = 1000 },
         { type = "item", name = "阴阳球", amount = 1000 },
         { type = "item", name = "三色石", amount = 1000 },
         { type = "item", name = "五行石", amount = 1000 },
@@ -5319,6 +5710,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "圣级研究包",
+    xiuxian = true,
     localised_name = "圣级研究包",
     category = "chemistry",
     enabled = false,
@@ -5340,6 +5732,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "起源包1",
+    xiuxian = true,
     localised_name = "修仙之起源其一",
     category = "chemistry",
     energy_required = 5.00,
@@ -5357,6 +5750,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "起源包2",
+    xiuxian = true,
     localised_name = "修仙之起源其二",
     category = "chemistry",
     energy_required = 10.00,
@@ -5374,6 +5768,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "起源包3",
+    xiuxian = true,
     localised_name = "修仙之起源其三",
     category = "chemistry",
     enabled = false,
@@ -5393,6 +5788,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "炼气瓶",
+    xiuxian = true,
     localised_name = "修仙之练气",
     category = "chemistry",
     enabled = false,
@@ -5412,6 +5808,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "筑基瓶",
+    xiuxian = true,
     localised_name = "筑基瓶",
     category = "chemistry",
     enabled = false,
@@ -5429,6 +5826,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "金丹瓶",
+    xiuxian = true,
     localised_name = "金丹瓶",
     category = "chemistry",
     enabled = false,
@@ -5448,6 +5846,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "岩浆",
+    xiuxian = true,
     localised_name = "岩浆",
     category = "chemistry",
     energy_required = 60.00,
@@ -5466,6 +5865,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "浑浊灵液",
+    xiuxian = true,
     localised_name = "浑浊灵液",
     category = "chemistry",
     energy_required = 60.00,
@@ -5484,6 +5884,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "纯净灵液",
+    xiuxian = true,
     localised_name = "纯净灵液",
     category = "chemistry",
     enabled = false,
@@ -5503,6 +5904,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "黑心魔魂花",
+    xiuxian = true,
     localised_name = "黑心魔魂花",
     category = "chemistry",
     energy_required = 10.00,
@@ -5519,6 +5921,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "巫妖花",
+    xiuxian = true,
     localised_name = "巫妖花",
     category = "chemistry",
     energy_required = 10.00,
@@ -5535,6 +5938,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "元婴瓶",
+    xiuxian = true,
     localised_name = "元婴瓶",
     category = "chemistry",
     enabled = false,
@@ -5554,6 +5958,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "化神瓶",
+    xiuxian = true,
     localised_name = "化神瓶",
     category = "centrifuging",
     enabled = false,
@@ -5573,6 +5978,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "炼虚瓶",
+    xiuxian = true,
     localised_name = "炼虚瓶",
     category = "centrifuging",
     enabled = false,
@@ -5592,6 +5998,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "大乘瓶",
+    xiuxian = true,
     localised_name = "大乘瓶",
     category = "centrifuging",
     enabled = false,
@@ -5611,6 +6018,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "渡劫瓶",
+    xiuxian = true,
     localised_name = "渡劫瓶",
     category = "centrifuging",
     enabled = false,
@@ -5630,6 +6038,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "飞升瓶",
+    xiuxian = true,
     localised_name = "飞升瓶",
     category = "centrifuging",
     enabled = false,
@@ -5649,6 +6058,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "凡之火",
+    xiuxian = true,
     localised_name = "凡火",
     category = "chemistry",
     energy_required = 2.00,
@@ -5665,6 +6075,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "鬼魂火焰",
+    xiuxian = true,
     category = "chemistry",
     energy_required = 5.00,
     ingredients = {
@@ -5680,6 +6091,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "业之火",
+    xiuxian = true,
     category = "chemistry",
     energy_required = 5.00,
     ingredients = {
@@ -5697,6 +6109,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "灵铁锭",
+    xiuxian = true,
     category = "smelting",
     energy_required = 5.00,
     ingredients = {
@@ -5709,6 +6122,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "凡之铁",
+    xiuxian = true,
     localised_name = "普通兵器",
     category = "chemistry",
     energy_required = 0.50,
@@ -5727,6 +6141,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "树",
+    xiuxian = true,
     localised_name = "树",
     category = "chemistry",
     energy_required = 0.50,
@@ -5744,6 +6159,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "种蛊",
+    xiuxian = true,
     localised_name = "子蛊",
     category = "蛊罐",
     energy_required = 300.00,
@@ -5762,6 +6178,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "噬心蛊",
+    xiuxian = true,
     localised_name = "噬心蛊",
     category = "蛊罐",
     enabled = false,
@@ -5780,6 +6197,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "失心蛊",
+    xiuxian = true,
     localised_name = "失心蛊",
     category = "蛊罐",
     enabled = false,
@@ -5799,6 +6217,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "饥饿蛊",
+    xiuxian = true,
     localised_name = "饥饿蛊",
     category = "蛊罐",
     enabled = false,
@@ -5817,6 +6236,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "暴食蛊",
+    xiuxian = true,
     localised_name = "暴食蛊",
     category = "蛊罐",
     enabled = false,
@@ -5836,6 +6256,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "蛊罐",
+    xiuxian = true,
     localised_name = "蛊罐",
     enabled = false,
     energy_required = 10.00,
@@ -5855,6 +6276,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "噬情蛊",
+    xiuxian = true,
     localised_name = "噬情蛊",
     category = "蛊罐",
     enabled = false,
@@ -5874,6 +6296,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "失情蛊",
+    xiuxian = true,
     localised_name = "失情蛊",
     category = "蛊罐",
     enabled = false,
@@ -5893,6 +6316,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "断肠丹",
+    xiuxian = true,
     localised_name = "断肠丹",
     category = "chemistry",
     enabled = false,
@@ -5912,6 +6336,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "大补丹（一）",
+    xiuxian = true,
     category = "centrifuging",
     enabled = false,
     energy_required = 60.00,
@@ -5933,6 +6358,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "大补丹（二）",
+    xiuxian = true,
     category = "centrifuging",
     enabled = false,
     energy_required = 60.00,
@@ -5954,6 +6380,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "大补丹（三）",
+    xiuxian = true,
     category = "centrifuging",
     enabled = false,
     energy_required = 60.00,
@@ -5975,6 +6402,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "终极大补丹",
+    xiuxian = true,
     category = "centrifuging",
     enabled = false,
     energy_required = 600.00,
@@ -5993,6 +6421,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "三步丹",
+    xiuxian = true,
     category = "chemistry",
     enabled = false,
     energy_required = 60.00,
@@ -6010,6 +6439,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "彼岸花",
+    xiuxian = true,
     category = "chemistry",
     enabled = false,
     energy_required = 60.00,
@@ -6027,6 +6457,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "黄泉水",
+    xiuxian = true,
     category = "chemistry",
     enabled = false,
     energy_required = 4444.00,
@@ -6046,6 +6477,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "解毒丹",
+    xiuxian = true,
     category = "chemistry",
     enabled = false,
     energy_required = 200.00,

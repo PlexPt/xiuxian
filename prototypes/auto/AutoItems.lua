@@ -5,8 +5,8 @@ local baseIconPath = "__xiuxian-graphics__/graphics/icons/"
 
 ITEM {
     type = "tool",
-    name = "测试科研包",
-    localised_name = "测试科研包",
+    name = "培元丹",
+    localised_name = "培元丹",
     icon = baseIconPath .. "danyao/object_hulineidan01.png",
     icon_size = 128,
     subgroup = "tool",
@@ -1784,15 +1784,6 @@ ITEM {
     icon = baseIconPath .. "item/item_307.png",
     icon_size = 128,
     subgroup = "灵药",
-    stack_size = 100,
-}
-ITEM {
-    type = "item",
-    name = "培元丹",
-    localised_name = "培元丹",
-    icon = baseIconPath .. "占位图.png",
-    icon_size = 128,
-    subgroup = "普通丹药",
     stack_size = 100,
 }
 -- "批量导入，请修改图标等"

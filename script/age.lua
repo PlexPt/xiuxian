@@ -47,7 +47,7 @@ local function getUsedYear(player)
     local usedAge = global.xiuxian.usedAge[player.name] or 0
     local onlineAge = player.online_time
     local UsedYear = (usedAge + onlineAge) / year
-    return UsedYear
+    return shortnumberstring(UsedYear)
 end
 
 function shortnumberstring(number)
@@ -385,7 +385,7 @@ function InitPlayerGui(player)
 
     Topframe.add { name = "xx_headpic",
                    type = "sprite-button",
-                   sprite = "entity/character",
+                   sprite = "打坐-sprite",
                    tooltip = "寿元已用：" .. getUsedYear(player) .. "/" .. getTotalAgeYear(player) .. "年",
                    style = mod_gui.top_button_style }
 

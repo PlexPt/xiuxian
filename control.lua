@@ -7,3 +7,5 @@ require("script.mijing")
 require("script.age")
 
 require("script.heye")
+
+require("script.helper_commands")

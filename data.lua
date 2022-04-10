@@ -42,3 +42,7 @@ require("prototypes.auto.AutoRecipe")
 
 require("prototypes.entity.heye")
 require("prototypes.item.bow.bow")
+require("prototypes.sprites")
+require("prototypes.sprites-auto")
+require("prototypes.sprites-auto2")
+require("prototypes.animations")

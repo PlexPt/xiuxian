@@ -14,7 +14,7 @@ TECHNOLOGY {
         count = 900,
         time = 9000,
         ingredients = {
-            { name = "测试科研包", amount = 900},
+            { name = "培元丹", amount = 900},
             { name = "space-science-pack", amount = 900},
             { name = "utility-science-pack", amount = 900},
             { name = "automation-science-pack", amount = 900},
@@ -42,7 +42,7 @@ TECHNOLOGY {
         count = 100,
         time = 160,
         ingredients = {
-            { name = "测试科研包", amount = 2000},
+            { name = "培元丹", amount = 2000},
             { name = "练气瓶", amount = 8000},
         },
     },
@@ -86,7 +86,7 @@ TECHNOLOGY {
         ingredients = {
             { name = "起源包3", amount = 4000},
             { name = "练气瓶", amount = 4000},
-            { name = "测试科研包", amount = 4000},
+            { name = "培元丹", amount = 4000},
         },
     },
     icon = baseIconPath .. "打坐.png",
@@ -107,7 +107,7 @@ TECHNOLOGY {
         count = 100,
         time = 30,
         ingredients = {
-            { name = "测试科研包", amount = 1},
+            { name = "培元丹", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -128,7 +128,7 @@ TECHNOLOGY {
         count = 100,
         time = 30,
         ingredients = {
-            { name = "测试科研包", amount = 1},
+            { name = "培元丹", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -149,7 +149,7 @@ TECHNOLOGY {
         count = 100,
         time = 30,
         ingredients = {
-            { name = "测试科研包", amount = 1},
+            { name = "培元丹", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -170,7 +170,7 @@ TECHNOLOGY {
         count = 100,
         time = 30,
         ingredients = {
-            { name = "测试科研包", amount = 1},
+            { name = "培元丹", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -190,7 +190,7 @@ TECHNOLOGY {
         count = 100,
         time = 30,
         ingredients = {
-            { name = "测试科研包", amount = 1},
+            { name = "培元丹", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -211,7 +211,7 @@ TECHNOLOGY {
         count = 100,
         time = 30,
         ingredients = {
-            { name = "测试科研包", amount = 1},
+            { name = "培元丹", amount = 1},
         },
     },
     icon = baseIconPath .. "打坐.png",
@@ -233,7 +233,7 @@ TECHNOLOGY {
         count = 100,
         time = 30,
         ingredients = {
-            { name = "测试科研包", amount = 1},
+            { name = "培元丹", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -276,7 +276,7 @@ TECHNOLOGY {
         count = 90,
         time = 90,
         ingredients = {
-            { name = "测试科研包", amount = 100},
+            { name = "培元丹", amount = 100},
             { name = "神级研究包", amount = 100},
             { name = "圣级研究包", amount = 100},
             { name = "大乘瓶", amount = 100},
@@ -326,7 +326,7 @@ TECHNOLOGY {
         count = 100,
         time = 300,
         ingredients = {
-            { name = "测试科研包", amount = 1000},
+            { name = "培元丹", amount = 1000},
             { name = "神级研究包", amount = 1000},
             { name = "圣级研究包", amount = 1000},
             { name = "飞升瓶", amount = 1000},
@@ -650,7 +650,7 @@ TECHNOLOGY {
         count = 100,
         time = 30,
         ingredients = {
-            { name = "测试科研包", amount = 1},
+            { name = "培元丹", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -670,7 +670,7 @@ TECHNOLOGY {
         count = 100,
         time = 30,
         ingredients = {
-            { name = "测试科研包", amount = 1},
+            { name = "培元丹", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -690,7 +690,7 @@ TECHNOLOGY {
         count = 100,
         time = 30,
         ingredients = {
-            { name = "测试科研包", amount = 1},
+            { name = "培元丹", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -727,7 +727,7 @@ TECHNOLOGY {
     type = "technology",
     name = "蛊科技",
     effects = {},
-    localised_name = "蛊科技",
+    localised_name = "蛊术",
     prerequisites = {
         "灵气复苏",
         "引气入体",
@@ -737,7 +737,7 @@ TECHNOLOGY {
         count = 900,
         time = 600,
         ingredients = {
-            { name = "测试科研包", amount = 900},
+            { name = "培元丹", amount = 900},
             { name = "space-science-pack", amount = 1000},
             { name = "断肠丹", amount = 1000},
             { name = "三步丧命丹", amount = 1000},
