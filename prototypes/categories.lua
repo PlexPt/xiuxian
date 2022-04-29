@@ -26,6 +26,16 @@ data:extend({
         group = "xiuxian",
         order = "a-a"
     },
+    ---------------------
+    {
+        type = "ammo-category",
+        name = "箭-ammo"
+    },
+
+    {
+        type = "recipe-category",
+        name = "空组",
+    }
     --{
     --    type = "module-category",
     --    name = "地火"

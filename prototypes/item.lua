@@ -105,9 +105,27 @@ data:extend(
                 type = "item",
                 name = "八品炼丹炉",
                 icon = ConstEnum.graphics .. "/icons/danlu-128.png",
-                icon_size = 128, icon_mipmaps = 3,
+                icon_size = 128,
                 subgroup = "smelting-machine",
                 place_result = "八品炼丹炉",
+                stack_size = 1
+            },
+            {
+                type = "item",
+                name = "红木凳",
+                icon = ConstEnum.graphics .. "/entity/椅子/1.png",
+                icon_size = 400,
+                subgroup = "smelting-machine",
+                place_result = "红木凳",
+                stack_size = 1
+            },
+            {
+                type = "item",
+                name = "法阵",
+                icon = ConstEnum.graphics .. "/entity/fa/1.png",
+                icon_size = 400,
+                subgroup = "smelting-machine",
+                place_result = "法阵",
                 stack_size = 1
             },
             {

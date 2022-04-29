@@ -86,3 +86,17 @@ data:extend(
             }
         }
 )
+
+data:extend(
+        {
+            {
+                type = "item-group",
+                name = "蛊冢",
+                localised_name = "蛊冢",
+                localised_description = "蛊虫生活的环境",
+                icon = baseIconPath .. "obj/object_20.png",
+                icon_size = 128,
+
+            }
+        }
+)

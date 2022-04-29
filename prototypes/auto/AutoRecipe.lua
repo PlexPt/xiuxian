@@ -7,7 +7,6 @@ RECIPE {
     name = "灵铁",
     localised_description = "再放进熔炉，使用其他火焰会有相应效果加成，与冲突",
     category = "chemistry",
-    enabled = false,
     energy_required = 20.00,
     ingredients = {
         { type = "item", name = "灵石", amount = 1000 },
@@ -16,10 +15,9 @@ RECIPE {
         { type = "fluid", name = "steam", amount = 1000 },
     },
     results = {
-        { type = "item", name = "灵铁", amount = 1, },
+        { type = "item", name = "灵铁", amount = 1, probability = 1.0  },
     },
-}:add_unlock("材料进化")
-
+}
 -- "笔是常驻，不消耗，有耐久，好一点可通过灵气修复，相当于无耐久（炼制中有炸炉的风险，炼制时请准备充分材料再炼制）"
 RECIPE {
     type = "recipe",
@@ -35,7 +33,7 @@ RECIPE {
         { type = "item", name = "风灵石", amount = 1000 },
     },
     results = {
-        { type = "item", name = "风行符", amount = 1, },
+        { type = "item", name = "风行符", amount = 1, probability = 0.006  },
     },
 }:add_unlock("鬼画符-符箓起源")
 
@@ -54,9 +52,9 @@ RECIPE {
         { type = "item", name = "凡火", amount = 40000 },
     },
     results = {
-        { type = "item", name = "测试科研包", amount = 1, },
-        { type = "item", name = "亢龙角", amount = 4, },
-        { type = "item", name = "灵石", amount = 1000, },
+        { type = "item", name = "测试科研包", amount = 1, probability = 0.005  },
+        { type = "item", name = "亢龙角", amount = 4, probability = 0.05  },
+        { type = "item", name = "灵石", amount = 1000, probability = 0.945  },
     },
     main_product = "测试科研包",
     always_show_products = true,
@@ -121,7 +119,7 @@ RECIPE {
         { type = "item", name = "朱砂", amount = 60000 },
     },
     results = {
-        { type = "item", name = "易经", amount = 1, },
+        { type = "item", name = "易经", amount = 1, probability = 50.0  },
     },
 }
 -- "自动生成,看到请修改原料"
@@ -211,7 +209,7 @@ RECIPE {
         { type = "item", name = "朱砂", amount = 1000 },
     },
     results = {
-        { type = "item", name = "八卦盘", amount = 1, },
+        { type = "item", name = "八卦盘", amount = 1, probability = 15.0  },
     },
     main_product = "八卦盘",
     always_show_products = true,
@@ -287,7 +285,7 @@ RECIPE {
         { type = "fluid", name = "龙血", amount = 100 },
     },
     results = {
-        { type = "item", name = "轩辕剑", amount = 1, },
+        { type = "item", name = "轩辕剑", amount = 1, probability = 0.04  },
     },
 }:add_unlock("advanced-electronics")
 
@@ -412,7 +410,7 @@ RECIPE {
         { type = "item", name = "凡铁", amount = 20 },
     },
     results = {
-        { type = "item", name = "松纹剑", amount = 1, },
+        { type = "item", name = "松纹剑", amount = 1, probability = 0.05  },
     },
 }:add_unlock("advanced-electronics")
 
@@ -430,7 +428,7 @@ RECIPE {
         { type = "fluid", name = "龙血", amount = 20 },
     },
     results = {
-        { type = "item", name = "阴阳镯", amount = 1, },
+        { type = "item", name = "阴阳镯", amount = 1, probability = 0.05  },
     },
 }
 -- "自动生成,看到请修改原料"
@@ -541,7 +539,7 @@ RECIPE {
         { type = "item", name = "阵法-阵纹", amount = 100 },
     },
     results = {
-        { type = "item", name = "诛仙剑", amount = 1, },
+        { type = "item", name = "诛仙剑", amount = 1, probability = 0.03  },
     },
 }:add_unlock("advanced-electronics")
 
@@ -873,7 +871,7 @@ RECIPE {
         { type = "fluid", name = "龙血", amount = 10000 },
     },
     results = {
-        { type = "item", name = "风灵月影剑", amount = 1, },
+        { type = "item", name = "风灵月影剑", amount = 1, probability = 0.001  },
     },
 }:add_unlock("新开始")
 
@@ -892,7 +890,7 @@ RECIPE {
         { type = "item", name = "阴阳球", amount = 10000 },
     },
     results = {
-        { type = "item", name = "混沌结晶石", amount = 1, },
+        { type = "item", name = "混沌结晶石", amount = 1, probability = 1.0  },
     },
 }:add_unlock("未知宇宙能量探索")
 
@@ -914,7 +912,7 @@ RECIPE {
         { type = "fluid", name = "纯净灵液", amount = 90000 },
     },
     results = {
-        { type = "item", name = "盘古斧", amount = 1, },
+        { type = "item", name = "盘古斧", amount = 1, probability = 1.0E-4  },
     },
     main_product = "盘古斧",
     always_show_products = true,
@@ -5032,8 +5030,8 @@ RECIPE {
         { type = "fluid", name = "water", amount = 1500 },
     },
     results = {
-        { type = "item", name = "五行石", amount = 10, },
-        { type = "item", name = "灵石", amount = 30, },
+        { type = "item", name = "五行石", amount = 10, probability = 0.05  },
+        { type = "item", name = "灵石", amount = 30, probability = 1.0  },
     },
     main_product = "五行石",
     always_show_products = true,
@@ -5052,7 +5050,7 @@ RECIPE {
         { type = "fluid", name = "water", amount = 150 },
     },
     results = {
-        { type = "item", name = "雷灵石", amount = 10, },
+        { type = "item", name = "雷灵石", amount = 10, probability = 1.0  },
     },
     main_product = "雷灵石",
     always_show_products = true,
@@ -5072,7 +5070,7 @@ RECIPE {
         { type = "item", name = "鬼火", amount = 150 },
     },
     results = {
-        { type = "item", name = "暗灵石", amount = 10, },
+        { type = "item", name = "暗灵石", amount = 10, probability = 1.0  },
     },
     main_product = "暗灵石",
     always_show_products = true,
@@ -5092,7 +5090,7 @@ RECIPE {
         { type = "item", name = "鬼火", amount = 150 },
     },
     results = {
-        { type = "item", name = "风灵石", amount = 10, },
+        { type = "item", name = "风灵石", amount = 10, probability = 1.0  },
     },
     main_product = "风灵石",
     always_show_products = true,
@@ -5107,16 +5105,17 @@ RECIPE {
     ingredients = {
         { type = "item", name = "源龙果", amount = 150 },
         { type = "item", name = "鬼火", amount = 150 },
-        { type = "item", name = "天麻翡石精", amount = 150 },
+        { type = "item", name = "龙血草", amount = 1500 },
         { type = "fluid", name = "steam", amount = 1500 },
         { type = "fluid", name = "water", amount = 1500 },
     },
     results = {
-        { type = "fluid", name = "龙血", amount = 100, },
+        { type = "fluid", name = "龙血", amount = 100, probability = 1.0  },
     },
     main_product = "龙血",
     always_show_products = true,
-}
+}:add_unlock("advanced-electronics")
+
 RECIPE {
     type = "recipe",
     name = "三色石",
@@ -5132,8 +5131,8 @@ RECIPE {
         { type = "fluid", name = "water", amount = 1250 },
     },
     results = {
-        { type = "item", name = "三色石", amount = 10, },
-        { type = "item", name = "灵石", amount = 100, },
+        { type = "item", name = "三色石", amount = 10, probability = 0.05  },
+        { type = "item", name = "灵石", amount = 100, probability = 0.95  },
     },
     main_product = "三色石",
     always_show_products = true,
@@ -5152,7 +5151,7 @@ RECIPE {
         { type = "fluid", name = "岩浆溶液", amount = 100 },
     },
     results = {
-        { type = "fluid", name = "水与火", amount = 10, },
+        { type = "fluid", name = "水与火", amount = 10, probability = 0.85  },
     },
     main_product = "水与火",
     always_show_products = true,
@@ -5169,7 +5168,7 @@ RECIPE {
         { type = "item", name = "凡火", amount = 150 },
     },
     results = {
-        { type = "item", name = "金灵石", amount = 10, },
+        { type = "item", name = "金灵石", amount = 10, probability = 1.0  },
     },
     main_product = "金灵石",
     always_show_products = true,
@@ -5185,7 +5184,7 @@ RECIPE {
         { type = "item", name = "凡火", amount = 15 },
     },
     results = {
-        { type = "item", name = "木灵石", amount = 1, },
+        { type = "item", name = "木灵石", amount = 1, probability = 1.0  },
     },
     main_product = "木灵石",
     always_show_products = true,
@@ -5201,7 +5200,7 @@ RECIPE {
         { type = "item", name = "凡火", amount = 15 },
     },
     results = {
-        { type = "item", name = "水灵石", amount = 1, },
+        { type = "item", name = "水灵石", amount = 1, probability = 1.0  },
     },
     main_product = "水灵石",
     always_show_products = true,
@@ -5218,7 +5217,7 @@ RECIPE {
         { type = "fluid", name = "steam", amount = 1000 },
     },
     results = {
-        { type = "item", name = "火灵石", amount = 10, },
+        { type = "item", name = "火灵石", amount = 10, probability = 1.0  },
     },
     main_product = "火灵石",
     always_show_products = true,
@@ -5234,7 +5233,7 @@ RECIPE {
         { type = "item", name = "凡火", amount = 15 },
     },
     results = {
-        { type = "item", name = "土灵石", amount = 1, },
+        { type = "item", name = "土灵石", amount = 1, probability = 1.0  },
     },
     main_product = "土灵石",
     always_show_products = true,
@@ -5252,7 +5251,7 @@ RECIPE {
         { type = "fluid", name = "steam", amount = 15000 },
     },
     results = {
-        { type = "fluid", name = "五水", amount = 100, },
+        { type = "fluid", name = "五水", amount = 100, probability = 1.0  },
     },
     main_product = "五水",
     always_show_products = true,
@@ -5270,7 +5269,7 @@ RECIPE {
         { type = "fluid", name = "纯净灵液", amount = 150 },
     },
     results = {
-        { type = "item", name = "光灵石", amount = 1, },
+        { type = "item", name = "光灵石", amount = 1, probability = 1.0  },
     },
     main_product = "光灵石",
     always_show_products = true,
@@ -5290,7 +5289,7 @@ RECIPE {
         { type = "fluid", name = "steam", amount = 100 },
     },
     results = {
-        { type = "item", name = "阴阳球", amount = 1, },
+        { type = "item", name = "阴阳球", amount = 1, probability = 1.0  },
     },
     main_product = "阴阳球",
     always_show_products = true,
@@ -5311,7 +5310,7 @@ RECIPE {
         { type = "item", name = "灵石", amount = 1000 },
     },
     results = {
-        { type = "item", name = "神级研究包", amount = 10, },
+        { type = "item", name = "神级研究包", amount = 10, probability = 0.04  },
     },
     main_product = "神级研究包",
     always_show_products = true,
@@ -5332,7 +5331,7 @@ RECIPE {
         { type = "item", name = "灵石", amount = 40000 },
     },
     results = {
-        { type = "item", name = "圣级研究包", amount = 1, },
+        { type = "item", name = "圣级研究包", amount = 1, probability = 1.0  },
     },
     main_product = "圣级研究包",
     always_show_products = true,
@@ -5346,11 +5345,11 @@ RECIPE {
     energy_required = 5.00,
     ingredients = {
         { type = "item", name = "灵石", amount = 100 },
-        { type = "item", name = "凡铁", amount = 100 },
+        { type = "item", name = "金灵石矿", amount = 500 },
         { type = "item", name = "凡火", amount = 100 },
     },
     results = {
-        { type = "item", name = "起源包1", amount = 10, },
+        { type = "item", name = "起源包1", amount = 10, probability = 1.0  },
     },
     main_product = "起源包1",
     always_show_products = true,
@@ -5367,7 +5366,7 @@ RECIPE {
         { type = "item", name = "凡火", amount = 500 },
     },
     results = {
-        { type = "item", name = "起源包2", amount = 10, },
+        { type = "item", name = "起源包2", amount = 10, probability = 1.0  },
     },
     main_product = "起源包2",
     always_show_products = true,
@@ -5385,7 +5384,7 @@ RECIPE {
         { type = "item", name = "凡火", amount = 1000 },
     },
     results = {
-        { type = "item", name = "起源包3", amount = 10, },
+        { type = "item", name = "起源包3", amount = 10, probability = 1.0  },
     },
     main_product = "起源包3",
     always_show_products = true,
@@ -5404,7 +5403,7 @@ RECIPE {
         { type = "item", name = "五行石", amount = 100 },
     },
     results = {
-        { type = "item", name = "练气瓶", amount = 10, },
+        { type = "item", name = "练气瓶", amount = 10, probability = 1.0  },
     },
     main_product = "练气瓶",
     always_show_products = true,
@@ -5423,7 +5422,7 @@ RECIPE {
         { type = "item", name = "青冥铁", amount = 4000 },
     },
     results = {
-        { type = "item", name = "筑基瓶", amount = 10, },
+        { type = "item", name = "筑基瓶", amount = 10, probability = 1.0  },
     },
 }:add_unlock("练气期")
 
@@ -5440,7 +5439,7 @@ RECIPE {
         { type = "item", name = "筑基瓶", amount = 8000 },
     },
     results = {
-        { type = "item", name = "金丹瓶", amount = 1, },
+        { type = "item", name = "金丹瓶", amount = 1, probability = 1.0  },
     },
     main_product = "金丹瓶",
     always_show_products = true,
@@ -5458,7 +5457,7 @@ RECIPE {
         { type = "fluid", name = "steam", amount = 10000 },
     },
     results = {
-        { type = "fluid", name = "岩浆溶液", amount = 100, },
+        { type = "fluid", name = "岩浆溶液", amount = 100, probability = 1.0  },
     },
     main_product = "岩浆溶液",
     always_show_products = true,
@@ -5476,7 +5475,7 @@ RECIPE {
         { type = "fluid", name = "steam", amount = 10000 },
     },
     results = {
-        { type = "fluid", name = "浑浊灵液", amount = 100, },
+        { type = "fluid", name = "浑浊灵液", amount = 100, probability = 1.0  },
     },
     main_product = "浑浊灵液",
     always_show_products = true,
@@ -5495,7 +5494,7 @@ RECIPE {
         { type = "fluid", name = "steam", amount = 10000 },
     },
     results = {
-        { type = "fluid", name = "纯净灵液", amount = 1000, },
+        { type = "fluid", name = "纯净灵液", amount = 1000, probability = 1.0  },
     },
     main_product = "纯净灵液",
     always_show_products = true,
@@ -5512,7 +5511,7 @@ RECIPE {
         { type = "item", name = "瘟疫花", amount = 100 },
     },
     results = {
-        { type = "item", name = "黑心魔魂花", amount = 10, },
+        { type = "item", name = "黑心魔魂花", amount = 10, probability = 1.0  },
     },
     main_product = "黑心魔魂花",
     always_show_products = true,
@@ -5528,7 +5527,7 @@ RECIPE {
         { type = "item", name = "吸灵叶", amount = 100 },
     },
     results = {
-        { type = "item", name = "巫妖花", amount = 10, },
+        { type = "item", name = "巫妖花", amount = 10, probability = 1.0  },
     },
     main_product = "巫妖花",
     always_show_products = true,
@@ -5546,7 +5545,7 @@ RECIPE {
         { type = "item", name = "三色石", amount = 100 },
     },
     results = {
-        { type = "item", name = "元婴瓶", amount = 10, },
+        { type = "item", name = "元婴瓶", amount = 10, probability = 1.0  },
     },
     main_product = "元婴瓶",
     always_show_products = true,
@@ -5565,7 +5564,7 @@ RECIPE {
         { type = "item", name = "阴阳球", amount = 100 },
     },
     results = {
-        { type = "item", name = "化神瓶", amount = 10, },
+        { type = "item", name = "化神瓶", amount = 10, probability = 1.0  },
     },
     main_product = "化神瓶",
     always_show_products = true,
@@ -5584,7 +5583,7 @@ RECIPE {
         { type = "item", name = "五行石", amount = 100 },
     },
     results = {
-        { type = "item", name = "炼虚瓶", amount = 10, },
+        { type = "item", name = "炼虚瓶", amount = 10, probability = 1.0  },
     },
     main_product = "炼虚瓶",
     always_show_products = true,
@@ -5603,7 +5602,7 @@ RECIPE {
         { type = "item", name = "起源包3", amount = 100 },
     },
     results = {
-        { type = "item", name = "大乘瓶", amount = 10, },
+        { type = "item", name = "大乘瓶", amount = 10, probability = 1.0  },
     },
     main_product = "大乘瓶",
     always_show_products = true,
@@ -5622,7 +5621,7 @@ RECIPE {
         { type = "item", name = "圣级研究包", amount = 100 },
     },
     results = {
-        { type = "item", name = "渡劫瓶", amount = 10, },
+        { type = "item", name = "渡劫瓶", amount = 10, probability = 1.0  },
     },
     main_product = "渡劫瓶",
     always_show_products = true,
@@ -5641,7 +5640,7 @@ RECIPE {
         { type = "item", name = "易经", amount = 100 },
     },
     results = {
-        { type = "item", name = "飞升瓶", amount = 1, },
+        { type = "item", name = "飞升瓶", amount = 1, probability = 0.05  },
     },
     main_product = "飞升瓶",
     always_show_products = true,
@@ -5658,7 +5657,7 @@ RECIPE {
         { type = "item", name = "wood", amount = 100 },
     },
     results = {
-        { type = "item", name = "凡火", amount = 20, },
+        { type = "item", name = "凡火", amount = 20, probability = 1.0  },
     },
     main_product = "凡火",
     always_show_products = true,
@@ -5673,7 +5672,7 @@ RECIPE {
         { type = "item", name = "命魂鬼脸花", amount = 100 },
     },
     results = {
-        { type = "item", name = "鬼火", amount = 20, },
+        { type = "item", name = "鬼火", amount = 20, probability = 1.0  },
     },
     main_product = "鬼火",
     always_show_products = true,
@@ -5690,7 +5689,7 @@ RECIPE {
         { type = "item", name = "业火红莲", amount = 100 },
     },
     results = {
-        { type = "item", name = "业火", amount = 10, },
+        { type = "item", name = "业火", amount = 10, probability = 1.0  },
     },
     main_product = "业火",
     always_show_products = true,
@@ -5704,20 +5703,23 @@ RECIPE {
         { type = "item", name = "灵铁", amount = 100 },
     },
     results = {
-        { type = "item", name = "灵铁锭", amount = 10, },
+        { type = "item", name = "灵铁锭", amount = 10, probability = 1.0  },
     },
 }
 RECIPE {
     type = "recipe",
     name = "凡之铁",
     localised_name = "普通兵器",
-    category = "smelting",
+    category = "chemistry",
     energy_required = 0.50,
     ingredients = {
         { type = "item", name = "灵石", amount = 100 },
+        { type = "item", name = "树", amount = 100 },
+        { type = "fluid", name = "water", amount = 200 },
     },
     results = {
-        { type = "item", name = "凡铁", amount = 10, },
+        { type = "item", name = "凡铁", amount = 10, probability = 0.05  },
+        { type = "item", name = "木灰", amount = 10, probability = 0.95  },
     },
     main_product = "凡铁",
     always_show_products = true,
@@ -5729,10 +5731,332 @@ RECIPE {
     category = "chemistry",
     energy_required = 0.50,
     ingredients = {
-        { type = "item", name = "木灵石矿", amount = 100 },
-        { type = "fluid", name = "water", amount = 150 },
+        { type = "item", name = "木灵石矿", amount = 1000 },
+        { type = "fluid", name = "water", amount = 1500 },
     },
     results = {
-        { type = "item", name = "硬树脂", amount = 10, },
+        { type = "item", name = "硬树脂", amount = 100, probability = 0.95  },
+        { type = "item", name = "wood", amount = 100, probability = 0.05  },
     },
+    main_product = "wood",
+    always_show_products = true,
 }
+RECIPE {
+    type = "recipe",
+    name = "种蛊",
+    localised_name = "子蛊",
+    category = "蛊罐",
+    energy_required = 300.00,
+    ingredients = {
+        { type = "item", name = "醉云仙树", amount = 100 },
+        { type = "item", name = "邪雾草", amount = 100 },
+        { type = "item", name = "瘟疫花", amount = 100 },
+    },
+    results = {
+        { type = "item", name = "种蛊", amount = 1, probability = 0.05  },
+    },
+    main_product = "种蛊",
+    always_show_products = true,
+}:add_unlock("猫狗日记-御兽起源")
+
+RECIPE {
+    type = "recipe",
+    name = "噬心蛊",
+    localised_name = "噬心蛊",
+    category = "蛊罐",
+    enabled = false,
+    energy_required = 300.00,
+    ingredients = {
+        { type = "item", name = "种蛊", amount = 100 },
+        { type = "item", name = "靛蓝僵蚕", amount = 100 },
+    },
+    results = {
+        { type = "item", name = "噬心蛊", amount = 1, probability = 0.001  },
+    },
+    main_product = "噬心蛊",
+    always_show_products = true,
+}:add_unlock("猫狗日记-御兽起源")
+
+RECIPE {
+    type = "recipe",
+    name = "失心蛊",
+    localised_name = "失心蛊",
+    category = "蛊罐",
+    enabled = false,
+    energy_required = 300.00,
+    ingredients = {
+        { type = "item", name = "噬心蛊", amount = 100 },
+        { type = "item", name = "沙之曼陀罗", amount = 200 },
+        { type = "item", name = "种蛊", amount = 100 },
+    },
+    results = {
+        { type = "item", name = "失心蛊", amount = 1, probability = 0.01  },
+    },
+    main_product = "失心蛊",
+    always_show_products = true,
+}:add_unlock("猫狗日记-御兽起源")
+
+RECIPE {
+    type = "recipe",
+    name = "饥饿蛊",
+    localised_name = "饥饿蛊",
+    category = "蛊罐",
+    enabled = false,
+    energy_required = 300.00,
+    ingredients = {
+        { type = "item", name = "种蛊", amount = 100 },
+        { type = "item", name = "夏枯草", amount = 100 },
+    },
+    results = {
+        { type = "item", name = "饥饿蛊", amount = 1, probability = 0.01  },
+    },
+    main_product = "饥饿蛊",
+    always_show_products = true,
+}:add_unlock("猫狗日记-御兽起源")
+
+RECIPE {
+    type = "recipe",
+    name = "暴食蛊",
+    localised_name = "暴食蛊",
+    category = "蛊罐",
+    enabled = false,
+    energy_required = 300.00,
+    ingredients = {
+        { type = "item", name = "饥饿蛊", amount = 100 },
+        { type = "item", name = "失心蛊", amount = 100 },
+        { type = "item", name = "毒魔藤", amount = 100 },
+    },
+    results = {
+        { type = "item", name = "暴食蛊", amount = 1, probability = 0.01  },
+    },
+    main_product = "暴食蛊",
+    always_show_products = true,
+}:add_unlock("猫狗日记-御兽起源")
+
+RECIPE {
+    type = "recipe",
+    name = "蛊罐",
+    localised_name = "蛊罐",
+    enabled = false,
+    energy_required = 10.00,
+    ingredients = {
+        { type = "item", name = "灵铁", amount = 1 },
+        { type = "item", name = "魂婴果", amount = 1 },
+        { type = "item", name = "黑魂石", amount = 1 },
+        { type = "item", name = "鬼火", amount = 1 },
+    },
+    results = {
+        { type = "item", name = "蛊罐", amount = 1, probability = 0.5  },
+    },
+    main_product = "蛊罐",
+    always_show_products = true,
+}:add_unlock("练气入门")
+
+RECIPE {
+    type = "recipe",
+    name = "噬情蛊",
+    localised_name = "噬情蛊",
+    category = "蛊罐",
+    enabled = false,
+    energy_required = 300.00,
+    ingredients = {
+        { type = "item", name = "种蛊", amount = 100 },
+        { type = "item", name = "失心蛊", amount = 100 },
+        { type = "item", name = "饥饿蛊", amount = 100 },
+    },
+    results = {
+        { type = "item", name = "噬情蛊", amount = 1, probability = 0.01  },
+    },
+    main_product = "噬情蛊",
+    always_show_products = true,
+}:add_unlock("猫狗日记-御兽起源")
+
+RECIPE {
+    type = "recipe",
+    name = "失情蛊",
+    localised_name = "失情蛊",
+    category = "蛊罐",
+    enabled = false,
+    energy_required = 300.00,
+    ingredients = {
+        { type = "item", name = "噬情蛊", amount = 100 },
+        { type = "item", name = "暴食蛊", amount = 100 },
+        { type = "item", name = "失心蛊", amount = 100 },
+    },
+    results = {
+        { type = "item", name = "失情蛊", amount = 1, probability = 0.01  },
+    },
+    main_product = "失情蛊",
+    always_show_products = true,
+}:add_unlock("猫狗日记-御兽起源")
+
+RECIPE {
+    type = "recipe",
+    name = "断肠丹",
+    localised_name = "断肠丹",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 50.00,
+    ingredients = {
+        { type = "item", name = "毒魔藤", amount = 100 },
+        { type = "item", name = "种蛊", amount = 100 },
+        { type = "item", name = "石南草", amount = 100 },
+    },
+    results = {
+        { type = "item", name = "断肠丹", amount = 1, probability = 0.1  },
+    },
+    main_product = "断肠丹",
+    always_show_products = true,
+}:add_unlock("advanced-electronics")
+
+RECIPE {
+    type = "recipe",
+    name = "大补丹（一）",
+    category = "centrifuging",
+    enabled = false,
+    energy_required = 60.00,
+    ingredients = {
+        { type = "item", name = "千年雪莲", amount = 100 },
+        { type = "item", name = "丹参", amount = 100 },
+        { type = "item", name = "何首乌", amount = 100 },
+        { type = "item", name = "玉髓花", amount = 100 },
+        { type = "item", name = "圣灵果", amount = 100 },
+        { type = "item", name = "千灵参", amount = 100 },
+    },
+    results = {
+        { type = "item", name = "大补丹（一）", amount = 1, probability = 0.02  },
+    },
+    main_product = "大补丹（一）",
+    always_show_products = true,
+}:add_unlock("advanced-electronics")
+
+RECIPE {
+    type = "recipe",
+    name = "大补丹（二）",
+    category = "centrifuging",
+    enabled = false,
+    energy_required = 60.00,
+    ingredients = {
+        { type = "item", name = "冰灵叶三花草", amount = 600 },
+        { type = "item", name = "夏枯草", amount = 600 },
+        { type = "item", name = "金银花", amount = 600 },
+        { type = "item", name = "紫仙花", amount = 600 },
+        { type = "item", name = "龙心九叶芝", amount = 600 },
+        { type = "item", name = "千灵草", amount = 600 },
+    },
+    results = {
+        { type = "item", name = "大补丹（二）", amount = 20, probability = 0.02  },
+    },
+    main_product = "大补丹（二）",
+    always_show_products = true,
+}:add_unlock("蛊科技")
+
+RECIPE {
+    type = "recipe",
+    name = "大补丹（三）",
+    category = "centrifuging",
+    enabled = false,
+    energy_required = 60.00,
+    ingredients = {
+        { type = "item", name = "玉髓花", amount = 600 },
+        { type = "item", name = "蒿荻雪胆", amount = 600 },
+        { type = "item", name = "远古苔", amount = 600 },
+        { type = "item", name = "梦露花", amount = 600 },
+        { type = "item", name = "千载雪蚕", amount = 600 },
+        { type = "item", name = "龙须冰火果", amount = 600 },
+    },
+    results = {
+        { type = "item", name = "大补丹（三）", amount = 10, probability = 0.02  },
+    },
+    main_product = "大补丹（三）",
+    always_show_products = true,
+}:add_unlock("蛊科技")
+
+RECIPE {
+    type = "recipe",
+    name = "终极大补丹",
+    category = "centrifuging",
+    enabled = false,
+    energy_required = 600.00,
+    ingredients = {
+        { type = "item", name = "大补丹（一）", amount = 1000 },
+        { type = "item", name = "大补丹（二）", amount = 1000 },
+        { type = "item", name = "大补丹（三）", amount = 1000 },
+    },
+    results = {
+        { type = "item", name = "终极大补丹", amount = 1, probability = 1.0  },
+    },
+    main_product = "终极大补丹",
+    always_show_products = true,
+}:add_unlock("蛊科技")
+
+RECIPE {
+    type = "recipe",
+    name = "三步丹",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 60.00,
+    ingredients = {
+        { type = "item", name = "大补丹（一）", amount = 500 },
+        { type = "item", name = "噬心蛊", amount = 1000 },
+    },
+    results = {
+        { type = "item", name = "三步丧命丹", amount = 1, probability = 0.05  },
+    },
+    main_product = "三步丧命丹",
+    always_show_products = true,
+}:add_unlock("advanced-electronics")
+
+RECIPE {
+    type = "recipe",
+    name = "彼岸花",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 60.00,
+    ingredients = {
+        { type = "item", name = "沙之曼陀罗", amount = 1000 },
+        { type = "fluid", name = "water", amount = 1000 },
+    },
+    results = {
+        { type = "item", name = "彼岸花", amount = 1, probability = 1.0  },
+    },
+    main_product = "彼岸花",
+    always_show_products = true,
+}:add_unlock("蛊科技")
+
+RECIPE {
+    type = "recipe",
+    name = "黄泉水",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 4444.00,
+    ingredients = {
+        { type = "item", name = "彼岸花", amount = 4444 },
+        { type = "item", name = "断肠丹", amount = 4444 },
+        { type = "fluid", name = "浑浊灵液", amount = 4444 },
+    },
+    results = {
+        { type = "fluid", name = "黄泉水", amount = 44, probability = 0.005  },
+        { type = "item", name = "种蛊", amount = 44, probability = 0.095  },
+    },
+    main_product = "黄泉水",
+    always_show_products = true,
+}:add_unlock("蛊科技")
+
+RECIPE {
+    type = "recipe",
+    name = "解毒丹",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 200.00,
+    ingredients = {
+        { type = "item", name = "终极大补丹", amount = 100 },
+        { type = "item", name = "药蛊", amount = 100 },
+        { type = "fluid", name = "steam", amount = 1000 },
+    },
+    results = {
+        { type = "item", name = "解毒丹", amount = 1, probability = 0.02  },
+    },
+    main_product = "解毒丹",
+    always_show_products = true,
+}:add_unlock("advanced-electronics")

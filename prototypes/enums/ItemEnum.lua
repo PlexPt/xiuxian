@@ -1,5 +1,5 @@
 
-ItemEnum = {}
+ItemEnum = ItemEnum or {}
 
 ItemEnum.accumulator="accumulator"
 ItemEnum.advancedCircuit="advanced-circuit"

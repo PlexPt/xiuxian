@@ -12,7 +12,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "item",
@@ -23,7 +23,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 60,
 }
-
 ITEM {
     type = "item",
     name = "推背图(全)",
@@ -33,7 +32,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 1,
 }
-
 ITEM {
     type = "item",
     name = "易经",
@@ -43,7 +41,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 1,
 }
-
 ITEM {
     type = "item",
     name = "鬼火",
@@ -53,7 +50,6 @@ ITEM {
     subgroup = "天地灵火",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "凡铁",
@@ -63,7 +59,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "纸张",
@@ -73,7 +68,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 100,
 }
-
 -- "杀害或其他原因而死，重生后有几率被业火缠身，尽快收服或者抵御，否则，死亡，没重生一次，会相应累加"
 ITEM {
     type = "item",
@@ -84,7 +78,6 @@ ITEM {
     subgroup = "天地灵火",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "灵铁",
@@ -94,7 +87,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "凡火",
@@ -104,7 +96,6 @@ ITEM {
     subgroup = "天地灵火",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "玉",
@@ -114,7 +105,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "朱砂",
@@ -124,7 +114,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "阵法-阵元",
@@ -134,7 +123,6 @@ ITEM {
     subgroup = "阵法材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "阵法-阵纹",
@@ -144,7 +132,6 @@ ITEM {
     subgroup = "阵法材料",
     stack_size = 100,
 }
-
 -- "八卦盘分不同品级，最差只能看方向，最强，不需要阵法材料，直接搭建与享用阵法效果"
 ITEM {
     type = "item",
@@ -155,7 +142,6 @@ ITEM {
     subgroup = "阵法材料",
     stack_size = 100,
 }
-
 -- "分品级。最差，能用能画，最高，不需要材料，直接印符箓"
 ITEM {
     type = "item",
@@ -166,7 +152,6 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
 }
-
 -- "符箓，分品级与制作工艺，互相制衡，最差，可能是用了，还没1秒，就过去了，或者1分钟，就加了0.1的移速，叠加看生命与体质，以此类推"
 ITEM {
     type = "item",
@@ -177,7 +162,6 @@ ITEM {
     subgroup = "符箓",
     stack_size = 100,
 }
-
 -- "最基础的防御符纸，可升科技，例如：金刚符等等"
 ITEM {
     type = "item",
@@ -188,7 +172,6 @@ ITEM {
     subgroup = "符箓",
     stack_size = 100,
 }
-
 -- "基础攻击附魔性符箓，相应看品级与制作工艺"
 ITEM {
     type = "item",
@@ -199,7 +182,6 @@ ITEM {
     subgroup = "符箓",
     stack_size = 100,
 }
-
 -- "存刀气之类的概念，远程攻击手段，基础攻击性符箓"
 ITEM {
     type = "item",
@@ -210,7 +192,6 @@ ITEM {
     subgroup = "符箓",
     stack_size = 100,
 }
-
 ITEM {
     type = "gun",
     name = "轩辕剑",
@@ -245,7 +226,6 @@ ITEM {
         }
     }
 }
-
 ITEM {
     type = "item",
     name = "乾坤秘境",
@@ -255,7 +235,6 @@ ITEM {
     subgroup = "建筑物",
     stack_size = 1,
 }
-
 ITEM {
     type = "item",
     name = "麒麟印",
@@ -265,7 +244,6 @@ ITEM {
     subgroup = "剑",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "海底秘境",
@@ -275,7 +253,6 @@ ITEM {
     subgroup = "建筑物",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "野草",
@@ -285,7 +262,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "木材",
@@ -295,7 +271,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "陨铁",
@@ -305,7 +280,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "北冥见闻",
@@ -315,7 +289,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "西海见闻",
@@ -325,7 +298,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "元精铜",
@@ -335,7 +307,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "松纹剑",
@@ -345,7 +316,6 @@ ITEM {
     subgroup = "剑",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "阴阳镯",
@@ -355,7 +325,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "落魂花",
@@ -365,7 +334,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "登云履",
@@ -375,7 +343,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "长生鉴",
@@ -385,7 +352,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "黑魂石",
@@ -395,7 +361,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "天晶玉",
@@ -405,7 +370,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "紫铃花",
@@ -415,7 +379,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "乳斑石",
@@ -425,7 +388,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "诛仙剑",
@@ -435,7 +397,6 @@ ITEM {
     subgroup = "剑",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "度厄镯",
@@ -445,7 +406,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "碧海鉴",
@@ -455,7 +415,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "晨露花",
@@ -465,7 +424,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "青冥铁",
@@ -475,7 +433,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "幽冥草",
@@ -485,7 +442,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "八荒玉",
@@ -495,7 +451,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "乾坤八卦阵",
@@ -505,7 +460,6 @@ ITEM {
     subgroup = "阵法材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "红莲草",
@@ -515,7 +469,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "缚魂镯",
@@ -525,7 +478,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "炎阳金",
@@ -535,7 +487,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "神魂果",
@@ -545,7 +496,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "紫云晶",
@@ -555,7 +505,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "熔山石",
@@ -565,7 +514,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "烛阴泪",
@@ -575,7 +523,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "夔牛蹄",
@@ -585,7 +532,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "狰狞骨",
@@ -595,7 +541,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "亢龙角",
@@ -605,7 +550,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "苍龙爪",
@@ -615,7 +559,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "逆龙鳞",
@@ -625,7 +568,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "勾陈须",
@@ -635,7 +577,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "腾蛇翼",
@@ -645,7 +586,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "彩凤羽",
@@ -655,7 +595,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "风灵月影剑",
@@ -665,7 +604,6 @@ ITEM {
     subgroup = "剑",
     stack_size = 1,
 }
-
 ITEM {
     type = "item",
     name = "混沌结晶石",
@@ -675,7 +613,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 10,
 }
-
 ITEM {
     type = "item",
     name = "盘古斧",
@@ -685,7 +622,6 @@ ITEM {
     subgroup = "斧",
     stack_size = 1,
 }
-
 ITEM {
     type = "item",
     name = "风灵石",
@@ -695,7 +631,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "雷灵石",
@@ -705,7 +640,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "暗灵石",
@@ -715,7 +649,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "玄铁",
@@ -725,7 +658,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "玄冰",
@@ -735,7 +667,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "玄玉",
@@ -745,7 +676,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -756,7 +686,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -767,7 +696,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -778,7 +706,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -789,7 +716,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -800,7 +726,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -811,7 +736,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -822,7 +746,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -833,7 +756,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -844,7 +766,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -855,7 +776,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -866,7 +786,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -877,7 +796,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -888,7 +806,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -899,7 +816,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -910,7 +826,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -921,7 +836,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -932,7 +846,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -943,7 +856,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -954,7 +866,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -965,7 +876,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -976,7 +886,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -987,7 +896,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -998,7 +906,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1009,7 +916,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1020,7 +926,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1031,7 +936,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1042,7 +946,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1053,7 +956,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1064,7 +966,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1075,7 +976,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1086,7 +986,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1097,7 +996,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1108,7 +1006,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1119,7 +1016,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1130,7 +1026,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1141,7 +1036,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1152,7 +1046,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1163,7 +1056,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1174,7 +1066,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1185,7 +1076,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1196,7 +1086,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1207,7 +1096,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1218,7 +1106,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1229,7 +1116,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1240,7 +1126,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1251,7 +1136,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1262,7 +1146,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1273,7 +1156,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1284,7 +1166,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1295,7 +1176,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1306,7 +1186,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1317,7 +1196,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1328,7 +1206,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1339,7 +1216,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1350,7 +1226,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1361,7 +1236,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1372,7 +1246,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1383,7 +1256,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1394,7 +1266,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1405,7 +1276,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1416,7 +1286,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1427,7 +1296,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1438,7 +1306,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1449,7 +1316,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1460,7 +1326,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1471,7 +1336,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1482,7 +1346,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1493,7 +1356,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1504,7 +1366,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1515,7 +1376,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1526,7 +1386,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1537,7 +1396,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1548,7 +1406,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1559,7 +1416,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1570,7 +1426,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1581,7 +1436,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1592,7 +1446,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1603,7 +1456,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1614,7 +1466,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1625,7 +1476,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1636,7 +1486,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1647,7 +1496,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1658,7 +1506,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1669,7 +1516,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1680,7 +1526,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1691,7 +1536,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1702,7 +1546,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1713,7 +1556,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1724,7 +1566,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1735,7 +1576,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1746,7 +1586,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1757,7 +1596,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1768,7 +1606,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1779,7 +1616,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1790,7 +1626,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1801,7 +1636,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1812,7 +1646,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1823,7 +1656,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1834,7 +1666,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1845,7 +1676,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1856,7 +1686,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1867,7 +1696,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1878,7 +1706,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1889,7 +1716,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1900,7 +1726,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1911,7 +1736,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1922,7 +1746,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1933,7 +1756,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1944,7 +1766,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1955,7 +1776,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1966,7 +1786,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "培元丹",
@@ -1976,7 +1795,6 @@ ITEM {
     subgroup = "普通丹药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1987,7 +1805,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -1998,7 +1815,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2009,7 +1825,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2020,7 +1835,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2031,7 +1845,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2042,7 +1855,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2053,7 +1865,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2064,7 +1875,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2075,7 +1885,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2086,7 +1895,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2097,7 +1905,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2108,7 +1915,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2119,7 +1925,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2130,7 +1935,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2141,7 +1945,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2152,7 +1955,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2163,7 +1965,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2174,7 +1975,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2185,7 +1985,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2196,7 +1995,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2207,7 +2005,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2218,7 +2015,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2229,7 +2025,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2240,7 +2035,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2251,7 +2045,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2262,7 +2055,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2273,7 +2065,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2284,7 +2075,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2295,7 +2085,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2306,7 +2095,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2317,7 +2105,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2328,7 +2115,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2339,7 +2125,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2350,7 +2135,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2361,7 +2145,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2372,7 +2155,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2383,7 +2165,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2394,7 +2175,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2405,7 +2185,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2416,7 +2195,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2427,7 +2205,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2438,7 +2215,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2449,7 +2225,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2460,7 +2235,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2471,7 +2245,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2482,7 +2255,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2493,7 +2265,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2504,7 +2275,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2515,7 +2285,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2526,7 +2295,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2537,7 +2305,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2548,7 +2315,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2559,7 +2325,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2570,7 +2335,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2581,7 +2345,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2592,7 +2355,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2603,7 +2365,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2614,7 +2375,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2625,7 +2385,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2636,7 +2395,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2647,7 +2405,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2658,7 +2415,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2669,7 +2425,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2680,7 +2435,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2691,7 +2445,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2702,7 +2455,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2713,7 +2465,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2724,7 +2475,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2735,7 +2485,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2746,7 +2495,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2757,7 +2505,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2768,7 +2515,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2779,7 +2525,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2790,7 +2535,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2801,7 +2545,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2812,7 +2555,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2823,7 +2565,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2834,7 +2575,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2845,7 +2585,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2856,7 +2595,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2867,7 +2605,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2878,7 +2615,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2889,7 +2625,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2900,7 +2635,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2911,7 +2645,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2922,7 +2655,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2933,7 +2665,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2944,7 +2675,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2955,7 +2685,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2966,7 +2695,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2977,7 +2705,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2988,7 +2715,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -2999,7 +2725,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3010,7 +2735,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3021,7 +2745,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3032,7 +2755,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3043,7 +2765,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3054,7 +2775,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3065,7 +2785,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3076,7 +2795,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3087,7 +2805,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3098,7 +2815,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3109,7 +2825,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3120,7 +2835,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3131,7 +2845,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3142,7 +2855,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3153,7 +2865,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3164,7 +2875,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3175,7 +2885,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3186,7 +2895,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3197,7 +2905,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3208,7 +2915,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3219,7 +2925,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3230,7 +2935,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3241,7 +2945,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3252,7 +2955,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3263,7 +2965,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3274,7 +2975,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3285,7 +2985,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3296,7 +2995,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3307,7 +3005,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3318,7 +3015,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3329,7 +3025,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3340,7 +3035,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3351,7 +3045,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3362,7 +3055,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3373,7 +3065,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3384,7 +3075,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3395,7 +3085,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3406,7 +3095,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3417,7 +3105,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3428,7 +3115,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3439,7 +3125,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3450,7 +3135,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3461,7 +3145,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3472,7 +3155,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3483,7 +3165,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3494,7 +3175,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3505,7 +3185,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3516,7 +3195,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3527,7 +3205,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3538,7 +3215,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3549,7 +3225,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3560,7 +3235,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3571,7 +3245,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3582,7 +3255,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3593,7 +3265,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3604,7 +3275,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3615,7 +3285,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3626,7 +3295,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3637,7 +3305,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3648,7 +3315,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3659,7 +3325,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3670,7 +3335,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3681,7 +3345,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3692,7 +3355,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3703,7 +3365,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3714,7 +3375,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3725,7 +3385,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3736,7 +3395,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3747,7 +3405,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3758,7 +3415,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3769,7 +3425,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3780,7 +3435,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3791,7 +3445,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3802,7 +3455,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3813,7 +3465,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3824,7 +3475,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3835,7 +3485,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3846,7 +3495,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3857,7 +3505,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3868,7 +3515,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3879,7 +3525,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3890,7 +3535,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3901,7 +3545,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3912,7 +3555,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3923,7 +3565,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3934,7 +3575,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3945,7 +3585,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3956,7 +3595,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3967,7 +3605,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3978,7 +3615,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -3989,7 +3625,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4000,7 +3635,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4011,7 +3645,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4022,7 +3655,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4033,7 +3665,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4044,7 +3675,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4055,7 +3685,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4066,7 +3695,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4077,7 +3705,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4088,7 +3715,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4099,7 +3725,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4110,7 +3735,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4121,7 +3745,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4132,7 +3755,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4143,7 +3765,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 -- "批量导入，请修改图标等"
 ITEM {
     type = "item",
@@ -4154,7 +3775,6 @@ ITEM {
     subgroup = "灵药",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "荷叶",
@@ -4164,7 +3784,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "五行石",
@@ -4174,7 +3793,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "三色石",
@@ -4184,7 +3802,6 @@ ITEM {
     subgroup = "修仙材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "灵铁锭",
@@ -4194,7 +3811,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "光灵石",
@@ -4204,7 +3820,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "金灵石",
@@ -4214,7 +3829,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "木灵石",
@@ -4224,7 +3838,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "水灵石",
@@ -4234,7 +3847,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "火灵石",
@@ -4244,7 +3856,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "土灵石",
@@ -4254,7 +3865,6 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
-
 ITEM {
     type = "item",
     name = "阴阳球",
@@ -4264,7 +3874,6 @@ ITEM {
     subgroup = "炼器材料",
     stack_size = 100,
 }
-
 ITEM {
     type = "tool",
     name = "神级研究包",
@@ -4274,7 +3883,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "tool",
@@ -4285,7 +3894,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "tool",
@@ -4296,7 +3905,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "tool",
@@ -4307,7 +3916,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "tool",
@@ -4318,7 +3927,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "tool",
@@ -4329,7 +3938,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "tool",
@@ -4340,7 +3949,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "item",
@@ -4351,7 +3960,6 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
 }
-
 ITEM {
     type = "tool",
     name = "元婴瓶",
@@ -4361,7 +3969,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "tool",
@@ -4372,7 +3980,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "tool",
@@ -4383,7 +3991,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "tool",
@@ -4394,7 +4002,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "tool",
@@ -4405,7 +4013,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "tool",
@@ -4416,7 +4024,7 @@ ITEM {
     subgroup = "tool",
     stack_size = 100,
     durability = 1,
-}
+}:add_to_labs({"lab"})
 
 ITEM {
     type = "item",
@@ -4424,13 +4032,12 @@ ITEM {
     localised_name = "树",
     icon = baseIconPath .. "item/item_0084.png",
     icon_size = 128,
-    subgroup = "杂项",
+    subgroup = "灵药",
     stack_size = 100,
     fuel_category = "化学",
     fuel_value = "3MJ",
     burnt_result = "木灰",
 }
-
 ITEM {
     type = "item",
     name = "木灰",
@@ -4440,4 +4047,277 @@ ITEM {
     subgroup = "杂项",
     stack_size = 100,
 }
+-- "一"
+ITEM {
+    type = "tool",
+    name = "引气丹",
+    localised_name = "引气丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "tool",
+    stack_size = 100,
+    durability = 1,
+}:add_to_labs({"lab"})
 
+-- "1"
+ITEM {
+    type = "tool",
+    name = "复苏丹",
+    localised_name = "复苏丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "tool",
+    stack_size = 100,
+    durability = 1,
+}:add_to_labs({"lab"})
+
+-- "二"
+ITEM {
+    type = "tool",
+    name = "飞升丹",
+    localised_name = "飞升丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "tool",
+    stack_size = 100,
+    durability = 1,
+}:add_to_labs({"lab"})
+
+-- "三"
+ITEM {
+    type = "tool",
+    name = "起源丹",
+    localised_name = "起源丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "tool",
+    stack_size = 100,
+    durability = 1,
+}:add_to_labs({"lab"})
+
+-- "四"
+ITEM {
+    type = "tool",
+    name = "炼气丹",
+    localised_name = "炼气丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "tool",
+    stack_size = 100,
+    durability = 1,
+}:add_to_labs({"lab"})
+
+ITEM {
+    type = "item",
+    name = "种蛊",
+    localised_name = "子蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+ITEM {
+    type = "item",
+    name = "噬心蛊",
+    localised_name = "噬心蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+ITEM {
+    type = "item",
+    name = "失心蛊",
+    localised_name = "失心蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+ITEM {
+    type = "item",
+    name = "饥饿蛊",
+    localised_name = "饥饿蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+ITEM {
+    type = "item",
+    name = "暴食蛊",
+    localised_name = "暴食蛊",
+    icon = baseIconPath .. "item/item_29.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+ITEM {
+    type = "item",
+    name = "蛊罐",
+    localised_name = "蛊罐",
+    icon = baseIconPath .. "item/item_14.png",
+    icon_size = 128,
+    subgroup = "修仙材料",
+    stack_size = 100,
+    place_result = "蛊罐",
+}
+ITEM {
+    type = "item",
+    name = "噬情蛊",
+    localised_name = "噬情蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+ITEM {
+    type = "item",
+    name = "失情蛊",
+    localised_name = "失情蛊",
+    icon = baseIconPath .. "item/item_30.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+ITEM {
+    type = "item",
+    name = "毒蛊",
+    localised_name = "毒蛊",
+    icon = baseIconPath .. "cfitem/item_4329.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+ITEM {
+    type = "item",
+    name = "药蛊",
+    localised_name = "药蛊",
+    icon = baseIconPath .. "item/item_853.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+ITEM {
+    type = "item",
+    name = "控心蛊",
+    localised_name = "控心蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 10,
+}
+ITEM {
+    type = "item",
+    name = "蚀骨蛊",
+    localised_name = "蚀骨蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "噬魂蛊",
+    localised_name = "噬魂蛊",
+    icon = baseIconPath .. "cfitem/item_4325.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "复制蛊",
+    localised_name = "复制蛊",
+    icon = baseIconPath .. "item/item_855.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 100,
+}
+ITEM {
+    type = "tool",
+    name = "断肠丹",
+    localised_name = "断肠丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 100,
+    durability = 1,
+}:add_to_labs({"lab"})
+
+ITEM {
+    type = "tool",
+    name = "三步丧命丹",
+    localised_name = "三步丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "蛊冢",
+    stack_size = 100,
+    durability = 1,
+}:add_to_labs({"lab"})
+
+ITEM {
+    type = "tool",
+    name = "解毒丹",
+    localised_name = "解毒丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "tool",
+    stack_size = 100,
+    durability = 1,
+}:add_to_labs({"lab"})
+
+ITEM {
+    type = "item",
+    name = "黄泉水",
+    localised_name = "黄泉水",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "修仙流体",
+    stack_size = 1000,
+}
+ITEM {
+    type = "item",
+    name = "彼岸花",
+    localised_name = "彼岸花",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "大补丹（一）",
+    localised_name = "大补丹（一）",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "普通丹药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "大补丹（二）",
+    localised_name = "大补丹（二）",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "普通丹药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "大补丹（三）",
+    localised_name = "大补丹（",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "普通丹药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "终极大补丹",
+    localised_name = "终极大补丹",
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+    subgroup = "普通丹药",
+    stack_size = 100,
+}

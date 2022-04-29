@@ -1,4 +1,8 @@
+require("prototypes.lib.entity_util")
 require("prototypes.entity.lingyaoyuan")
+require("prototypes.entity.guguan")
+require("prototypes.entity.chair")
+require("prototypes.entity.fazhen")
 
 require("util")
 
@@ -7,6 +11,13 @@ local util = require("util")
 local sounds = require("__base__/prototypes/entity/sounds")
 local ConstEnum = require("prototypes.enums.ConstEnum")
 local GraphicsEnum = require("prototypes.enums.GraphicsEnum")
+
+
+--临时
+
+create_entity7("四方炼丹炉","炼丹炉")
+create_entity7("四方炼器室","炼器室")
+
 
 local sticker = {
     type = "sticker",

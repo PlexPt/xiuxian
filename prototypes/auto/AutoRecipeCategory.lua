@@ -1,55 +1,6 @@
 -- 自动创建的
 
 
--- "1"
-data:extend(
-        {
-            {
-                type = "recipe-category",
-                name = "crafting",
-                localised_name = "手搓",
-                localised_description = "原版手搓和组装机",
-            }
-        }
-)
-
-
-data:extend(
-        {
-            {
-                type = "recipe-category",
-                name = "smelting",
-                localised_name = "原版冶炼",
-                localised_description = "",
-            }
-        }
-)
-
-
-data:extend(
-        {
-            {
-                type = "recipe-category",
-                name = "chemistry",
-                localised_name = "原版化工",
-                localised_description = "",
-            }
-        }
-)
-
-
-data:extend(
-        {
-            {
-                type = "recipe-category",
-                name = "centrifuging",
-                localised_name = "原版离心机",
-                localised_description = "",
-            }
-        }
-)
-
-
 data:extend(
         {
             {
@@ -80,7 +31,7 @@ data:extend(
                 type = "recipe-category",
                 name = "聚灵阵",
                 localised_name = "聚灵阵",
-                localised_description = "",
+                localised_description = "聚集天地灵气的一种高级设备",
             }
         }
 )
@@ -104,7 +55,31 @@ data:extend(
                 type = "recipe-category",
                 name = "灵药种植",
                 localised_name = "灵药种植",
-                localised_description = "",
+                localised_description = "通过灵药种植设备获取各类灵药",
+            }
+        }
+)
+
+
+data:extend(
+        {
+            {
+                type = "recipe-category",
+                name = "蛊罐",
+                localised_name = "蛊罐",
+                localised_description = "养蛊用",
+            }
+        }
+)
+
+
+data:extend(
+        {
+            {
+                type = "recipe-category",
+                name = "lab",
+                localised_name = "研究实验室",
+                localised_description = "原版研究实验室",
             }
         }
 )

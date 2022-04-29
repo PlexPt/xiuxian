@@ -106,3 +106,21 @@ data:extend(
         }
 )
 
+data:extend(
+        {
+            {
+                type = "fluid",
+                name = "黄泉水",
+                localised_name = "黄泉水",
+                icon = baseIconPath .. "cfitem/item_4331.png",
+                icon_size = 128,
+                subgroup = "修仙流体",
+                base_color = {r=1, g=0.949, b=0, a=1},
+                flow_color = {r=0.031, g=0.016, b=0, a=1},
+                default_temperature = 15.00,
+                gas_temperature = "20",
+                max_temperature = "444",
+            }
+        }
+)
+

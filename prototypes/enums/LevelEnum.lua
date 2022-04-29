@@ -1,4 +1,4 @@
-local LevelEnum = {}
+local LevelEnum = LevelEnum or {}
 
 LevelEnum[1] = "凡人"
 LevelEnum[2] = "炼气期"

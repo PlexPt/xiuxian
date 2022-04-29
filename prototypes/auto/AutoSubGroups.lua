@@ -169,3 +169,16 @@ data:extend(
         }
 )
 
+
+data:extend(
+        {
+            {
+                type = "item-subgroup",
+                name = "蛊冢",
+                localised_name = "蛊冢",
+                localised_description = "蛊虫生活的环境",
+                group = "蛊冢",
+            }
+        }
+)
+

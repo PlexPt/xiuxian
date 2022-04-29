@@ -1,5 +1,6 @@
 local gui = require("__flib__.gui")
-local event = require("__flib__.event")
+--local event = require("__flib__.event")
+local Event = require('__stdlib__/stdlib/event/event')
 
 local function init_gui(player)
     gui.build(player.gui.screen, {
@@ -45,9 +46,9 @@ local function init_gui(player)
 end
 
 
-event.register(defines.events.on_player_joined_game, function(e)
+Event.register(defines.events.on_player_joined_game, function(e)
     log("on_player_joined_game !")
-    local player = game.players[event.player_index]
+    local player = game.players[Event.player_index]
     if not player or not player.valid or not player.character then
         return
     end
@@ -55,9 +56,6 @@ event.register(defines.events.on_player_joined_game, function(e)
 end)
 
 
-event.on_gui_click(function(e)
-    local action = gui.read_action(e)
-    if action then
-        -- do stuff
-    end
+Event.on_gui_click(function(e)
+
 end)

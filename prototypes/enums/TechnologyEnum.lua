@@ -1,4 +1,4 @@
-TechnologyEnum = {}
+TechnologyEnum = TechnologyEnum or {}
 
 TechnologyEnum.advancedElectronics = "advanced-electronics"
 TechnologyEnum.advancedElectronics2 = "advanced-electronics-2"
