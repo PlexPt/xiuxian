@@ -39,7 +39,7 @@ function itemUtil.createDanyaoFu(item_name)
                             range = 0,
                             ammo_type = {
                                 category = "capsule",
-                                target_type = "position",
+                                target_type = "position", -- "entity", "position" or "direction"
                                 action = {
                                     type = "direct",
                                     action_delivery = {

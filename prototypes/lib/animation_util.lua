@@ -36,10 +36,9 @@ function getStripes(path, max)
     return stripes
 end
 
-function getStripesAnimation(path, max, width, height, animation_speed, shift)
+function getStripesAnimation(path, max, width, height, animation_speed, shift, scale)
     local animation = {
         slice = 1,
-        priority = "high",
         animation_speed = animation_speed or 0.5,
         width = width,
         height = height,
@@ -47,7 +46,7 @@ function getStripesAnimation(path, max, width, height, animation_speed, shift)
         draw_as_glow = true,
         direction_count = 1,
         shift = shift or util.by_pixel(0, 0),
-        scale = 1,
+        scale = scale or 1,
         stripes = getStripes(path, max)
 
     }

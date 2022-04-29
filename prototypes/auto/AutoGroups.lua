@@ -100,3 +100,31 @@ data:extend(
             }
         }
 )
+
+data:extend(
+        {
+            {
+                type = "item-group",
+                name = "燃料",
+                localised_name = "燃料",
+                localised_description = "各种各样的燃料",
+                icon = baseIconPath .. "cfother/hou.png",
+                icon_size = 256,
+
+            }
+        }
+)
+
+data:extend(
+        {
+            {
+                type = "item-group",
+                name = "修炼丹方",
+                localised_name = "修炼丹方",
+                localised_description = "修炼用",
+                icon = baseIconPath .. "占位图.png",
+                icon_size = 128,
+
+            }
+        }
+)

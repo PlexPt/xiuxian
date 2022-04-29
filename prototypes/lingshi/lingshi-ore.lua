@@ -23,7 +23,7 @@ data:extend({
         map_color = { r = 211 / 255, g = 215 / 255, b = 212 / 255 },
         minable = {
             hardness = 1,
-            mining_particle = "灵石矿-particle",
+            mining_particle = "绿色粒子",
             mining_time = 0.5,
             --fluid_amount = 1,
             --required_fluid = (mods["Krastorio2"] and "mineral-water" or "water"),

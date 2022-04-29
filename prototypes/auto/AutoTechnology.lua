@@ -14,13 +14,13 @@ TECHNOLOGY {
         count = 900,
         time = 9000,
         ingredients = {
-            { name = "培元丹", amount = 900},
-            { name = "space-science-pack", amount = 900},
-            { name = "utility-science-pack", amount = 900},
-            { name = "automation-science-pack", amount = 900},
-            { name = "logistic-science-pack", amount = 900},
-            { name = "military-science-pack", amount = 900},
-            { name = "production-science-pack", amount = 900},
+            { name = "培元丹", amount = 1},
+            { name = "space-science-pack", amount = 1},
+            { name = "utility-science-pack", amount = 1},
+            { name = "automation-science-pack", amount = 1},
+            { name = "logistic-science-pack", amount = 1},
+            { name = "military-science-pack", amount = 1},
+            { name = "production-science-pack", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -42,8 +42,8 @@ TECHNOLOGY {
         count = 100,
         time = 160,
         ingredients = {
-            { name = "培元丹", amount = 2000},
-            { name = "练气瓶", amount = 8000},
+            { name = "培元丹", amount = 1},
+            { name = "练气瓶", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -63,8 +63,8 @@ TECHNOLOGY {
         count = 100,
         time = 80,
         ingredients = {
-            { name = "起源包3", amount = 4000},
-            { name = "练气瓶", amount = 4000},
+            { name = "production-science-pack", amount = 1},
+            { name = "练气瓶", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -84,9 +84,8 @@ TECHNOLOGY {
         count = 1000,
         time = 40,
         ingredients = {
-            { name = "起源包3", amount = 4000},
-            { name = "练气瓶", amount = 4000},
-            { name = "培元丹", amount = 4000},
+            { name = "起源包3", amount = 1},
+            { name = "练气瓶", amount = 1},
         },
     },
     icon = baseIconPath .. "打坐.png",
@@ -141,6 +140,7 @@ TECHNOLOGY {
     name = "同归于尽-丹药起源",
     effects = {},
     localised_name = "同归于尽-丹药起源",
+    enabled = false,
     prerequisites = {
         "练气入门",
         "万物与灵气的连连看",
@@ -224,6 +224,7 @@ TECHNOLOGY {
     name = "风水-阵法起源",
     effects = {},
     localised_name = "风水-阵法起源",
+    enabled = false,
     prerequisites = {
         "鬼画符-符箓起源",
         "涂鸦-灵纹起源",
@@ -254,7 +255,7 @@ TECHNOLOGY {
         count = 100,
         time = 30,
         ingredients = {
-            { name = "起源包3", amount = 100},
+            { name = "起源包3", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -276,11 +277,11 @@ TECHNOLOGY {
         count = 90,
         time = 90,
         ingredients = {
-            { name = "培元丹", amount = 100},
-            { name = "神级研究包", amount = 100},
-            { name = "圣级研究包", amount = 100},
-            { name = "大乘瓶", amount = 100},
-            { name = "飞升瓶", amount = 100},
+            { name = "培元丹", amount = 1},
+            { name = "神级研究包", amount = 1},
+            { name = "圣级研究包", amount = 1},
+            { name = "大乘瓶", amount = 1},
+            { name = "飞升瓶", amount = 1},
         },
     },
     icon = baseIconPath .. "ping.png",
@@ -303,8 +304,8 @@ TECHNOLOGY {
         count = 100,
         time = 30,
         ingredients = {
-            { name = "起源包3", amount = 100},
-            { name = "练气瓶", amount = 100},
+            { name = "起源包3", amount = 1},
+            { name = "练气瓶", amount = 1},
         },
     },
     icon = baseIconPath .. "打坐.png",
@@ -326,11 +327,11 @@ TECHNOLOGY {
         count = 100,
         time = 300,
         ingredients = {
-            { name = "培元丹", amount = 1000},
-            { name = "神级研究包", amount = 1000},
-            { name = "圣级研究包", amount = 1000},
-            { name = "飞升瓶", amount = 1000},
-            { name = "渡劫瓶", amount = 1000},
+            { name = "培元丹", amount = 1},
+            { name = "神级研究包", amount = 1},
+            { name = "圣级研究包", amount = 1},
+            { name = "飞升瓶", amount = 1},
+            { name = "渡劫瓶", amount = 1},
         },
     },
     icon = baseIconPath .. "打坐.png",
@@ -687,10 +688,17 @@ TECHNOLOGY {
         "混沌",
     },
     unit = {
-        count = 100,
-        time = 30,
+        count = 10000,
+        time = 30000,
         ingredients = {
             { name = "培元丹", amount = 1},
+            { name = "神级研究包", amount = 1},
+            { name = "圣级研究包", amount = 1},
+            { name = "解毒丹", amount = 1},
+            { name = "三步丧命丹", amount = 1},
+            { name = "起源包3", amount = 1},
+            { name = "渡劫瓶", amount = 1},
+            { name = "飞升瓶", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -710,12 +718,12 @@ TECHNOLOGY {
         count = 9000,
         time = 900,
         ingredients = {
-            { name = "utility-science-pack", amount = 900},
-            { name = "automation-science-pack", amount = 900},
-            { name = "chemical-science-pack", amount = 900},
-            { name = "logistic-science-pack", amount = 900},
-            { name = "military-science-pack", amount = 900},
-            { name = "production-science-pack", amount = 900},
+            { name = "utility-science-pack", amount = 1},
+            { name = "automation-science-pack", amount = 1},
+            { name = "chemical-science-pack", amount = 1},
+            { name = "logistic-science-pack", amount = 1},
+            { name = "military-science-pack", amount = 1},
+            { name = "production-science-pack", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",
@@ -729,21 +737,218 @@ TECHNOLOGY {
     effects = {},
     localised_name = "蛊术",
     prerequisites = {
-        "灵气复苏",
-        "引气入体",
-        "练气入门",
+        "修仙百艺",
     },
     unit = {
         count = 900,
         time = 600,
         ingredients = {
-            { name = "培元丹", amount = 900},
-            { name = "space-science-pack", amount = 1000},
-            { name = "断肠丹", amount = 1000},
-            { name = "三步丧命丹", amount = 1000},
-            { name = "解毒丹", amount = 1000},
-            { name = "production-science-pack", amount = 1000},
-            { name = "military-science-pack", amount = 1000},
+            { name = "培元丹", amount = 1},
+            { name = "space-science-pack", amount = 1},
+            { name = "断肠丹", amount = 1},
+            { name = "三步丧命丹", amount = 1},
+            { name = "解毒丹", amount = 1},
+            { name = "production-science-pack", amount = 1},
+            { name = "military-science-pack", amount = 1},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "修仙百艺",
+    effects = {},
+    localised_name = "修仙百艺",
+    prerequisites = {
+    },
+    unit = {
+        count = 100,
+        time = 30,
+        ingredients = {
+            { name = "培元丹", amount = 1},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "阵法之道",
+    effects = {},
+    localised_name = "阵法之道",
+    prerequisites = {
+        "修仙百艺",
+    },
+    unit = {
+        count = 100,
+        time = 30,
+        ingredients = {
+            { name = "automation-science-pack", amount = 1},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "符箓之道",
+    effects = {},
+    localised_name = "符箓之道",
+    prerequisites = {
+        "修仙百艺",
+    },
+    unit = {
+        count = 100,
+        time = 30,
+        ingredients = {
+            { name = "automation-science-pack", amount = 1},
+        },
+    },
+    icon = baseIconPath .. "打坐.png",
+    icon_size = 512,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "炼丹之道",
+    effects = {},
+    localised_name = "炼丹之道",
+    prerequisites = {
+        "修仙百艺",
+    },
+    unit = {
+        count = 100,
+        time = 30,
+        ingredients = {
+            { name = "automation-science-pack", amount = 1},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "炼器之道",
+    effects = {},
+    localised_name = "炼器之道",
+    prerequisites = {
+        "修仙百艺",
+    },
+    unit = {
+        count = 100,
+        time = 30,
+        ingredients = {
+            { name = "automation-science-pack", amount = 1},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "驯兽之道",
+    effects = {},
+    localised_name = "驯兽之道",
+    prerequisites = {
+        "修仙百艺",
+    },
+    unit = {
+        count = 100,
+        time = 30,
+        ingredients = {
+            { name = "automation-science-pack", amount = 1},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "傀儡之道",
+    effects = {},
+    localised_name = "傀儡之道",
+    prerequisites = {
+        "修仙百艺",
+    },
+    unit = {
+        count = 100,
+        time = 30,
+        ingredients = {
+            { name = "automation-science-pack", amount = 1},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "灵虫之道",
+    effects = {},
+    localised_name = "灵虫之道",
+    prerequisites = {
+        "修仙百艺",
+    },
+    unit = {
+        count = 100,
+        time = 30,
+        ingredients = {
+            { name = "automation-science-pack", amount = 1},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "夺舍之道",
+    effects = {},
+    localised_name = "夺舍之道",
+    prerequisites = {
+        "修仙百艺",
+    },
+    unit = {
+        count = 100,
+        time = 30,
+        ingredients = {
+            { name = "automation-science-pack", amount = 1},
+        },
+    },
+    icon = baseIconPath .. "占位图.png",
+    icon_size = 128,
+
+}
+
+TECHNOLOGY {
+    type = "technology",
+    name = "身外化身",
+    effects = {},
+    localised_name = "身外化身",
+    prerequisites = {
+        "元婴期",
+    },
+    unit = {
+        count = 100,
+        time = 30,
+        ingredients = {
+            { name = "培元丹", amount = 1},
         },
     },
     icon = baseIconPath .. "占位图.png",

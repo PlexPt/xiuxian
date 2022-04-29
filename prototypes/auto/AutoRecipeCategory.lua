@@ -84,3 +84,15 @@ data:extend(
         }
 )
 
+
+data:extend(
+        {
+            {
+                type = "recipe-category",
+                name = "地火室",
+                localised_name = "地火室",
+                localised_description = "",
+            }
+        }
+)
+

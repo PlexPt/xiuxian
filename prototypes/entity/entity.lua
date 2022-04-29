@@ -3,6 +3,9 @@ require("prototypes.entity.lingyaoyuan")
 require("prototypes.entity.guguan")
 require("prototypes.entity.chair")
 require("prototypes.entity.fazhen")
+require("prototypes.entity.danlu")
+require("prototypes.entity.fire")
+require("prototypes.entity.hun")
 
 require("util")
 
@@ -15,7 +18,7 @@ local GraphicsEnum = require("prototypes.enums.GraphicsEnum")
 
 --临时
 
-create_entity7("四方炼丹炉","炼丹炉")
+--create_entity7("四方炼丹炉","炼丹炉")
 create_entity7("四方炼器室","炼器室")
 
 
@@ -388,7 +391,28 @@ data:extend({
             }
         },
         energy_usage = "100W",
-        energy_source = { type = "void" },
+        energy_source = {
+            type = "burner",
+            fuel_category = "灵力",
+            effectivity = 1,
+            fuel_inventory_size = 2,
+            emissions_per_minute = 2,
+            light_flicker = {
+                color = { 0, 0, 0 },
+                minimum_intensity = 0.6,
+                maximum_intensity = 0.95
+            },
+            smoke = {
+                {
+                    name = "smoke",
+                    deviation = { 0.1, 0.1 },
+                    frequency = 5,
+                    position = { 0.0, -0.8 },
+                    starting_vertical_speed = 0.08,
+                    starting_frame_deviation = 60
+                }
+            }
+        },
         result_inventory_size = 1000,
         source_inventory_size = 1000,
         module_specification = {
@@ -497,7 +521,28 @@ data:extend({
             }
         },
         energy_usage = "100W",
-        energy_source = { type = "void" },
+        energy_source = {
+            type = "burner",
+            fuel_category = "灵力",
+            effectivity = 1,
+            fuel_inventory_size = 2,
+            emissions_per_minute = 2,
+            light_flicker = {
+                color = { 0, 0, 0 },
+                minimum_intensity = 0.6,
+                maximum_intensity = 0.95
+            },
+            smoke = {
+                {
+                    name = "smoke",
+                    deviation = { 0.1, 0.1 },
+                    frequency = 5,
+                    position = { 0.0, -0.8 },
+                    starting_vertical_speed = 0.08,
+                    starting_frame_deviation = 60
+                }
+            }
+        },
         result_inventory_size = 0,
         source_inventory_size = 0,
         se_allow_in_space = true

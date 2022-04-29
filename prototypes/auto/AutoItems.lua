@@ -9,7 +9,7 @@ ITEM {
     localised_name = "培元丹",
     icon = baseIconPath .. "danyao/object_hulineidan01.png",
     icon_size = 128,
-    subgroup = "tool",
+    subgroup = "修仙丹方",
     stack_size = 100,
     durability = 1,
 }:add_to_labs({"lab"})
@@ -49,6 +49,9 @@ ITEM {
     icon_size = 128,
     subgroup = "天地灵火",
     stack_size = 100,
+    fuel_category = "nuclear",
+    fuel_value = "10MJ",
+    burnt_result = "种蛊",
 }
 ITEM {
     type = "item",
@@ -65,8 +68,11 @@ ITEM {
     localised_name = "纸张",
     icon = baseIconPath .. "item/item_2400.png",
     icon_size = 128,
-    subgroup = "修仙材料",
+    subgroup = "燃料",
     stack_size = 100,
+    fuel_category = "chemical",
+    fuel_value = "0.5MJ",
+    burnt_result = "木灰",
 }
 -- "杀害或其他原因而死，重生后有几率被业火缠身，尽快收服或者抵御，否则，死亡，没重生一次，会相应累加"
 ITEM {
@@ -77,6 +83,9 @@ ITEM {
     icon_size = 128,
     subgroup = "天地灵火",
     stack_size = 100,
+    fuel_category = "nuclear",
+    fuel_value = "444MJ",
+    burnt_result = "业火红莲",
 }
 ITEM {
     type = "item",
@@ -95,6 +104,9 @@ ITEM {
     icon_size = 128,
     subgroup = "天地灵火",
     stack_size = 100,
+    fuel_category = "chemical",
+    fuel_value = "0.5MJ",
+    burnt_result = "木灰",
 }
 ITEM {
     type = "item",
@@ -268,8 +280,11 @@ ITEM {
     localised_name = "木材",
     icon = baseIconPath .. "item/item_50.png",
     icon_size = 128,
-    subgroup = "杂项",
+    subgroup = "燃料",
     stack_size = 100,
+    fuel_category = "chemical",
+    fuel_value = "10MJ",
+    burnt_result = "木灰",
 }
 ITEM {
     type = "item",
@@ -603,12 +618,14 @@ ITEM {
     icon_size = 256,
     subgroup = "剑",
     stack_size = 1,
+    fuel_category = "nuclear",
+    fuel_value = "10000GJ",
 }
 ITEM {
     type = "item",
     name = "混沌结晶石",
     localised_name = "结晶石",
-    icon = baseIconPath .. "cfitem/item_5022.png",
+    icon = baseIconPath .. "item/item_85.png",
     icon_size = 128,
     subgroup = "炼器材料",
     stack_size = 10,
@@ -2201,7 +2218,7 @@ ITEM {
     type = "item",
     name = "乌酸果",
     localised_name = "乌酸果",
-    icon = baseIconPath .. "item/item_2319.png",
+    icon = baseIconPath .. "danyao/object_ginseng.png",
     icon_size = 128,
     subgroup = "灵药",
     stack_size = 100,
@@ -2221,7 +2238,7 @@ ITEM {
     type = "item",
     name = "常青花",
     localised_name = "常青花",
-    icon = baseIconPath .. "item/item_2310.png",
+    icon = baseIconPath .. "danyao/观音土05.png",
     icon_size = 128,
     subgroup = "灵药",
     stack_size = 100,
@@ -2231,7 +2248,7 @@ ITEM {
     type = "item",
     name = "赤血灵果",
     localised_name = "赤血灵果",
-    icon = baseIconPath .. "item/item_2309.png",
+    icon = baseIconPath .. "cfitem/item_21.png",
     icon_size = 128,
     subgroup = "灵药",
     stack_size = 100,
@@ -2261,7 +2278,7 @@ ITEM {
     type = "item",
     name = "火心七叶花",
     localised_name = "火心七叶花",
-    icon = baseIconPath .. "item/item_2296.png",
+    icon = baseIconPath .. "danyao/object_huangjing01.png",
     icon_size = 128,
     subgroup = "灵药",
     stack_size = 100,
@@ -3779,10 +3796,13 @@ ITEM {
     type = "item",
     name = "五行石",
     localised_name = "五灵石",
-    icon = baseIconPath .. "item/item_403.png",
+    icon = baseIconPath .. "cfitem/item_4273.png",
     icon_size = 128,
     subgroup = "炼器材料",
     stack_size = 100,
+    fuel_category = "nuclear",
+    fuel_value = "10000MJ",
+    burnt_result = "灵石",
 }
 ITEM {
     type = "item",
@@ -3844,8 +3864,11 @@ ITEM {
     localised_name = "火灵石",
     icon = baseIconPath .. "gem/gem_hong_1.png",
     icon_size = 128,
-    subgroup = "杂项",
+    subgroup = "修仙材料",
     stack_size = 100,
+    fuel_category = "chemical",
+    fuel_value = "50MJ",
+    burnt_result = "木灰",
 }
 ITEM {
     type = "item",
@@ -3888,35 +3911,31 @@ ITEM {
 }:add_to_labs({"lab"})
 
 ITEM {
-    type = "tool",
+    type = "item",
     name = "起源包1",
     localised_name = "修仙起源之一",
-    icon = baseIconPath .. "danyao/丹药瓶装01.png",
+    icon = baseIconPath .. "item/item_41.png",
     icon_size = 128,
     subgroup = "tool",
-    stack_size = 100,
-    durability = 1,
-}:add_to_labs({"lab"})
-
+    stack_size = 500,
+}
 ITEM {
-    type = "tool",
+    type = "item",
     name = "起源包2",
     localised_name = "修仙起源之二",
-    icon = baseIconPath .. "danyao/丹药瓶装02.png",
+    icon = baseIconPath .. "item/item_42.png",
     icon_size = 128,
     subgroup = "tool",
-    stack_size = 100,
-    durability = 1,
-}:add_to_labs({"lab"})
-
+    stack_size = 500,
+}
 ITEM {
     type = "tool",
     name = "起源包3",
     localised_name = "修仙起源之三",
-    icon = baseIconPath .. "danyao/丹药瓶装03.png",
+    icon = baseIconPath .. "item/item_43.png",
     icon_size = 128,
     subgroup = "tool",
-    stack_size = 100,
+    stack_size = 500,
     durability = 1,
 }:add_to_labs({"lab"})
 
@@ -3948,7 +3967,7 @@ ITEM {
     localised_name = "修仙之金丹",
     icon = baseIconPath .. "danyao/小丹药03.png",
     icon_size = 64,
-    subgroup = "tool",
+    subgroup = "修仙丹方",
     stack_size = 100,
 }
 ITEM {
@@ -4021,9 +4040,9 @@ ITEM {
     type = "item",
     name = "树",
     localised_name = "树",
-    icon = baseIconPath .. "item/item_0084.png",
+    icon = baseIconPath .. "obj/object_65.png",
     icon_size = 128,
-    subgroup = "灵药",
+    subgroup = "燃料",
     stack_size = 100,
     fuel_category = "化学",
     fuel_value = "3MJ",
@@ -4031,21 +4050,24 @@ ITEM {
 }
 ITEM {
     type = "item",
-    name = "木灰",
-    localised_name = "灰渣",
+    name = "木炭",
+    localised_name = "木炭",
     icon = baseIconPath .. "item/item_7.png",
     icon_size = 128,
-    subgroup = "杂项",
+    subgroup = "燃料",
     stack_size = 100,
+    fuel_category = "chemical",
+    fuel_value = "1MJ",
+    burnt_result = "木灰",
 }
 -- "一"
 ITEM {
     type = "tool",
     name = "引气丹",
     localised_name = "引气丹",
-    icon = baseIconPath .. "占位图.png",
+    icon = baseIconPath .. "item/item_514.png",
     icon_size = 128,
-    subgroup = "tool",
+    subgroup = "修仙丹方",
     stack_size = 100,
     durability = 1,
 }:add_to_labs({"lab"})
@@ -4055,9 +4077,9 @@ ITEM {
     type = "tool",
     name = "复苏丹",
     localised_name = "复苏丹",
-    icon = baseIconPath .. "占位图.png",
+    icon = baseIconPath .. "item/item_513.png",
     icon_size = 128,
-    subgroup = "tool",
+    subgroup = "修仙丹方",
     stack_size = 100,
     durability = 1,
 }:add_to_labs({"lab"})
@@ -4067,9 +4089,9 @@ ITEM {
     type = "tool",
     name = "飞升丹",
     localised_name = "飞升丹",
-    icon = baseIconPath .. "占位图.png",
+    icon = baseIconPath .. "item/item_506.png",
     icon_size = 128,
-    subgroup = "tool",
+    subgroup = "修仙丹方",
     stack_size = 100,
     durability = 1,
 }:add_to_labs({"lab"})
@@ -4079,9 +4101,9 @@ ITEM {
     type = "tool",
     name = "起源丹",
     localised_name = "起源丹",
-    icon = baseIconPath .. "占位图.png",
+    icon = baseIconPath .. "item/item_513.png",
     icon_size = 128,
-    subgroup = "tool",
+    subgroup = "修仙丹方",
     stack_size = 100,
     durability = 1,
 }:add_to_labs({"lab"})
@@ -4091,9 +4113,9 @@ ITEM {
     type = "tool",
     name = "炼气丹",
     localised_name = "炼气丹",
-    icon = baseIconPath .. "占位图.png",
+    icon = baseIconPath .. "item/item_507.png",
     icon_size = 128,
-    subgroup = "tool",
+    subgroup = "修仙丹方",
     stack_size = 100,
     durability = 1,
 }:add_to_labs({"lab"})
@@ -4149,7 +4171,7 @@ ITEM {
     localised_name = "蛊罐",
     icon = baseIconPath .. "item/item_14.png",
     icon_size = 128,
-    subgroup = "修仙材料",
+    subgroup = "蛊冢",
     stack_size = 100,
     place_result = "蛊罐",
 }
@@ -4229,9 +4251,9 @@ ITEM {
     type = "tool",
     name = "断肠丹",
     localised_name = "断肠丹",
-    icon = baseIconPath .. "占位图.png",
+    icon = baseIconPath .. "item/item_2238.png",
     icon_size = 128,
-    subgroup = "蛊冢",
+    subgroup = "修仙丹方",
     stack_size = 100,
     durability = 1,
 }:add_to_labs({"lab"})
@@ -4240,9 +4262,9 @@ ITEM {
     type = "tool",
     name = "三步丧命丹",
     localised_name = "三步丹",
-    icon = baseIconPath .. "占位图.png",
+    icon = baseIconPath .. "item/item_2239.png",
     icon_size = 128,
-    subgroup = "蛊冢",
+    subgroup = "修仙丹方",
     stack_size = 100,
     durability = 1,
 }:add_to_labs({"lab"})
@@ -4251,9 +4273,9 @@ ITEM {
     type = "tool",
     name = "解毒丹",
     localised_name = "解毒丹",
-    icon = baseIconPath .. "占位图.png",
+    icon = baseIconPath .. "item/item_2233.png",
     icon_size = 128,
-    subgroup = "tool",
+    subgroup = "修仙丹方",
     stack_size = 100,
     durability = 1,
 }:add_to_labs({"lab"})
@@ -4262,7 +4284,7 @@ ITEM {
     type = "item",
     name = "黄泉水",
     localised_name = "黄泉水",
-    icon = baseIconPath .. "占位图.png",
+    icon = baseIconPath .. "jkxm/122.png",
     icon_size = 128,
     subgroup = "修仙流体",
     stack_size = 1000,
@@ -4271,7 +4293,7 @@ ITEM {
     type = "item",
     name = "彼岸花",
     localised_name = "彼岸花",
-    icon = baseIconPath .. "占位图.png",
+    icon = baseIconPath .. "cfitem/item_4294.png",
     icon_size = 128,
     subgroup = "灵药",
     stack_size = 100,
@@ -4280,8 +4302,8 @@ ITEM {
     type = "item",
     name = "大补丹（一）",
     localised_name = "大补丹（一）",
-    icon = baseIconPath .. "占位图.png",
-    icon_size = 128,
+    icon = baseIconPath .. "danyao/小丹药01.png",
+    icon_size = 64,
     subgroup = "普通丹药",
     stack_size = 100,
 }
@@ -4289,8 +4311,8 @@ ITEM {
     type = "item",
     name = "大补丹（二）",
     localised_name = "大补丹（二）",
-    icon = baseIconPath .. "占位图.png",
-    icon_size = 128,
+    icon = baseIconPath .. "danyao/小丹药02.png",
+    icon_size = 64,
     subgroup = "普通丹药",
     stack_size = 100,
 }
@@ -4298,8 +4320,8 @@ ITEM {
     type = "item",
     name = "大补丹（三）",
     localised_name = "大补丹（",
-    icon = baseIconPath .. "占位图.png",
-    icon_size = 128,
+    icon = baseIconPath .. "danyao/小丹药03.png",
+    icon_size = 64,
     subgroup = "普通丹药",
     stack_size = 100,
 }
@@ -4307,8 +4329,407 @@ ITEM {
     type = "item",
     name = "终极大补丹",
     localised_name = "终极大补丹",
-    icon = baseIconPath .. "占位图.png",
-    icon_size = 128,
+    icon = baseIconPath .. "danyao/大丹药01.png",
+    icon_size = 64,
     subgroup = "普通丹药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "木灰",
+    localised_name = "木灰",
+    icon = baseIconPath .. "item/item_83.png",
+    icon_size = 128,
+    subgroup = "杂项",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "瓶",
+    localised_name = "瓶 ",
+    icon = baseIconPath .. "cfitem/item_4018.png",
+    icon_size = 128,
+    subgroup = "杂项",
+    stack_size = 10,
+}
+ITEM {
+    type = "item",
+    name = "灵燃袋",
+    localised_name = "灵石燃料",
+    icon = baseIconPath .. "item/item_11098.png",
+    icon_size = 128,
+    subgroup = "燃料",
+    stack_size = 100,
+    fuel_category = "灵力",
+    fuel_value = "25J",
+    burnt_result = "木灰",
+}
+ITEM {
+    type = "item",
+    name = "培元丹辅料",
+    localised_name = "培元丹辅料",
+    icon = baseIconPath .. "cfitem/item_211.png",
+    icon_size = 128,
+    subgroup = "修仙丹方",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "洗髓丹",
+    localised_name = "洗髓丹",
+    icon = baseIconPath .. "item/item_802.png",
+    icon_size = 128,
+    subgroup = "修仙丹方",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "核桃",
+    localised_name = "核桃",
+    icon = baseIconPath .. "item/item_2404.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "南瓜粉",
+    localised_name = "南瓜粉",
+    icon = baseIconPath .. "item/item_2351.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "花椒粉",
+    localised_name = "花椒粉",
+    icon = baseIconPath .. "item/item_849.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "芝麻球",
+    localised_name = "芝麻球",
+    icon = baseIconPath .. "item/item_2416.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "山药",
+    localised_name = "山药",
+    icon = baseIconPath .. "item/item_2405.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "婴狸兽皮",
+    localised_name = "婴狸兽皮",
+    icon = baseIconPath .. "cfitem/item_4075.png",
+    icon_size = 128,
+    subgroup = "炼器材料",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "婴狸兽骨",
+    localised_name = "婴狸兽骨",
+    icon = baseIconPath .. "item/item_1107.png",
+    icon_size = 128,
+    subgroup = "炼器材料",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "婴狸兽内丹",
+    localised_name = "婴狸兽内丹",
+    icon = baseIconPath .. "item/item_702.png",
+    icon_size = 128,
+    subgroup = "炼器材料",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "婴狸兽肉",
+    localised_name = "婴狸兽肉",
+    icon = baseIconPath .. "item/item_11126.png",
+    icon_size = 128,
+    subgroup = "炼器材料",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "婴狸兽须",
+    localised_name = "婴狸兽须",
+    icon = baseIconPath .. "cfitem/item_4198.png",
+    icon_size = 128,
+    subgroup = "炼器材料",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "婴狸兽齿",
+    localised_name = "婴狸兽齿",
+    icon = baseIconPath .. "cfitem/item_4102.png",
+    icon_size = 128,
+    subgroup = "炼器材料",
+    stack_size = 100,
+}
+ITEM {
+    type = "tool",
+    name = "黑水",
+    localised_name = "黑水",
+    icon = baseIconPath .. "item/item_1320.png",
+    icon_size = 128,
+    subgroup = "tool",
+    stack_size = 100,
+    fuel_category = "nuclear",
+    fuel_value = "100000MJ",
+    burnt_result = "木灰",
+    durability = 1,
+}
+ITEM {
+    type = "item",
+    name = "四方炼丹炉",
+    localised_name = "炼丹炉",
+    icon = baseIconPath .. "danlu-128.png",
+    icon_size = 128,
+    subgroup = "建筑物",
+    stack_size = 10,
+    place_result = "四方炼丹炉",
+    fuel_category = "灵能",
+    fuel_value = "10MJ",
+    burnt_result = "凡铁",
+}
+ITEM {
+    type = "item",
+    name = "四方炼器室",
+    localised_name = "炼器室",
+    icon = baseIconPath .. "fabao/fabao_104.png",
+    icon_size = 256,
+    subgroup = "建筑物",
+    stack_size = 10,
+    place_result = "四方炼器室",
+    fuel_category = "灵能",
+    fuel_value = "10MJ",
+    burnt_result = "凡铁",
+}
+ITEM {
+    type = "item",
+    name = "灵药园",
+    localised_name = "灵药园",
+    icon = baseIconPath .. "obj/object_43.png",
+    icon_size = 512,
+    subgroup = "建筑物",
+    stack_size = 10,
+    place_result = "灵药园",
+    fuel_category = "灵能",
+    fuel_value = "10MJ",
+    burnt_result = "木炭",
+}
+ITEM {
+    type = "item",
+    name = "灵土",
+    localised_name = "灵土",
+    icon = baseIconPath .. "item/item_0082.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "灵壤",
+    localised_name = "灵壤",
+    icon = baseIconPath .. "item/item_13244.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "灵泉",
+    localised_name = "灵泉",
+    icon = baseIconPath .. "cfitem/item_221.png",
+    icon_size = 256,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "灵土粉",
+    localised_name = "灵土粉",
+    icon = baseIconPath .. "item/item_81.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "灵液（瓶）",
+    localised_name = "瓶装灵泉精炼液",
+    icon = baseIconPath .. "item/item_69.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "婴狸兽爪",
+    localised_name = "婴狸兽爪",
+    icon = baseIconPath .. "cfitem/item_4169.png",
+    icon_size = 128,
+    subgroup = "修仙材料",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "竹",
+    localised_name = "竹",
+    icon = baseIconPath .. "item/item_2245.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "种子袋",
+    localised_name = "灵植物种袋",
+    icon = baseIconPath .. "item/item_2383.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "竹笋",
+    localised_name = "竹笋",
+    icon = baseIconPath .. "item/item_2409.png",
+    icon_size = 128,
+    subgroup = "杂项",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "山药粉",
+    localised_name = "山药粉",
+    icon = baseIconPath .. "item/item_13121.png",
+    icon_size = 128,
+    subgroup = "杂项",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "花椒",
+    localised_name = "花椒",
+    icon = baseIconPath .. "item/item_68.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "南瓜",
+    localised_name = "南瓜",
+    icon = baseIconPath .. "item/item_70.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "灵植树",
+    localised_name = "灵植树",
+    icon = baseIconPath .. "obj/object_66.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 1000,
+}
+ITEM {
+    type = "item",
+    name = "西瓜粉",
+    localised_name = "西瓜粉",
+    icon = baseIconPath .. "item/item_201.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "西瓜",
+    localised_name = "西瓜",
+    icon = baseIconPath .. "item/item_2311.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "红薯",
+    localised_name = "红薯",
+    icon = baseIconPath .. "item/item_2242.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "红薯粉",
+    localised_name = "红薯粉",
+    icon = baseIconPath .. "item/item_2354.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "芝麻",
+    localised_name = "芝麻",
+    icon = baseIconPath .. "item/item_13140.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "露蜂房",
+    localised_name = "露蜂房",
+    icon = baseIconPath .. "item/item_13269.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "tool",
+    name = "大还魂丹",
+    localised_name = "大还魂丹",
+    icon = baseIconPath .. "item/item_9.png",
+    icon_size = 128,
+    subgroup = "服用的丹药",
+    stack_size = 100,
+    durability = 1,
+}:add_to_labs({"lab"})
+
+ITEM {
+    type = "item",
+    name = "黄泉灵液",
+    localised_name = "黄泉灵液",
+    icon = baseIconPath .. "jkxm/121.png",
+    icon_size = 128,
+    subgroup = "灵药",
+    stack_size = 100,
+}
+ITEM {
+    type = "item",
+    name = "妖兽魂",
+    localised_name = "妖兽魂",
+    icon = baseIconPath .. "jkxm/中毒-1.png",
+    icon_size = 128,
+    subgroup = "修仙材料",
     stack_size = 100,
 }

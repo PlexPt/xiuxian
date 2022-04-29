@@ -1,6 +1,6 @@
 {
   "name": "xiuxian",
-  "version": "1.0.54",
+  "version": "1.0.69",
   "factorio_version": "1.1",
   "title": "Cultivate",
   "author": "plexpt",
@@ -10,6 +10,8 @@
     "base",
     "stdlib",
     "flib",
+    "beaver",
+    "phoenix",
     "xiuxian-graphics",
     "xiuxian-sounds"
   ],

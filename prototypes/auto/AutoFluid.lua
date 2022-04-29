@@ -124,3 +124,21 @@ data:extend(
         }
 )
 
+data:extend(
+        {
+            {
+                type = "fluid",
+                name = "灵液",
+                localised_name = "灵石液化",
+                icon = baseIconPath .. "cfitem/item_4331.png",
+                icon_size = 128,
+                subgroup = "修仙流体",
+                base_color = {r=0, g=1, b=0.933, a=1},
+                flow_color = {r=0, g=1, b=0.933, a=1},
+                default_temperature = 15.00,
+                gas_temperature = "15",
+                max_temperature = "1000",
+            }
+        }
+)
+

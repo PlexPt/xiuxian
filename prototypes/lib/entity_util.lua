@@ -60,7 +60,28 @@ function create_entity7(name, category)
             }
         },
         energy_usage = "100W",
-        energy_source = { type = "void" },
+        energy_source = {
+            type = "burner",
+            fuel_category = "灵力",
+            effectivity = 1,
+            fuel_inventory_size = 2,
+            emissions_per_minute = 2,
+            light_flicker = {
+                color = { 0, 0, 0 },
+                minimum_intensity = 0.6,
+                maximum_intensity = 0.95
+            },
+            smoke = {
+                {
+                    name = "smoke",
+                    deviation = { 0.1, 0.1 },
+                    frequency = 5,
+                    position = { 0.0, -0.8 },
+                    starting_vertical_speed = 0.08,
+                    starting_frame_deviation = 60
+                }
+            }
+        },
         result_inventory_size = 0,
         source_inventory_size = 0
     }

@@ -6,6 +6,7 @@ require("prototypes.enums.GraphicsEnum")
 require("prototypes.lib.animation_util")
 require("prototypes.lib.entity_util")
 
+require("prototypes.skill_animations")
 require("prototypes.fonts")
 require("prototypes.categories")
 require("prototypes.damage-type")

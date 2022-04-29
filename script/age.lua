@@ -85,7 +85,6 @@ function Log(what)
     game.write_file("修仙.log", serpent.block(what), true)
 end
 
-
 --prototypes.sprites.charxpmod_space_suit.layers[2].tint = {1,0,0,0.5}
 
 
@@ -98,9 +97,9 @@ end
 function printXP(player, XP)
     if player and player.valid then
         player.surface.create_entity { name = "flying-text",
-                                       position = player.position,
-                                       text = "折损了" .. RPG_format_number(XP / dayage) .. '天 寿元',
-                                       color = colors.yellow }
+            position = player.position,
+            text = "折损了" .. RPG_format_number(XP / dayage) .. '天 寿元',
+            color = colors.yellow }
         --if settings.get_player_settings(player)["charxpmod_print_xp_user"].value then
         --end
     end
@@ -117,7 +116,7 @@ function ResetXPTables()
 
     local m
     for k = 2, maxi do
-        m = mp - k * (red - red * k / maxi)  -- (Multiplier - Level * (reductor-reductor*Level/100))
+        m = mp - k * (red - red * k / maxi) -- (Multiplier - Level * (reductor-reductor*Level/100))
         xp = math.ceil(xp * m)
         if (xp / global.xp_table[k - 1]) < 1.02 then
             xp = global.xp_table[k - 1] * 1.02
@@ -253,6 +252,7 @@ function XPModSetup()
     global.xiuxian = global.xiuxian or {}
     global.xiuxian.Level = global.xiuxian.Level or {}
     global.xiuxian.usedAge = global.xiuxian.usedAge or {}
+    global.xiuxian.chenghao = global.xiuxian.chenghao or {}
 
     if true then
         return
@@ -373,9 +373,9 @@ function InitPlayerGui(player)
 
     -- create new ones
     local Topframe = player.gui.top.add { name = "xx_age_bar",
-                                          direction = "horizontal",
-                                          type = "frame",
-                                          style = mod_gui.frame_style }
+        direction = "horizontal",
+        type = "frame",
+        style = mod_gui.frame_style }
 
     Topframe.style.minimal_height = 30
     Topframe.style.minimal_width = 150
@@ -384,17 +384,17 @@ function InitPlayerGui(player)
     Topframe.style.padding = { 0, 9, 0, 0 }
 
     Topframe.add { name = "xx_headpic",
-                   type = "sprite-button",
-                   sprite = "打坐-sprite",
-                   tooltip = "寿元已用：" .. getUsedYear(player) .. "/" .. getTotalAgeYear(player) .. "年",
-                   style = mod_gui.top_button_style }
+        type = "sprite-button",
+        sprite = "打坐-sprite",
+        tooltip = "寿元已用：" .. getUsedYear(player) .. "/" .. getTotalAgeYear(player) .. "年",
+        style = mod_gui.top_button_style }
 
     local tabFrame = Topframe.add { type = "table", name = "xx_age_coulm", column_count = 1 }
 
     local Level = getLevel(player)
 
     local pnivel = tabFrame.add { type = "label", name = 'xx_level',
-                                  caption = Level }
+        caption = Level }
     --caption = { 'actual_lv', Level } }
 
     pnivel.style.font = "xx_font_17b"
@@ -405,7 +405,6 @@ function InitPlayerGui(player)
 
     UpdatePanel(player)
 end
-
 
 ----------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------
@@ -433,7 +432,7 @@ function XP_Player_upd()
             local cp = #force.connected_players
             local afk = global.setting_afk_time
             if cp > 0 then
-                local XP = global.XP[name]   --math.ceil(global.XP[name] / cp)
+                local XP = global.XP[name] --math.ceil(global.XP[name] / cp)
 
                 if XP > 0 then
                     for p, PL in pairs(force.connected_players) do
@@ -705,7 +704,7 @@ function update_char_panel(player)
             btAttribute.style.width = 190
             btAttribute.enabled = PontosXP>=custo and at_level<Max
         end
-    end]]--
+    end]] --
 
     for A = 1, #global.Player_Attributes do
         attrib = global.Player_Attributes[A]
@@ -902,7 +901,7 @@ function expand_char_gui(player)
     local frame = player.gui.center["修仙面板"] or player.gui.screen["修仙面板"]
     if not frame then
         frame = player.gui.screen.add { type = "frame", name = "修仙面板", direction = "vertical",
-                                        style = mod_gui.frame_style, caption = { "panel-title", player.name } }
+            style = mod_gui.frame_style, caption = { "panel-title", player.name } }
         frame.auto_center = true
         frame.style.minimal_height = 430
         --frame.style.maximal_height = 430
@@ -959,16 +958,16 @@ function UpdatePlayerLvStats(player, skip_inv)
 end
 
 local p_attribs = { 'character_crafting_speed_modifier',
-                    'character_mining_speed_modifier',
-                    'character_running_speed_modifier',
-                    'character_reach_distance_bonus',
-                    'character_item_drop_distance_bonus',
-                    'character_resource_reach_distance_bonus',
-                    'character_inventory_slots_bonus',
-                    'character_trash_slot_count_bonus',
-                    'character_maximum_following_robot_count_bonus',
-                    'character_health_bonus',
-                    'character_item_pickup_distance_bonus' }
+    'character_mining_speed_modifier',
+    'character_running_speed_modifier',
+    'character_reach_distance_bonus',
+    'character_item_drop_distance_bonus',
+    'character_resource_reach_distance_bonus',
+    'character_inventory_slots_bonus',
+    'character_trash_slot_count_bonus',
+    'character_maximum_following_robot_count_bonus',
+    'character_health_bonus',
+    'character_item_pickup_distance_bonus' }
 
 function CopyPlayerStats(name)
     local player = game.players[name]
@@ -982,12 +981,12 @@ function CopyPlayerStats(name)
         end
 
         local rpg_stats = { global.personalxp.Level[name],
-                            global.personalxp.XP[name],
-                            global.personalxp.Death[name],
-                            global.personalxp.opt_Pick_Extender[name],
-                            global.personal_kill_units[name],
-                            global.personal_kill_spawner[name],
-                            global.personal_kill_turrets[name],
+            global.personalxp.XP[name],
+            global.personalxp.Death[name],
+            global.personalxp.opt_Pick_Extender[name],
+            global.personal_kill_units[name],
+            global.personal_kill_spawner[name],
+            global.personal_kill_turrets[name],
         }
         for k = 1, #global.Player_Attributes do
             local attrib = global.Player_Attributes[k]
@@ -1159,6 +1158,20 @@ Event.register(defines.events.on_runtime_mod_setting_changed, ReadRunTimeSetting
 
 Event.register(defines.events.on_force_created, on_force_created)
 
+--研究完成 境界提升 TODO
+Event.register(defines.events.on_research_finished, function(event)
+    local research = event.research
+    local name = research.name
+    local force = research.force
+
+    if is_this_research_level(name) then
+        for _, player in pairs(force.players) do
+            local old = global.xiuxian.Level[player.name] or 1
+            global.xiuxian.Level[player.name] = old + 1
+        end
+    end
+end)
+
 Event.on_configuration_changed(on_configuration_changed)
 Event.on_init(On_Init)
 
@@ -1253,8 +1266,6 @@ local function on_gui_click(event)
         end
     end
 end
-
-
 
 -- ANTI RESPAWN EVENT DEPENDENCY
 --[[
@@ -1563,7 +1574,3 @@ Event.register(defines.events.on_player_used_capsule, function(event)
 
 
 end)
-
-
-
-

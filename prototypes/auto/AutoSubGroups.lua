@@ -182,3 +182,29 @@ data:extend(
         }
 )
 
+
+data:extend(
+        {
+            {
+                type = "item-subgroup",
+                name = "燃料",
+                localised_name = "燃料",
+                localised_description = "各种各样的燃料",
+                group = "燃料",
+            }
+        }
+)
+
+
+data:extend(
+        {
+            {
+                type = "item-subgroup",
+                name = "修仙丹方",
+                localised_name = "修炼丹方",
+                localised_description = "修炼用",
+                group = "修炼丹方",
+            }
+        }
+)
+
