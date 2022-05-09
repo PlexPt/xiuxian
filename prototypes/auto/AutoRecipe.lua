@@ -7099,7 +7099,6 @@ RECIPE {
     name = "四方炼丹炉",
     xiuxian = true,
     category = "chemistry",
-    enabled = false,
     energy_required = 25.00,
     ingredients = {
         { type = "item", name = "灵铁锭", amount = 100 },
