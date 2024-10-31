@@ -29,6 +29,14 @@ function debug_util.tojson(obj, level)
     for i = 1, level, 1 do
         levelSpace = levelSpace .. " "
     end
+    if not obj then
+        return "nil"
+    end
+
+    if type(obj) == "number" then
+        return obj
+    end
+
     local size = 1
     local maxSize = table_size(obj)
     local s = level == 1 and "\n{" or "{"
@@ -36,7 +44,7 @@ function debug_util.tojson(obj, level)
         s = s .. "\n" .. levelSpace .. (type(k) == "number" and "" or (tostring(k) .. " : "))
         local dataType = type(v)
         if dataType == "table" then
-            s = s ..dataType --debug_util.tojson(v, level + 1)
+            s = s .. dataType --debug_util.tojson(v, level + 1)
         elseif dataType == "string" then
             s = s .. "\"" .. v .. "\""
         else
