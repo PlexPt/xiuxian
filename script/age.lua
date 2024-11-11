@@ -1,18 +1,16 @@
 local mod_gui = require("mod-gui")
 require "util"
 
-local Event = require('__stdlib__/stdlib/event/event')
-
---require "particles"
+local Event = require('__kry_stdlib__/stdlib/event/event')
 local LevelEnum = require("prototypes.enums.LevelEnum")
 -- 真实一天的tick
-local daytick = 86400 * 60
+local DAYTICK = 86400 * 60
 
 -- 虚拟一天的tick
-local dayage = 142
+local DAYAGE = 142
 
 -- 虚拟一年的tick
-local year = 51840
+local YEARTICK = 51840
 
 local format_number = {} -- util.format_number()
 
@@ -22,7 +20,7 @@ local colors = require("prototypes.enums.ColorEnum")
 --获取修为文字
 local function getLevel(player)
     if player and player.valid then
-        local level = global.xiuxian.Level[player.name]
+        local level = storage.xiuxian.Level[player.name]
 
         return LevelEnum[level]
     end
@@ -32,21 +30,21 @@ end
 
 --获取修为寿命
 local function getTotalAge(player)
-    local level = global.xiuxian.Level[player.name]
+    local level = storage.xiuxian.Level[player.name]
     --2 的指数 X 境界 * 100年
-    return math.pow(2, level) * daytick
+    return math.pow(2, level) * DAYTICK
 end
 
 --获取修为寿命年
 local function getTotalAgeYear(player)
-    return getTotalAge(player) / year
+    return getTotalAge(player) / YEARTICK
 end
 
 --获取当前年龄
 local function getUsedYear(player)
-    local usedAge = global.xiuxian.usedAge[player.name] or 0
+    local usedAge = storage.xiuxian.usedAge[player.name] or 0
     local onlineAge = player.online_time
-    local UsedYear = (usedAge + onlineAge) / year
+    local UsedYear = (usedAge + onlineAge) / YEARTICK
     return shortnumberstring(UsedYear)
 end
 
@@ -96,10 +94,18 @@ end
 
 function printXP(player, XP)
     if player and player.valid then
-        player.surface.create_entity { name = "flying-text",
-            position = player.position,
-            text = "折损了" .. RPG_format_number(XP / dayage) .. '天 寿元',
-            color = colors.yellow }
+        --player.surface.create_entity { name = "flying-text",
+        --                               position = player.position,
+        --                               text = "折损了" .. RPG_format_number(XP / dayage) .. '天 寿元',
+        --                               color = colors.yellow }
+
+        rendering.draw_text { text = "折损了" .. RPG_format_number(XP / DAYAGE) .. '天 寿元',
+                              surface = player.surface,
+                              target = player.position,
+                              color = colors.yellow,
+                              time_to_live = 120,
+
+        }
         --if settings.get_player_settings(player)["charxpmod_print_xp_user"].value then
         --end
     end
@@ -107,24 +113,24 @@ end
 
 function ResetXPTables()
     local xp = settings.startup["charxpmod_xpinilevel"].value
-    global.xp_table = { [1] = xp }
+    storage.xp_table = { [1] = xp }
     local mp = settings.startup["charxpmod_xpmult"].value
     local red = settings.startup["charxpmod_xp_mp_reductor"].value
     --local maxL = settings.startup["charxpmod_xp_maxlevel"].value
 
-    local maxi = global.setting_max_player_level
+    local maxi = storage.setting_max_player_level
 
     local m
     for k = 2, maxi do
         m = mp - k * (red - red * k / maxi) -- (Multiplier - Level * (reductor-reductor*Level/100))
         xp = math.ceil(xp * m)
-        if (xp / global.xp_table[k - 1]) < 1.02 then
-            xp = global.xp_table[k - 1] * 1.02
+        if (xp / storage.xp_table[k - 1]) < 1.02 then
+            xp = storage.xp_table[k - 1] * 1.02
         end
         xp = math.ceil(xp)
-        global.xp_table[k] = xp
+        storage.xp_table[k] = xp
     end
-    global.max_xp = xp
+    storage.max_xp = xp
 end
 
 --todo
@@ -132,51 +138,51 @@ function SetForceValues(name)
     if true then
         return
     end
-    global.kills_spawner[name] = 0
-    global.kills_units[name] = 0
-    global.kills_worms[name] = 0
-    global.XP[name] = 0
-    global.XP_GANHO[name] = 0
-    global.XP_TECH[name] = 0
-    global.XP_LEVEL[name] = 1
-    global.XP_LEVEL_MIN[name] = 0
-    global.XP_KILL_HP[name] = 0
-    global.XP_MAX_PLAYTIME[name] = 0
-    global.XP_AVG_PLAYTIME[name] = 0
+    storage.kills_spawner[name] = 0
+    storage.kills_units[name] = 0
+    storage.kills_worms[name] = 0
+    storage.XP[name] = 0
+    storage.XP_GANHO[name] = 0
+    storage.XP_TECH[name] = 0
+    storage.XP_LEVEL[name] = 1
+    storage.XP_LEVEL_MIN[name] = 0
+    storage.XP_KILL_HP[name] = 0
+    storage.XP_MAX_PLAYTIME[name] = 0
+    storage.XP_AVG_PLAYTIME[name] = 0
 end
 
 function CheckAddPlayerStatus(name)
-    if global.personalxp[name] == nil then
-        global.personalxp[name] = {}
+    if storage.personalxp[name] == nil then
+        storage.personalxp[name] = {}
         for _, player in pairs(game.players) do
-            global.personalxp[name][player.name] = 0
+            storage.personalxp[name][player.name] = 0
         end
     end
 end
 
 function VersionChange()
 
-    if global.personalxp.opt_Pick_Extender == nil then
-        global.personalxp.opt_Pick_Extender = {}
+    if storage.personalxp.opt_Pick_Extender == nil then
+        storage.personalxp.opt_Pick_Extender = {}
         for _, player in pairs(game.players) do
-            global.personalxp.opt_Pick_Extender[player.name] = false
+            storage.personalxp.opt_Pick_Extender[player.name] = false
         end
     end
 
-    if global.XP_MAX_PLAYTIME == nil then
-        global.XP_MAX_PLAYTIME = {}
+    if storage.XP_MAX_PLAYTIME == nil then
+        storage.XP_MAX_PLAYTIME = {}
         for name, force in pairs(game.forces) do
             if name ~= 'neutral' and name ~= 'enemy' then
-                global.XP_MAX_PLAYTIME[name] = 0
+                storage.XP_MAX_PLAYTIME[name] = 0
             end
         end
     end
 
-    if global.XP_AVG_PLAYTIME == nil then
-        global.XP_AVG_PLAYTIME = {}
+    if storage.XP_AVG_PLAYTIME == nil then
+        storage.XP_AVG_PLAYTIME = {}
         for name, force in pairs(game.forces) do
             if name ~= 'neutral' and name ~= 'enemy' then
-                global.XP_AVG_PLAYTIME[name] = 0
+                storage.XP_AVG_PLAYTIME[name] = 0
             end
         end
     end
@@ -191,33 +197,33 @@ function SetupPlayer(player, ResetXP)
     local name = player.name
 
     if ResetXP then
-        global.xiuxian.usedAge[name] = 0
-        global.xiuxian.Level[name] = 1
+        storage.xiuxian.usedAge[name] = 0
+        storage.xiuxian.Level[name] = 1
         --    TODO
     end
 
-    global.xiuxian.Level[name] = 1
+    storage.xiuxian.Level[name] = 1
 
-    --for k = 1, #global.Player_Attributes do
-    --    local attrib = global.Player_Attributes[k]
-    --    global.personalxp[attrib][name] = 0
+    --for k = 1, #storage.Player_Attributes do
+    --    local attrib = storage.Player_Attributes[k]
+    --    storage.personalxp[attrib][name] = 0
     --end
     --
-    --global.personalxp.opt_Pick_Extender[name] = false
+    --storage.personalxp.opt_Pick_Extender[name] = false
 
     UpdatePlayerLvStats(player)
 end
 
 function CheckPlayers()
     for _, player in pairs(game.players) do
-        if not (global.personalxp.Level[player.name]) then
+        if not (storage.personalxp.Level[player.name]) then
             SetupPlayer(player, true)
         end
 
-        if not global.personal_kill_units[player.name] then
-            global.personal_kill_units[player.name] = 0
-            global.personal_kill_spawner[player.name] = 0
-            global.personal_kill_turrets[player.name] = 0
+        if not storage.personal_kill_units[player.name] then
+            storage.personal_kill_units[player.name] = 0
+            storage.personal_kill_spawner[player.name] = 0
+            storage.personal_kill_turrets[player.name] = 0
         end
 
         InitPlayerGui(player)
@@ -225,7 +231,7 @@ function CheckPlayers()
 end
 
 function CheckPlayer(player)
-    if not (global.xiuxian.Level[player.name]) then
+    if not (storage.xiuxian.Level[player.name]) then
         SetupPlayer(player, true)
     end
 end
@@ -235,10 +241,10 @@ function ReadRunTimeSettings(event)
     if true then
         return
     end
-    global.setting_print_critical = settings.global["charxpmod_print_critical"].value
-    global.setting_afk_time = settings.global["charxpmod_afk"].value
-    global.setting_time_ratio_xp = settings.global["charxpmod_time_ratio_xp"].value
-    global.setting_death_penal = settings.global["charxpmod_death_penal"].value
+    storage.setting_print_critical = settings.global["charxpmod_print_critical"].value
+    storage.setting_afk_time = settings.global["charxpmod_afk"].value
+    storage.setting_time_ratio_xp = settings.global["charxpmod_time_ratio_xp"].value
+    storage.setting_death_penal = settings.global["charxpmod_death_penal"].value
 
     if event and event.setting_type == 'runtime-per-user' and event.setting == 'charxpmod_hide_xp_panel' then
         local player = game.players[event.player_index]
@@ -249,19 +255,19 @@ end
 --todo
 function XPModSetup()
 
-    global.xiuxian = global.xiuxian or {}
-    global.xiuxian.Level = global.xiuxian.Level or {}
-    global.xiuxian.usedAge = global.xiuxian.usedAge or {}
-    global.xiuxian.chenghao = global.xiuxian.chenghao or {}
+    storage.xiuxian = storage.xiuxian or {}
+    storage.xiuxian.Level = storage.xiuxian.Level or {}
+    storage.xiuxian.usedAge = storage.xiuxian.usedAge or {}
+    storage.xiuxian.chenghao = storage.xiuxian.chenghao or {}
 
     if true then
         return
     end
 
-    global.handle_respawn = global.handle_respawn or {}
-    global.potion_effects = global.potion_effects or {}
+    storage.handle_respawn = storage.handle_respawn or {}
+    storage.potion_effects = storage.potion_effects or {}
 
-    global.Player_Attributes = {
+    storage.Player_Attributes = {
         "LV_Health_Bonus",
         "LV_Armor_Bonus",
         "LV_Damage_Bonus",
@@ -275,41 +281,41 @@ function XPModSetup()
         "LV_Reach_Dist",
     }
 
-    global.setting_allow_xp_by_tech = settings.startup["charxpmod_allow_xp_by_tech"].value
-    global.setting_allow_xp_by_kill = settings.startup["charxpmod_allow_xp_by_kill"].value
-    global.setting_allow_xp_by_rocket = settings.startup["charxpmod_allow_xp_by_rocket"].value
-    global.setting_allow_xp_by_mining = settings.startup["charxpmod_allow_xp_by_mining"].value
-    global.XP_Mult = settings.startup["charxpmod_xp_multiplier_bonus"].value
-    global.setting_allow_damage_attribs = settings.startup["charxpmod_enable_damage_attribs"].value
-    global.setting_max_player_level = settings.startup["charxpmod_xp_maxlevel"].value
-    global.setting_max_level_ability = settings.startup["charxpmod_xp_maxlevel_ability"].value
+    storage.setting_allow_xp_by_tech = settings.startup["charxpmod_allow_xp_by_tech"].value
+    storage.setting_allow_xp_by_kill = settings.startup["charxpmod_allow_xp_by_kill"].value
+    storage.setting_allow_xp_by_rocket = settings.startup["charxpmod_allow_xp_by_rocket"].value
+    storage.setting_allow_xp_by_mining = settings.startup["charxpmod_allow_xp_by_mining"].value
+    storage.XP_Mult = settings.startup["charxpmod_xp_multiplier_bonus"].value
+    storage.setting_allow_damage_attribs = settings.startup["charxpmod_enable_damage_attribs"].value
+    storage.setting_max_player_level = settings.startup["charxpmod_xp_maxlevel"].value
+    storage.setting_max_level_ability = settings.startup["charxpmod_xp_maxlevel_ability"].value
 
     ReadRunTimeSettings()
 
-    if global.CharXPMOD == nil then
-        global.CharXPMOD = 1
-        global.kills_spawner = {}
-        global.kills_units = {}
-        global.kills_worms = {}
-        global.XP = {}
-        global.XP_GANHO = {}
-        global.XP_KILL_HP = {}
-        global.XP_TECH = {}
-        global.XP_LEVEL = {}
-        global.XP_LEVEL_MIN = {}
-        global.XP_MAX_PLAYTIME = {}
-        global.XP_AVG_PLAYTIME = {}
+    if storage.CharXPMOD == nil then
+        storage.CharXPMOD = 1
+        storage.kills_spawner = {}
+        storage.kills_units = {}
+        storage.kills_worms = {}
+        storage.XP = {}
+        storage.XP_GANHO = {}
+        storage.XP_KILL_HP = {}
+        storage.XP_TECH = {}
+        storage.XP_LEVEL = {}
+        storage.XP_LEVEL_MIN = {}
+        storage.XP_MAX_PLAYTIME = {}
+        storage.XP_AVG_PLAYTIME = {}
 
-        global.personalxp = {}
-        global.personalxp.Level = {}
-        global.personalxp.XP = {}
-        global.personalxp.Death = {}
+        storage.personalxp = {}
+        storage.personalxp.Level = {}
+        storage.personalxp.XP = {}
+        storage.personalxp.Death = {}
 
-        for k = 1, #global.Player_Attributes do
-            global.personalxp[global.Player_Attributes[k]] = {}
+        for k = 1, #storage.Player_Attributes do
+            storage.personalxp[storage.Player_Attributes[k]] = {}
         end
 
-        global.personalxp.opt_Pick_Extender = {}
+        storage.personalxp.opt_Pick_Extender = {}
 
         for name, force in pairs(game.forces) do
             if name ~= 'neutral' and name ~= 'enemy' then
@@ -320,15 +326,15 @@ function XPModSetup()
 
     ResetXPTables()
 
-    global.RPG_Bonus = {}
-    for k = 1, #global.Player_Attributes do
-        local attrib = global.Player_Attributes[k]
-        global.RPG_Bonus[attrib] = settings.startup["charxpmod_" .. attrib].value
+    storage.RPG_Bonus = {}
+    for k = 1, #storage.Player_Attributes do
+        local attrib = storage.Player_Attributes[k]
+        storage.RPG_Bonus[attrib] = settings.startup["charxpmod_" .. attrib].value
     end
 
-    global.personal_kill_units = global.personal_kill_units or {}
-    global.personal_kill_spawner = global.personal_kill_spawner or {}
-    global.personal_kill_turrets = global.personal_kill_turrets or {}
+    storage.personal_kill_units = storage.personal_kill_units or {}
+    storage.personal_kill_spawner = storage.personal_kill_spawner or {}
+    storage.personal_kill_turrets = storage.personal_kill_turrets or {}
 
     VersionChange()
     CheckPlayers()
@@ -385,7 +391,7 @@ function InitPlayerGui(player)
 
     Topframe.add { name = "xx_headpic",
         type = "sprite-button",
-        sprite = "打坐-sprite",
+        sprite = "dazuo-sprite",
         tooltip = "寿元已用：" .. getUsedYear(player) .. "/" .. getTotalAgeYear(player) .. "年",
         style = mod_gui.top_button_style }
 
@@ -413,8 +419,8 @@ end
 
 function RatioXP(player)
     local ratioXP = 1
-    if global.setting_time_ratio_xp and global.XP_AVG_PLAYTIME[player.force.name] > 0 then
-        ratioXP = player.online_time / global.XP_AVG_PLAYTIME[player.force.name]
+    if storage.setting_time_ratio_xp and storage.XP_AVG_PLAYTIME[player.force.name] > 0 then
+        ratioXP = player.online_time / storage.XP_AVG_PLAYTIME[player.force.name]
         if ratioXP >= 1.10 then
             ratioXP = 1.10
         elseif ratioXP < 0.05 then
@@ -430,22 +436,22 @@ function XP_Player_upd()
         if name ~= 'neutral' and name ~= 'enemy' then
 
             local cp = #force.connected_players
-            local afk = global.setting_afk_time
+            local afk = storage.setting_afk_time
             if cp > 0 then
-                local XP = global.XP[name] --math.ceil(global.XP[name] / cp)
+                local XP = storage.XP[name] --math.ceil(storage.XP[name] / cp)
 
                 if XP > 0 then
                     for p, PL in pairs(force.connected_players) do
                         if afk == 0 or PL.afk_time < afk * 3600 then
                             local ratioXP = RatioXP(PL)
                             XP = math.ceil(XP * ratioXP)
-                            global.personalxp.XP[PL.name] = global.personalxp.XP[PL.name] + XP
+                            storage.personalxp.XP[PL.name] = storage.personalxp.XP[PL.name] + XP
                             printXP(PL, XP)
                             UpdatePanel(PL)
                         end
                     end
                 end
-                global.XP[name] = 0
+                storage.XP[name] = 0
             end
         end
     end
@@ -456,25 +462,25 @@ function XP_PlayerLv_upd()
     for _, player in pairs(game.players) do
         if player.connected then
             local name = player.name
-            local Lv = global.personalxp.Level[name]
-            if global.personalxp.XP[name] > global.max_xp then
-                global.personalxp.Level[name] = global.setting_max_player_level
+            local Lv = storage.personalxp.Level[name]
+            if storage.personalxp.XP[name] > storage.max_xp then
+                storage.personalxp.Level[name] = storage.setting_max_player_level
             else
 
-                for L = Lv, #global.xp_table do
-                    if global.personalxp.XP[name] < global.xp_table[L] then
-                        global.personalxp.Level[name] = L
+                for L = Lv, #storage.xp_table do
+                    if storage.personalxp.XP[name] < storage.xp_table[L] then
+                        storage.personalxp.Level[name] = L
                         break
                     end
                 end
             end
 
-            if global.personalxp.Level[name] > Lv then
-                --player.print({'player_lv_up',global.personalxp.Level[name]})
+            if storage.personalxp.Level[name] > Lv then
+                --player.print({'player_lv_up',storage.personalxp.Level[name]})
                 --mod_gui.get_button_flow(player).focus()
                 --player.gui.top.xx_age_bar.focus()
                 player.play_sound { path = 'player_level_up', volume_modifier = 0.85 }
-                --script.raise_event(on_player_level_up, { player_index = player.index, player_level = global.personalxp.Level[name] })
+                --script.raise_event(on_player_level_up, { player_index = player.index, player_level = storage.personalxp.Level[name] })
             end
             UpdatePanel(player)
         end
@@ -490,18 +496,18 @@ function XP_Time_upd()
 
             for p, PL in pairs(force.players) do
                 PT = PL.online_time
-                if PT > global.XP_AVG_PLAYTIME[name] / 20 then
+                if PT > storage.XP_AVG_PLAYTIME[name] / 20 then
                     -- a player time count for avg if he has at least 5% of the avg time
                     TT = TT + PT
                     QP = QP + 1
                 end
 
-                if global.XP_MAX_PLAYTIME[name] < PT then
-                    global.XP_MAX_PLAYTIME[name] = PT
+                if storage.XP_MAX_PLAYTIME[name] < PT then
+                    storage.XP_MAX_PLAYTIME[name] = PT
                 end
             end
             if QP > 0 then
-                global.XP_AVG_PLAYTIME[name] = TT / QP
+                storage.XP_AVG_PLAYTIME[name] = TT / QP
             end
         end
     end
@@ -522,9 +528,9 @@ end
 
 function SumPointSpent(name)
     local sum = 0
-    for k = 1, #global.Player_Attributes do
-        local attrib = global.Player_Attributes[k]
-        sum = sum + global.personalxp[attrib][name]
+    for k = 1, #storage.Player_Attributes do
+        local attrib = storage.Player_Attributes[k]
+        sum = sum + storage.personalxp[attrib][name]
     end
     return sum
 end
@@ -536,7 +542,7 @@ function update_char_panel(player)
     local painel = player.gui.center["修仙面板"] or player.gui.screen["修仙面板"]
     local frame = painel.tabcharScroll
     local nome = player.name
-    local Level = global.personalxp.Level[nome]
+    local Level = storage.personalxp.Level[nome]
 
     --local playercolor = player.color
     --modsprites.charxpmod_space_suit_mask.tint = playercolor
@@ -608,7 +614,7 @@ function update_char_panel(player)
 
     --local tabPStat = tabScroll.add{type = "table", name = "tab_PStat", column_count = 2}
     --	tabPStat.add{type="label", name='STT1', caption= txtPTime} --.style.font="charxpmod_font_17"
-    --	tabPStat.add{type="label", name='STT2', caption={'xp_deaths',global.personalxp.Death[nome]}} --.style.font="charxpmod_font_17"
+    --	tabPStat.add{type="label", name='STT2', caption={'xp_deaths',storage.personalxp.Death[nome]}} --.style.font="charxpmod_font_17"
 
     --tabScroll.add{type="label", name='blankL1', caption=' '}
 
@@ -618,26 +624,26 @@ function update_char_panel(player)
 
     local tabStats = tabScroll.add { type = "table", name = "tabStats", column_count = 1 }
 
-    --[[  tabStats.add{type="label", name='STT3', caption={'xp_spawnk',global.kills_spawner[force]}}.style.width = wd
-    tabStats.add{type="label", name='STT4', caption={'xp_techs',global.XP_TECH[force]}}.style.width = wd
-    tabStats.add{type="label", name='STT5', caption={'xp_wormk',global.kills_worms[force]}}.style.width = wd
-    tabStats.add{type="label", name='STT6', caption={'xp_unitk',global.kills_units[force]}}.style.width = wd  ]]
+    --[[  tabStats.add{type="label", name='STT3', caption={'xp_spawnk',storage.kills_spawner[force]}}.style.width = wd
+    tabStats.add{type="label", name='STT4', caption={'xp_techs',storage.XP_TECH[force]}}.style.width = wd
+    tabStats.add{type="label", name='STT5', caption={'xp_wormk',storage.kills_worms[force]}}.style.width = wd
+    tabStats.add{type="label", name='STT6', caption={'xp_unitk',storage.kills_units[force]}}.style.width = wd  ]]
 
     local wd = 160
     tabStats.add { type = "label", name = 'STT1', caption = txtPTime }.style.width = wd
     tabStats.add { type = "label", name = 'STT3', caption = { 'xp_ratio', ratioXP } } --.style.width = wd
-    tabStats.add { type = "label", name = 'STT2', caption = { 'xp_deaths', global.personalxp.Death[nome] } }.style.width = wd
+    tabStats.add { type = "label", name = 'STT2', caption = { 'xp_deaths', storage.personalxp.Death[nome] } }.style.width = wd
 
     --local xpratiotext = frame.add{type="label", name='lbxratioxp', caption={'xp_ratio', ratioXP}}
     --xpratiotext.style.font = "charxpmod_font_12"
 
     local pbvalue = calc_age_percent(player)
     --local pbvalue = player.gui.top.xx_age_bar.xx_age_progress.value
-    local XP = global.personalxp.XP[nome]
-    local NextLevel = global.xp_table[Level]
+    local XP = storage.personalxp.XP[nome]
+    local NextLevel = storage.xp_table[Level]
 
     local NextLtxt = RPG_format_number(NextLevel)
-    if XP >= global.max_xp then
+    if XP >= storage.max_xp then
         NextLtxt = 'MAX'
     end
 
@@ -676,23 +682,23 @@ function update_char_panel(player)
     tabUpgrades.style.horizontal_spacing = 10
     tabUpgrades.style.vertical_spacing = 10
 
-    local Max = global.setting_max_level_ability
+    local Max = storage.setting_max_level_ability
     local custo = 1
     local vchar
     local at_level
     local attrib
     local bonus, Tbonus
 
-    --[[for A=1,#global.Player_Attributes do
-        attrib = global.Player_Attributes[A]
+    --[[for A=1,#storage.Player_Attributes do
+        attrib = storage.Player_Attributes[A]
         local enabled = true
         if (attrib=="LV_Armor_Bonus" or attrib=="LV_Damage_Bonus" or attrib=="LV_Damage_Critical")
-            and (not global.setting_allow_damage_attribs) then enabled = false end
+            and (not storage.setting_allow_damage_attribs) then enabled = false end
         if enabled then
 
-            vchar    = 'global.personalxp.'..attrib
-            at_level = global.personalxp[attrib][nome]
-            bonus    = global.RPG_Bonus[attrib]
+            vchar    = 'storage.personalxp.'..attrib
+            at_level = storage.personalxp[attrib][nome]
+            bonus    = storage.RPG_Bonus[attrib]
 
             local tabAttrib = tabUpgrades.add{type = "table", column_count = 2}
 
@@ -706,18 +712,18 @@ function update_char_panel(player)
         end
     end]] --
 
-    for A = 1, #global.Player_Attributes do
-        attrib = global.Player_Attributes[A]
+    for A = 1, #storage.Player_Attributes do
+        attrib = storage.Player_Attributes[A]
         local enabled = true
         if (attrib == "LV_Armor_Bonus" or attrib == "LV_Damage_Bonus" or attrib == "LV_Damage_Critical")
-                and (not global.setting_allow_damage_attribs) then
+                and (not storage.setting_allow_damage_attribs) then
             enabled = false
         end
         if enabled then
 
-            vchar = 'global.personalxp.' .. attrib
-            at_level = global.personalxp[attrib][nome]
-            bonus = global.RPG_Bonus[attrib]
+            vchar = 'storage.personalxp.' .. attrib
+            at_level = storage.personalxp[attrib][nome]
+            bonus = storage.RPG_Bonus[attrib]
             Tbonus = at_level * bonus
 
 
@@ -763,7 +769,7 @@ function update_char_panel(player)
 
     frame.add { type = "line" }
 
-    local pickbutton = frame.add { type = "checkbox", name = "cb_pick_extender", caption = { 'xp_opt_Pick_Extender' }, state = global.personalxp.opt_Pick_Extender[nome] }
+    local pickbutton = frame.add { type = "checkbox", name = "cb_pick_extender", caption = { 'xp_opt_Pick_Extender' }, state = storage.personalxp.opt_Pick_Extender[nome] }
 
     --frame.add{type="label", name='blankL4', caption=' '}
     frame.add { type = "line" }
@@ -806,14 +812,14 @@ function ListAll(player)
         local ptime = PL.online_time
         local txtPTime = string.format("%d:%02d", math.floor(ptime / 216000), math.floor(ptime / 3600) % 60)
         local ratioXP = math.floor(RatioXP(PL) * 100)
-        tabpllst.add { type = "label", name = 'pllstname' .. p, caption = PL.name .. ' ' .. global.personalxp.Level[PL.name] .. ' (' .. txtPTime .. ' ' .. ratioXP .. '%)' }
+        tabpllst.add { type = "label", name = 'pllstname' .. p, caption = PL.name .. ' ' .. storage.personalxp.Level[PL.name] .. ' (' .. txtPTime .. ' ' .. ratioXP .. '%)' }
     end
 end
 
 function ListXPTable(player)
     local scroll = create_gui_box(player, 'XP Level Table:')
-    for k = 1, #global.xp_table do
-        local txt = 'Level ' .. k .. ' - ' .. global.xp_table[k]
+    for k = 1, #storage.xp_table do
+        local txt = 'Level ' .. k .. ' - ' .. storage.xp_table[k]
         scroll.add { type = "label", caption = txt }
     end
 end
@@ -821,7 +827,7 @@ end
 function calc_age_percent(player)
 
     local total = getTotalAge(player)
-    local usedAge = global.xiuxian.usedAge[player.name]
+    local usedAge = storage.xiuxian.usedAge[player.name]
     local onlineAge = player.online_time
     local remainAge = total - usedAge - onlineAge
     if remainAge < 0 then
@@ -930,23 +936,23 @@ function UpdatePlayerLvStats(player, skip_inv)
 
     if player.character then
 
-        player.character.character_crafting_speed_modifier = player.character.character_crafting_speed_modifier + global.personalxp.LV_Craft_Speed[name] * global.RPG_Bonus['LV_Craft_Speed'] / 100
-        player.character.character_mining_speed_modifier = player.character.character_mining_speed_modifier + global.personalxp.LV_Mining_Speed[name] * global.RPG_Bonus['LV_Mining_Speed'] / 100
-        player.character.character_running_speed_modifier = player.character.character_running_speed_modifier + global.personalxp.LV_Run_Speed[name] * global.RPG_Bonus['LV_Run_Speed'] / 100
+        player.character.character_crafting_speed_modifier = player.character.character_crafting_speed_modifier + storage.personalxp.LV_Craft_Speed[name] * storage.RPG_Bonus['LV_Craft_Speed'] / 100
+        player.character.character_mining_speed_modifier = player.character.character_mining_speed_modifier + storage.personalxp.LV_Mining_Speed[name] * storage.RPG_Bonus['LV_Mining_Speed'] / 100
+        player.character.character_running_speed_modifier = player.character.character_running_speed_modifier + storage.personalxp.LV_Run_Speed[name] * storage.RPG_Bonus['LV_Run_Speed'] / 100
 
-        player.character.character_build_distance_bonus = player.character.character_build_distance_bonus + global.personalxp.LV_Reach_Dist[name] * global.RPG_Bonus['LV_Reach_Dist']
-        player.character.character_reach_distance_bonus = player.character.character_reach_distance_bonus + global.personalxp.LV_Reach_Dist[name] * global.RPG_Bonus['LV_Reach_Dist']
-        player.character.character_item_drop_distance_bonus = player.character.character_item_drop_distance_bonus + global.personalxp.LV_Reach_Dist[name] * global.RPG_Bonus['LV_Reach_Dist']
-        player.character.character_resource_reach_distance_bonus = player.character.character_resource_reach_distance_bonus + global.personalxp.LV_Reach_Dist[name] * global.RPG_Bonus['LV_Reach_Dist']
+        player.character.character_build_distance_bonus = player.character.character_build_distance_bonus + storage.personalxp.LV_Reach_Dist[name] * storage.RPG_Bonus['LV_Reach_Dist']
+        player.character.character_reach_distance_bonus = player.character.character_reach_distance_bonus + storage.personalxp.LV_Reach_Dist[name] * storage.RPG_Bonus['LV_Reach_Dist']
+        player.character.character_item_drop_distance_bonus = player.character.character_item_drop_distance_bonus + storage.personalxp.LV_Reach_Dist[name] * storage.RPG_Bonus['LV_Reach_Dist']
+        player.character.character_resource_reach_distance_bonus = player.character.character_resource_reach_distance_bonus + storage.personalxp.LV_Reach_Dist[name] * storage.RPG_Bonus['LV_Reach_Dist']
 
         if not skip_inv then
-            player.character.character_inventory_slots_bonus = player.character.character_inventory_slots_bonus + global.personalxp.LV_Inv_Bonus[name] * global.RPG_Bonus['LV_Inv_Bonus']
+            player.character.character_inventory_slots_bonus = player.character.character_inventory_slots_bonus + storage.personalxp.LV_Inv_Bonus[name] * storage.RPG_Bonus['LV_Inv_Bonus']
         end
-        player.character.character_trash_slot_count_bonus = player.character.character_trash_slot_count_bonus + global.personalxp.LV_InvTrash_Bonus[name] * global.RPG_Bonus['LV_InvTrash_Bonus']
-        player.character.character_maximum_following_robot_count_bonus = player.character.character_maximum_following_robot_count_bonus + global.personalxp.LV_Robot_Bonus[name] * global.RPG_Bonus['LV_Robot_Bonus']
-        player.character.character_health_bonus = player.character.character_health_bonus + global.personalxp.LV_Health_Bonus[name] * global.RPG_Bonus['LV_Health_Bonus']
+        player.character.character_trash_slot_count_bonus = player.character.character_trash_slot_count_bonus + storage.personalxp.LV_InvTrash_Bonus[name] * storage.RPG_Bonus['LV_InvTrash_Bonus']
+        player.character.character_maximum_following_robot_count_bonus = player.character.character_maximum_following_robot_count_bonus + storage.personalxp.LV_Robot_Bonus[name] * storage.RPG_Bonus['LV_Robot_Bonus']
+        player.character.character_health_bonus = player.character.character_health_bonus + storage.personalxp.LV_Health_Bonus[name] * storage.RPG_Bonus['LV_Health_Bonus']
 
-        if global.personalxp.opt_Pick_Extender[name] then
+        if storage.personalxp.opt_Pick_Extender[name] then
             player.character.character_item_pickup_distance_bonus = player.character.character_reach_distance_bonus
             player.character.character_loot_pickup_distance_bonus = player.character.character_reach_distance_bonus
             --	else
@@ -980,17 +986,17 @@ function CopyPlayerStats(name)
             end
         end
 
-        local rpg_stats = { global.personalxp.Level[name],
-            global.personalxp.XP[name],
-            global.personalxp.Death[name],
-            global.personalxp.opt_Pick_Extender[name],
-            global.personal_kill_units[name],
-            global.personal_kill_spawner[name],
-            global.personal_kill_turrets[name],
+        local rpg_stats = { storage.personalxp.Level[name],
+            storage.personalxp.XP[name],
+            storage.personalxp.Death[name],
+            storage.personalxp.opt_Pick_Extender[name],
+            storage.personal_kill_units[name],
+            storage.personal_kill_spawner[name],
+            storage.personal_kill_turrets[name],
         }
-        for k = 1, #global.Player_Attributes do
-            local attrib = global.Player_Attributes[k]
-            table.insert(rpg_stats, global.personalxp[attrib][name])
+        for k = 1, #storage.Player_Attributes do
+            local attrib = storage.Player_Attributes[k]
+            table.insert(rpg_stats, storage.personalxp[attrib][name])
         end
         return { character_attribs = character_attribs, rpg_stats = rpg_stats }
     end
@@ -1008,17 +1014,17 @@ function PastePlayerStats(name, status)
         end
 
         local rpg_stats = status.rpg_stats
-        global.personalxp.Level[name] = rpg_stats[1]
-        global.personalxp.XP[name] = rpg_stats[2]
-        global.personalxp.Death[name] = rpg_stats[3]
-        global.personalxp.opt_Pick_Extender[name] = rpg_stats[4]
-        global.personal_kill_units[name] = rpg_stats[5]
-        global.personal_kill_spawner[name] = rpg_stats[6]
-        global.personal_kill_turrets[name] = rpg_stats[7]
+        storage.personalxp.Level[name] = rpg_stats[1]
+        storage.personalxp.XP[name] = rpg_stats[2]
+        storage.personalxp.Death[name] = rpg_stats[3]
+        storage.personalxp.opt_Pick_Extender[name] = rpg_stats[4]
+        storage.personal_kill_units[name] = rpg_stats[5]
+        storage.personal_kill_spawner[name] = rpg_stats[6]
+        storage.personal_kill_turrets[name] = rpg_stats[7]
 
-        for k = 1, #global.Player_Attributes do
-            local attrib = global.Player_Attributes[k]
-            global.personalxp[attrib][name] = rpg_stats[k + 7]
+        for k = 1, #storage.Player_Attributes do
+            local attrib = storage.Player_Attributes[k]
+            storage.personalxp[attrib][name] = rpg_stats[k + 7]
         end
         UpdatePanel(player)
     end
@@ -1028,55 +1034,55 @@ function LevelUPPlayer(player, btname)
 
     local name = player.name
 
-    for A = 1, #global.Player_Attributes do
-        local attrib = global.Player_Attributes[A]
+    for A = 1, #storage.Player_Attributes do
+        local attrib = storage.Player_Attributes[A]
 
-        if btname == 'btLVU_global.personalxp.' .. attrib then
-            global.personalxp[attrib][name] = global.personalxp[attrib][name] + 1
+        if btname == 'btLVU_storage.personalxp.' .. attrib then
+            storage.personalxp[attrib][name] = storage.personalxp[attrib][name] + 1
 
-            if btname == 'btLVU_global.personalxp.LV_Craft_Speed' then
-                player.character.character_crafting_speed_modifier = player.character.character_crafting_speed_modifier + global.RPG_Bonus[attrib] / 100
+            if btname == 'btLVU_storage.personalxp.LV_Craft_Speed' then
+                player.character.character_crafting_speed_modifier = player.character.character_crafting_speed_modifier + storage.RPG_Bonus[attrib] / 100
             end
-            if btname == 'btLVU_global.personalxp.LV_Mining_Speed' then
-                player.character.character_mining_speed_modifier = player.character.character_mining_speed_modifier + global.RPG_Bonus[attrib] / 100
+            if btname == 'btLVU_storage.personalxp.LV_Mining_Speed' then
+                player.character.character_mining_speed_modifier = player.character.character_mining_speed_modifier + storage.RPG_Bonus[attrib] / 100
             end
-            if btname == 'btLVU_global.personalxp.LV_Run_Speed' then
-                player.character.character_running_speed_modifier = player.character.character_running_speed_modifier + global.RPG_Bonus[attrib] / 100
-            end
-
-            if btname == 'btLVU_global.personalxp.LV_Reach_Dist' then
-                player.character.character_build_distance_bonus = player.character.character_build_distance_bonus + global.RPG_Bonus[attrib]
-                player.character.character_reach_distance_bonus = player.character.character_reach_distance_bonus + global.RPG_Bonus[attrib]
-                player.character.character_item_drop_distance_bonus = player.character.character_item_drop_distance_bonus + global.RPG_Bonus[attrib]
-                player.character.character_resource_reach_distance_bonus = player.character.character_resource_reach_distance_bonus + global.RPG_Bonus[attrib]
+            if btname == 'btLVU_storage.personalxp.LV_Run_Speed' then
+                player.character.character_running_speed_modifier = player.character.character_running_speed_modifier + storage.RPG_Bonus[attrib] / 100
             end
 
-            if btname == 'btLVU_global.personalxp.LV_Inv_Bonus' then
-                player.character.character_inventory_slots_bonus = player.character.character_inventory_slots_bonus + global.RPG_Bonus[attrib]
+            if btname == 'btLVU_storage.personalxp.LV_Reach_Dist' then
+                player.character.character_build_distance_bonus = player.character.character_build_distance_bonus + storage.RPG_Bonus[attrib]
+                player.character.character_reach_distance_bonus = player.character.character_reach_distance_bonus + storage.RPG_Bonus[attrib]
+                player.character.character_item_drop_distance_bonus = player.character.character_item_drop_distance_bonus + storage.RPG_Bonus[attrib]
+                player.character.character_resource_reach_distance_bonus = player.character.character_resource_reach_distance_bonus + storage.RPG_Bonus[attrib]
             end
 
-            --		if btname=='btLVU_global.personalxp.LV_InvLog_Bonus' then
-            --		player.character.character_logistic_slot_count_bonus = player.character.character_logistic_slot_count_bonus + global.RPG_Bonus[attrib] end
-
-            if btname == 'btLVU_global.personalxp.LV_InvTrash_Bonus' then
-                player.character.character_trash_slot_count_bonus = player.character.character_trash_slot_count_bonus + global.RPG_Bonus[attrib]
+            if btname == 'btLVU_storage.personalxp.LV_Inv_Bonus' then
+                player.character.character_inventory_slots_bonus = player.character.character_inventory_slots_bonus + storage.RPG_Bonus[attrib]
             end
 
-            if btname == 'btLVU_global.personalxp.LV_Robot_Bonus' then
-                player.character.character_maximum_following_robot_count_bonus = player.character.character_maximum_following_robot_count_bonus + global.RPG_Bonus[attrib]
+            --		if btname=='btLVU_storage.personalxp.LV_InvLog_Bonus' then
+            --		player.character.character_logistic_slot_count_bonus = player.character.character_logistic_slot_count_bonus + storage.RPG_Bonus[attrib] end
+
+            if btname == 'btLVU_storage.personalxp.LV_InvTrash_Bonus' then
+                player.character.character_trash_slot_count_bonus = player.character.character_trash_slot_count_bonus + storage.RPG_Bonus[attrib]
             end
 
-            if btname == 'btLVU_global.personalxp.LV_Health_Bonus' then
-                player.character.character_health_bonus = player.character.character_health_bonus + global.RPG_Bonus[attrib]
+            if btname == 'btLVU_storage.personalxp.LV_Robot_Bonus' then
+                player.character.character_maximum_following_robot_count_bonus = player.character.character_maximum_following_robot_count_bonus + storage.RPG_Bonus[attrib]
             end
 
-            --script.raise_event(on_player_updated_status, { player_index = player.index, player_level = global.personalxp.Level[name], attribute = attrib })
+            if btname == 'btLVU_storage.personalxp.LV_Health_Bonus' then
+                player.character.character_health_bonus = player.character.character_health_bonus + storage.RPG_Bonus[attrib]
+            end
+
+            --script.raise_event(on_player_updated_status, { player_index = player.index, player_level = storage.personalxp.Level[name], attribute = attrib })
 
             break
         end
     end
 
-    if global.personalxp.opt_Pick_Extender[name] then
+    if storage.personalxp.opt_Pick_Extender[name] then
         player.character.character_item_pickup_distance_bonus = player.character.character_reach_distance_bonus
         player.character.character_loot_pickup_distance_bonus = player.character.character_reach_distance_bonus
     else
@@ -1100,24 +1106,24 @@ end)
 function check_potion_effect()
     for _, player in pairs(game.players) do
 
-        if global.potion_effects[player.name] and player.character and player.character.valid then
-            if global.potion_effects[player.name]['craft'] and global.potion_effects[player.name]['craft'] < game.tick then
+        if storage.potion_effects[player.name] and player.character and player.character.valid then
+            if storage.potion_effects[player.name]['craft'] and storage.potion_effects[player.name]['craft'] < game.tick then
                 player.character.character_crafting_speed_modifier = math.max(0, player.character.character_crafting_speed_modifier - potion_speed_bonus)
-                global.potion_effects[player.name]['craft'] = nil
+                storage.potion_effects[player.name]['craft'] = nil
             end
-            if global.potion_effects[player.name]['speed'] and global.potion_effects[player.name]['speed'] < game.tick then
+            if storage.potion_effects[player.name]['speed'] and storage.potion_effects[player.name]['speed'] < game.tick then
                 player.character.character_running_speed_modifier = math.max(0, player.character.character_running_speed_modifier - potion_speed_bonus)
-                global.potion_effects[player.name]['speed'] = nil
+                storage.potion_effects[player.name]['speed'] = nil
             end
         end
     end
 end
 
 function check_respawned_players()
-    for name, died in pairs(global.handle_respawn) do
+    for name, died in pairs(storage.handle_respawn) do
         if died then
             if game.players[name] and game.players[name].valid and game.players[name].character and game.players[name].character.valid then
-                global.handle_respawn[name] = false
+                storage.handle_respawn[name] = false
                 UpdatePlayerLvStats(game.players[name])
             end
         end
@@ -1166,8 +1172,8 @@ Event.register(defines.events.on_research_finished, function(event)
 
     if is_this_research_level(name) then
         for _, player in pairs(force.players) do
-            local old = global.xiuxian.Level[player.name] or 1
-            global.xiuxian.Level[player.name] = old + 1
+            local old = storage.xiuxian.Level[player.name] or 1
+            storage.xiuxian.Level[player.name] = old + 1
         end
     end
 end)
@@ -1246,11 +1252,11 @@ local function on_gui_click(event)
 
     elseif name == "cb_pick_extender" then
         if player.character == nil then
-            frame.tabcharScroll.cb_pick_extender.state = global.personalxp.opt_Pick_Extender[player.name]
+            frame.tabcharScroll.cb_pick_extender.state = storage.personalxp.opt_Pick_Extender[player.name]
             return
         end
         local cb_pick_extender = frame.tabcharScroll.cb_pick_extender.state
-        global.personalxp.opt_Pick_Extender[player.name] = cb_pick_extender
+        storage.personalxp.opt_Pick_Extender[player.name] = cb_pick_extender
 
         if cb_pick_extender then
             player.character.character_item_pickup_distance_bonus = player.character.character_reach_distance_bonus
@@ -1273,8 +1279,8 @@ Event.on_nth_tick(60*21, function (event)
 for p, PL in pairs (game.connected_players) do
 	if PL.valid and PL.character and PL.character.valid then
 		local name = PL.name
-		if (PL.character.character_crafting_speed_modifier==0 and global.personalxp.LV_Craft_Speed[name]>0) or
-		   (PL.character.character_running_speed_modifier==0  and global.personalxp.LV_Mining_Speed[name]>0) then
+		if (PL.character.character_crafting_speed_modifier==0 and storage.personalxp.LV_Craft_Speed[name]>0) or
+		   (PL.character.character_running_speed_modifier==0  and storage.personalxp.LV_Mining_Speed[name]>0) then
 			UpdatePlayerLvStats(PL) end
 		end
 	end
@@ -1291,7 +1297,7 @@ Event.register(defines.events.on_player_respawned, function(event)
         return
     end
     local player = game.players[event.player_index]
-    global.handle_respawn[player.name] = false
+    storage.handle_respawn[player.name] = false
     UpdatePlayerLvStats(player)
 end)
 
@@ -1302,22 +1308,22 @@ Event.register(defines.events.on_pre_player_died, function(event)
     end
     local player = game.players[event.player_index]
     local name = player.name
-    global.potion_effects[name] = {}
-    local XP = global.personalxp.XP[name]
-    local Level = global.personalxp.Level[name]
-    local NextLevel = global.xp_table[Level]
+    storage.potion_effects[name] = {}
+    local XP = storage.personalxp.XP[name]
+    local Level = storage.personalxp.Level[name]
+    local NextLevel = storage.xp_table[Level]
     local XP_ant
     if Level == 1 then
         XP_ant = 0
     else
-        XP_ant = global.xp_table[Level - 1]
+        XP_ant = storage.xp_table[Level - 1]
     end
     local Interval_XP = NextLevel - XP_ant
-    local Penal = math.floor((XP - XP_ant) * global.setting_death_penal / 100)
-    global.personalxp.Death[name] = global.personalxp.Death[name] + 1
-    global.handle_respawn[name] = true
+    local Penal = math.floor((XP - XP_ant) * storage.setting_death_penal / 100)
+    storage.personalxp.Death[name] = storage.personalxp.Death[name] + 1
+    storage.handle_respawn[name] = true
     if Penal > 0 then
-        global.personalxp.XP[name] = global.personalxp.XP[name] - Penal
+        storage.personalxp.XP[name] = storage.personalxp.XP[name] - Penal
         player.print({ "", { 'xp_lost' }, RPG_format_number(Penal) }, colors.lightred)
     end
 
@@ -1325,11 +1331,11 @@ end)
 
 function GetXPByKill(entity, killer, force)
     if force then
-        if global.setting_allow_xp_by_kill then
-            if not global.last_overkill or (global.last_overkill and global.last_overkill ~= entity) then
+        if storage.setting_allow_xp_by_kill then
+            if not storage.last_overkill or (storage.last_overkill and storage.last_overkill ~= entity) then
 
                 if entity and entity.valid then
-                    local XP = entity.prototype.max_health
+                    local XP = entity.prototype.get_max_health()
                     local player, plname
 
                     if killer and killer.valid then
@@ -1354,50 +1360,50 @@ function GetXPByKill(entity, killer, force)
                         if entity.type == 'character' then
                             XP = XP * 4
                         elseif entity.type == 'unit' then
-                            global.kills_units[nforce] = global.kills_units[nforce] + 1
+                            storage.kills_units[nforce] = storage.kills_units[nforce] + 1
                             if player then
-                                global.personal_kill_units[plname] = global.personal_kill_units[plname] + 1
+                                storage.personal_kill_units[plname] = storage.personal_kill_units[plname] + 1
                             end
                         elseif entity.type == 'unit-spawner' then
                             XP = XP * 3
-                            global.kills_spawner[nforce] = global.kills_spawner[nforce] + 1
+                            storage.kills_spawner[nforce] = storage.kills_spawner[nforce] + 1
                             if player then
-                                global.personal_kill_spawner[plname] = global.personal_kill_spawner[plname] + 1
+                                storage.personal_kill_spawner[plname] = storage.personal_kill_spawner[plname] + 1
                             end
                         elseif entity.type == 'turret' then
-                            global.kills_worms[nforce] = global.kills_worms[nforce] + 1
+                            storage.kills_worms[nforce] = storage.kills_worms[nforce] + 1
                             if player then
-                                global.personal_kill_turrets[plname] = global.personal_kill_turrets[plname] + 1
+                                storage.personal_kill_turrets[plname] = storage.personal_kill_turrets[plname] + 1
                             end
                             XP = XP * 2
                         end
 
                         --	if XP > 999999 then XP=999999 end
-                        XP = math.ceil((1 + force.evolution_factor) * global.XP_Mult * XP / 3)
+                        XP = math.ceil((1 + force.evolution_factor) * storage.XP_Mult * XP / 3)
                         if XP < 1 then
                             XP = 1
                         end
 
                         local teamxp = true
                         if plname then
-                            if global.personalxp.XP[plname] then
-                                global.personalxp.XP[plname] = global.personalxp.XP[plname] + XP
+                            if storage.personalxp.XP[plname] then
+                                storage.personalxp.XP[plname] = storage.personalxp.XP[plname] + XP
                                 printXP(player, XP)
                                 teamxp = false
                             end
                         end
 
-                        if teamxp and global.XP_KILL_HP[nforce] then
+                        if teamxp and storage.XP_KILL_HP[nforce] then
                             XP = math.ceil(XP / 3)
-                            global.XP_KILL_HP[nforce] = global.XP_KILL_HP[nforce] + XP
-                            global.XP[nforce] = global.XP[nforce] + XP
+                            storage.XP_KILL_HP[nforce] = storage.XP_KILL_HP[nforce] + XP
+                            storage.XP[nforce] = storage.XP[nforce] + XP
                         end
 
                     end
                 end
             end
         end
-        global.last_overkill = nil
+        storage.last_overkill = nil
     end
 end
 
@@ -1416,7 +1422,7 @@ end
 --
 --
 --    --if event.entity.force.name == 'enemy' and force~='neutral' and force~='enemy' then --aliens
---    if killer and killer.valid and global.kills_units[force.name] and event.entity.force ~= game.forces.neutral then
+--    if killer and killer.valid and storage.kills_units[force.name] and event.entity.force ~= game.forces.neutral then
 --        if event.entity.prototype and event.entity.prototype.max_health and (not force.get_friend(event.entity.force)) then
 --
 --            if killer.type == 'car' then
@@ -1431,7 +1437,7 @@ end
 --    end
 --
 --    if not killer then
---        if global.kills_units[force.name] and event.entity.force ~= game.forces.neutral then
+--        if storage.kills_units[force.name] and event.entity.force ~= game.forces.neutral then
 --            GetXPByKill(event.entity, killer, force)
 --        end
 --    end
@@ -1452,16 +1458,16 @@ Event.register(defines.events.on_research_finished, function(event)
         return
     end
 
-    if global.setting_allow_xp_by_tech and game.tick > 3600 * 2 then
+    if storage.setting_allow_xp_by_tech and game.tick > 3600 * 2 then
 
         if event.research.force then
             local force = event.research.force.name
             if force ~= 'neutral' and force ~= 'enemy' then
-                if global.XP_TECH[force] then
+                if storage.XP_TECH[force] then
                     local techXP = event.research.research_unit_count * #event.research.research_unit_ingredients
-                    techXP = math.ceil(global.XP_Mult * techXP * (1 + (6 * game.forces["enemy"].evolution_factor)))
-                    global.XP_TECH[force] = global.XP_TECH[force] + techXP
-                    global.XP[force] = global.XP[force] + techXP
+                    techXP = math.ceil(storage.XP_Mult * techXP * (1 + (6 * game.forces["enemy"].evolution_factor)))
+                    storage.XP_TECH[force] = storage.XP_TECH[force] + techXP
+                    storage.XP[force] = storage.XP[force] + techXP
                 end
             end
         end
@@ -1473,8 +1479,8 @@ function mine_age_use(player, entity)
     --折寿
     local age = 0
 
-    if entity.prototype.max_health then
-        age = entity.prototype.max_health or 400
+    if entity.prototype.get_max_health() then
+        age = entity.prototype.get_max_health() or 400
         if entity.type == 'tree' then
             age = age
         else
@@ -1484,9 +1490,9 @@ function mine_age_use(player, entity)
 
     if age > 0 then
         local plname = player.name
-        --寿元 = math.ceil(寿元 * global.personalxp.Level[plname] * global.XP_Mult)
-        global.xiuxian.usedAge[plname] = global.xiuxian.usedAge[plname] or 0
-        global.xiuxian.usedAge[plname] = global.xiuxian.usedAge[plname] + age
+        --寿元 = math.ceil(寿元 * storage.personalxp.Level[plname] * storage.XP_Mult)
+        storage.xiuxian.usedAge[plname] = storage.xiuxian.usedAge[plname] or 0
+        storage.xiuxian.usedAge[plname] = storage.xiuxian.usedAge[plname] + age
         printXP(player, age)
     end
 
@@ -1494,7 +1500,7 @@ end
 
 -- 挖矿
 Event.register(defines.events.on_player_mined_entity, function(event)
-    --if global.setting_allow_wakuangzhesou then
+    --if storage.setting_allow_wakuangzhesou then
     local player = game.players[event.player_index]
     if not player.valid then
         return
@@ -1538,31 +1544,31 @@ Event.register(defines.events.on_player_used_capsule, function(event)
         player.print({ 'feel_better' }, colors.yellow)
 
     elseif item.name == 'rpg_amnesia_potion' then
-        local XP = math.ceil(global.personalxp.XP[player.name] * 0.7)
+        local XP = math.ceil(storage.personalxp.XP[player.name] * 0.7)
         SetupPlayer(player)
-        global.personalxp.XP[player.name] = XP
+        storage.personalxp.XP[player.name] = XP
         XP_UPDATE_tick()
         player.print({ 'feel_strange' }, colors.lightgreen)
 
 
     elseif item.name == 'rpg_speed_potion' then
         player.print({ 'feel_faster' }, colors.lightgreen)
-        global.potion_effects[player.name] = global.potion_effects[player.name] or {}
-        if global.potion_effects[player.name]['speed'] then
-            global.potion_effects[player.name]['speed'] = global.potion_effects[player.name]['speed'] + potion_duration
+        storage.potion_effects[player.name] = storage.potion_effects[player.name] or {}
+        if storage.potion_effects[player.name]['speed'] then
+            storage.potion_effects[player.name]['speed'] = storage.potion_effects[player.name]['speed'] + potion_duration
         else
-            global.potion_effects[player.name]['speed'] = game.tick + potion_duration
+            storage.potion_effects[player.name]['speed'] = game.tick + potion_duration
             player.character.character_running_speed_modifier = player.character.character_running_speed_modifier + potion_speed_bonus
         end
 
 
     elseif item.name == 'rpg_crafting_potion' then
         player.print({ 'feel_faster' }, colors.lightgreen)
-        global.potion_effects[player.name] = global.potion_effects[player.name] or {}
-        if global.potion_effects[player.name]['craft'] then
-            global.potion_effects[player.name]['craft'] = global.potion_effects[player.name]['craft'] + potion_duration
+        storage.potion_effects[player.name] = storage.potion_effects[player.name] or {}
+        if storage.potion_effects[player.name]['craft'] then
+            storage.potion_effects[player.name]['craft'] = storage.potion_effects[player.name]['craft'] + potion_duration
         else
-            global.potion_effects[player.name]['craft'] = game.tick + potion_duration
+            storage.potion_effects[player.name]['craft'] = game.tick + potion_duration
             player.character.character_crafting_speed_modifier = player.character.character_crafting_speed_modifier + potion_speed_bonus
         end
 
