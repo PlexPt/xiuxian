@@ -33,27 +33,27 @@ local function rock_autoplace_settings(multiplier, order_suffix, rectangle)
 end
 
 ENTITY {
-    name = "鬼火",
+    name = "gui-huo",
     type = "simple-entity",
     flags = { "placeable-neutral", "placeable-off-grid" },
-    icon = ConstEnum.entity .. "/技能/火/1.png",
+    icon = ConstEnum.entity .. "/skill/fire/1.png",
     icon_size = 280,
     subgroup = "grass",
     order = "fgh",
     collision_box = { { 0, 0 }, { 0, 0 } },
     selection_box = { { -2, -2 }, { 2, 2 } },
-    collision_mask = { "object-layer", "train-layer", "floor-layer", "water-tile" },
+    collision_mask =  { layers = {} },
     --damaged_trigger_effect = hit_effects.rock(),
     --dying_trigger_effect = decorative_trigger_effects.huge_rock(),
     minable = {
         --mining_particle = "stone-particle",
         mining_time = 1,
-        results = { { name = "鬼火", amount_min = 1, amount_max = 50, probability = 0.5 },
-                    { name = "凡火", amount_min = 1, amount_max = 50, probability = 0.5 } },
+        results = { {type = "item", name = "gui-huo", amount_min = 1, amount_max = 50, probability = 0.5 },
+                    {type = "item", name = "fan-huo", amount_min = 1, amount_max = 50, probability = 0.5 } },
         --count = 200
     },
     loot = {
-        { item = "鬼火", probability = 1, count_min = 1, count_max = 50 }
+        { item = "gui-huo", probability = 1, count_min = 1, count_max = 50 }
     },
     map_color = { r = 255, g = 0, b = 0 },
     --count_as_rock_for_filtered_deconstruction = true,
@@ -66,31 +66,44 @@ ENTITY {
             percent = 10
         }
     },
-    autoplace = rock_autoplace_settings(1, "h[gui]", { { 0, 0.65 }, { 1, 1 } }),
-    animations = getStripesAnimation("entity/技能/火/", 11, 280, 280, 0.5, { 0, -2 }),
+    autoplace =  {
+        control = "rocks",
+        order = "aguihuo",
+        probability_expression = "multiplier * control * (region_box + rock_density - penalty)",
+        local_expressions =
+        {
+            multiplier = 0.2,
+            penalty = 1.6,
+            region_box = "range_select_base(moisture, 0.35, 1, 0.2, -10, 0)",
+            control = "control:rocks:size"
+        }
+    },
+    graphics_set = {
 
+        animations = getStripesAnimation("entity/skill/fire/", 11, 280, 280, 0.5, { 0, -2 }),
+    },
 }
 
 ENTITY {
-    name = "太阳精火",
+    name = "tai-yang-jing-huo",
     type = "simple-entity",
     flags = { "placeable-neutral", "placeable-off-grid" },
-    icon = ConstEnum.entity .. "/技能/火/1.png",
+    icon = ConstEnum.entity .. "/skill/fire/1.png",
     icon_size = 280,
     subgroup = "grass",
     order = "fgh",
     collision_box = { { 0, 0 }, { 0, 0 } },
     selection_box = { { -2, -2 }, { 2, 2 } },
-    collision_mask = {},
+    collision_mask =  { layers = {} },
     --damaged_trigger_effect = hit_effects.rock(),
     --dying_trigger_effect = decorative_trigger_effects.huge_rock(),
     minable = {
         --mining_particle = "stone-particle",
         mining_time = 3,
-        results = { { name = "太阳精火", amount_min = 1, amount_max = 50, probability = 1 } },
+        results = { {type = "item", name = "tai-yang-jing-huo", amount_min = 1, amount_max = 50, probability = 1 } },
     },
     loot = {
-        { item = "太阳精火", probability = 1, count_min = 1, count_max = 50 }
+        { item = "tai-yang-jing-huo", probability = 1, count_min = 1, count_max = 50 }
     },
     map_color = { r = 255, g = 0, b = 0 },
     --count_as_rock_for_filtered_deconstruction = true,
@@ -103,7 +116,21 @@ ENTITY {
             percent = 10
         }
     },
-    autoplace = rock_autoplace_settings(0.05, "h[gui]", { { 0, 0.65 }, { 1, 1 } }),
-    animations = getStripesAnimation("entity/技能/火/", 11, 280, 280, 0.5, { 0, -2 }),
+    autoplace =
+    {
+        control = "rocks",
+        order = "aguihuo",
+        probability_expression = "multiplier * control * (region_box + rock_density - penalty)",
+        local_expressions =
+        {
+            multiplier = 0.07,
+            penalty = 1.7,
+            region_box = "range_select_base(moisture, 0.35, 1, 0.2, -10, 0)",
+            control = "control:rocks:size"
+        }
+    },
+    graphics_set = {
 
+        animations = getStripesAnimation("entity/skill/fire/", 11, 280, 280, 0.5, { 0, -2 }),
+    }
 }

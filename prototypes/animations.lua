@@ -1,7 +1,7 @@
 data:extend({
     {
         type = "animation",
-        name = "蝴蝶",
+        name = "hu-die",
         size = 102,
         filename = ConstEnum.entity .. "/entitynew/0_hudie.png",
         frame_count = 24,
@@ -13,7 +13,7 @@ data:extend({
     },
     {
         type = "animation",
-        name = "蝴蝶2",
+        name = "hu-die2",
         size = 102,
         filename = ConstEnum.entity .. "/entitynew/0_F_HT_001_01.png",
         frame_count = 24,
@@ -25,7 +25,7 @@ data:extend({
     },
     {
         type = "animation",
-        name = "蓝色花瓣",
+        name = "lan-se-hua-ban",
         size = 128,
         filename = ConstEnum.entity .. "/entitynew/Sequence_165.png",
         frame_count = 16,
@@ -36,7 +36,7 @@ data:extend({
     },
     {
         type = "animation",
-        name = "花瓣",
+        name = "hua-ban",
         size = 32,
         filename = ConstEnum.entity .. "/entitynew/Sequence_211.png",
         frame_count = 16,
@@ -47,7 +47,7 @@ data:extend({
     },
     {
         type = "animation",
-        name = "紫色框",
+        name = "zi-se-kuang",
         size = 64,
         filename = ConstEnum.entity .. "/entitynew/UI_0023_3.png",
         frame_count = 16,
@@ -58,7 +58,7 @@ data:extend({
     },
     {
         type = "animation",
-        name = "蓝色框",
+        name = "lan-se-kuang",
         size = 64,
         filename = ConstEnum.entity .. "/entitynew/UI_0023_4.png",
         frame_count = 16,
@@ -69,7 +69,7 @@ data:extend({
     },
     {
         type = "animation",
-        name = "橙色框",
+        name = "cheng-se-kuang",
         size = 64,
         filename = ConstEnum.entity .. "/entitynew/UI_0024_4.png",
         frame_count = 16,
@@ -80,7 +80,7 @@ data:extend({
     },
     {
         type = "animation",
-        name = "红色框",
+        name = "hong-se-kuang",
         size = 64,
         filename = ConstEnum.entity .. "/entitynew/UI_0025_3.png",
         frame_count = 16,
@@ -91,7 +91,7 @@ data:extend({
     },
     {
         type = "animation",
-        name = "横框",
+        name = "heng-kuang",
         height = 64,
         width = 128,
         filename = ConstEnum.entity .. "/entitynew/UI_0009.png",

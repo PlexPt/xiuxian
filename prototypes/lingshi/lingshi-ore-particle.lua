@@ -2,7 +2,7 @@ data:extend(
         {
             {
                 type = "optimized-particle",
-                name = "灵石矿-particle",
+                name = "ling-shi-kuang-particle",
                 flags = { "not-on-map" },
                 life_time = 180,
                 pictures = {

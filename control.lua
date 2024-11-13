@@ -1,6 +1,6 @@
 if script.active_mods["gvv"] then require("__gvv__.gvv")() end
 
-Event = require('__stdlib__/stdlib/event/event')
+Event = require('__kry_stdlib__/stdlib/event/event')
 
 require("globalConst")
 

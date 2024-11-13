@@ -1,0 +1,15 @@
+update
+
+"[\u4e00-\u9fa5]+"
+ name = "[\u4e00-\u9fa5]+"
+
+正则表达式来查找并替换类似 { "stone", 100 } 格式的内容为 {type="item", name="stone", amount=100} 格式
+---------------\{\s*"([^"]+)"\s*,\s*(\d+)\s*\}
+
+\{\s*"([^"]+)"\s*,\s*([\w]+)\s*\}
+
+{type="item", name="$1", amount=$2}
+
+
+jin-mu-shui-huo-tu-
+-huo-ling-shi-kuang

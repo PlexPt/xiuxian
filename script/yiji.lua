@@ -18,7 +18,7 @@ local function teleport_players()
     for player_index, player in pairs(game.players) do
 
         if player.connected and
-                not player.driving and tick - (global.last_player_teleport[player_index] or 0) >= 45 then
+                not player.driving and tick - (storage.last_player_teleport[player_index] or 0) >= 45 then
             local walking_state = player.walking_state
             if walking_state.walking then
                 if walking_state.direction == defines.direction.north
@@ -52,7 +52,7 @@ end
 -- ON TICK --
 
 Event.register(defines.events.on_tick, function(event)
-    local factories = global.mijing
+    local factories = storage.mijing
 
     -- Teleport players
     teleport_players() -- What did you expect

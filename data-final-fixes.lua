@@ -9,7 +9,7 @@ for k, v in pairs(data.raw["recipe"]) do
             -- so apparently, though the API calls out using { name="x", type="y", amount="z"} for
             -- IngredientPrototype per https://wiki.factorio.com/Types/IngredientPrototype
             -- Most recipes use a degenerate form where the ingredient is only { "x", "z" } representing name and amount; thanks a lot API documentation
-            if v2.name == "灵石" or v2[1] == "灵石" or v["xiuxian"] then
+            if v2.name == "ling-shi" or v2[1] == "ling-shi" or v["xiuxian"] then
                 already_needs_lingshi = true
             end
         end
@@ -20,7 +20,7 @@ for k, v in pairs(data.raw["recipe"]) do
 
         if not already_needs_lingshi then
 
-            table.insert(v["ingredients"], { "灵石", 1 })
+            table.insert(v["ingredients"], {type="item", name="ling-shi", amount=1})
 
             -- debug, see what recipe looks like after being modified
             --log(serpent.block(data.raw["recipe"][k]))

@@ -1,8 +1,8 @@
 data:extend({
     {
         type = "sprite",
-        name = "打坐-sprite",
-        filename = ConstEnum.icons .. "/打坐.png",
+        name = "dazuo-sprite",
+        filename = ConstEnum.icons .. "/dazuo.png",
         size = 512,
         scale = 0.2
     }

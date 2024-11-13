@@ -5,7 +5,7 @@ data:extend(
 
             {
                 type = "projectile",
-                name = "飞箭-木箭",
+                name = "projectile-mu-jian",
                 flags = { "not-on-map" },
                 acceleration = 0.01,
                 action = {
@@ -15,11 +15,11 @@ data:extend(
                         target_effects = {
                             {
                                 type = "damage",
-                                damage = { amount = 50, type = "木" }
+                                damage = { amount = 50, type = "mu" }
                             },
                             {
                                 type = "damage",
-                                damage = { amount = 10, type = "穿甲" }
+                                damage = { amount = 10, type = "chuan-jia" }
                             },
 
                         }

@@ -1,24 +1,26 @@
 -- 自动创建的
 
 
+-- " 原名:pu-tong-dan-yao"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "普通丹药",
+                name = "pu-tong-dan-yao",
                 localised_name = "普通丹药",
                 localised_description = "修炼用的",
-                group = "灵丹妙药",
+                group = "ling-dan-miao-yao",
             }
         }
 )
 
 
+-- " 原名:xiu-xian-liu-ti"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "修仙流体",
+                name = "xiu-xian-liu-ti",
                 localised_name = "修仙流体",
                 localised_description = "修仙流体组 一个应该够了",
                 group = "fluids",
@@ -27,63 +29,68 @@ data:extend(
 )
 
 
+-- " 原名:tian-di-ling-huo"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "天地灵火",
+                name = "tian-di-ling-huo",
                 localised_name = "天地灵火",
                 localised_description = "",
-                group = "天地灵火",
+                group = "tian-di-ling-huo",
             }
         }
 )
 
 
+-- " 原名:xiu-xian-cai-liao"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "修仙材料",
+                name = "xiu-xian-cai-liao",
                 localised_name = "修仙材料",
                 localised_description = "",
-                group = "修仙材料",
+                group = "xiu-xian-cai-liao",
             }
         }
 )
 
 
+-- " 原名:zhen-fa-cai-liao"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "阵法材料",
+                name = "zhen-fa-cai-liao",
                 localised_name = "阵法材料",
                 localised_description = "",
-                group = "阵法材料",
+                group = "zhen-fa-cai-liao",
             }
         }
 )
 
 
+-- " 原名:fu-lu"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "符箓",
+                name = "fu-lu",
                 localised_name = "符箓",
                 localised_description = "",
-                group = "符箓",
+                group = "fu-lu",
             }
         }
 )
 
 
+-- " 原名:jian-zhu-wu"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "建筑物",
+                name = "jian-zhu-wu",
                 localised_name = "建筑",
                 localised_description = "",
                 group = "production",
@@ -92,11 +99,12 @@ data:extend(
 )
 
 
+-- " 原名:jian"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "剑",
+                name = "jian",
                 localised_name = "剑",
                 localised_description = "",
                 group = "combat",
@@ -105,50 +113,54 @@ data:extend(
 )
 
 
+-- " 原名:za-xiang"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "杂项",
+                name = "za-xiang",
                 localised_name = "杂项",
                 localised_description = "",
-                group = "修仙材料",
+                group = "xiu-xian-cai-liao",
             }
         }
 )
 
 
+-- " 原名:ling-yao"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "灵药",
+                name = "ling-yao",
                 localised_name = "灵药",
                 localised_description = "灵药",
-                group = "灵草灵药",
+                group = "ling-cao-ling-yao",
             }
         }
 )
 
 
+-- " 原名:lian-qi-cai-liao"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "炼器材料",
+                name = "lian-qi-cai-liao",
                 localised_name = "炼器材料",
                 localised_description = "",
-                group = "修仙材料",
+                group = "xiu-xian-cai-liao",
             }
         }
 )
 
 
+-- " 原名:fu"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "斧",
+                name = "fu",
                 localised_name = "斧头",
                 localised_description = "各种各样的斧头",
                 group = "combat",
@@ -157,53 +169,57 @@ data:extend(
 )
 
 
+-- "null 原名:fu-yong-de-dan-yao"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "服用的丹药",
+                name = "fu-yong-de-dan-yao",
                 localised_name = "服用的丹药",
                 localised_description = "直接服用的丹药",
-                group = "灵丹妙药",
+                group = "ling-dan-miao-yao",
             }
         }
 )
 
 
+-- " 原名:gu-zhong"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "蛊冢",
+                name = "gu-zhong",
                 localised_name = "蛊冢",
                 localised_description = "蛊虫生活的环境",
-                group = "蛊冢",
+                group = "gu-zhong",
             }
         }
 )
 
 
+-- " 原名:ran-liao"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "燃料",
+                name = "ran-liao",
                 localised_name = "燃料",
                 localised_description = "各种各样的燃料",
-                group = "燃料",
+                group = "ran-liao",
             }
         }
 )
 
 
+-- " 原名:xiu-xian-dan-fang"
 data:extend(
         {
             {
                 type = "item-subgroup",
-                name = "修仙丹方",
+                name = "xiu-xian-dan-fang",
                 localised_name = "修炼丹方",
                 localised_description = "修炼用",
-                group = "修炼丹方",
+                group = "xiu-lian-dan-fang",
             }
         }
 )

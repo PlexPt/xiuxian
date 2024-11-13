@@ -3,25 +3,27 @@ local default_icon = "__xiuxian-graphics__/graphics/icons/danyao/丹药瓶装01.
 local baseIconPath = "__xiuxian-graphics__/graphics/icons/"
 
 
+-- " 原名:ling-dan-miao-yao"
 data:extend(
         {
             {
                 type = "item-group",
-                name = "灵丹妙药",
-                localised_name = "灵丹妙药",
+                name = "ling-dan-miao-yao",
+                localised_name = "ling-dan-miao-yao",
                 localised_description = "修仙-炼丹科技",
-                icon = baseIconPath .. "占位图.png",
+                icon = baseIconPath .. "aplaceholder.png",
                 icon_size = 128,
 
             }
         }
 )
 
+-- " 原名:tian-di-ling-huo"
 data:extend(
         {
             {
                 type = "item-group",
-                name = "天地灵火",
+                name = "tian-di-ling-huo",
                 localised_name = "天地灵火",
                 localised_description = "",
                 icon = baseIconPath .. "item/item_874.png",
@@ -31,11 +33,12 @@ data:extend(
         }
 )
 
+-- " 原名:xiu-xian-cai-liao"
 data:extend(
         {
             {
                 type = "item-group",
-                name = "修仙材料",
+                name = "xiu-xian-cai-liao",
                 localised_name = "修仙材料",
                 localised_description = "修仙材料可放",
                 icon = baseIconPath .. "item/item_1.png",
@@ -45,11 +48,12 @@ data:extend(
         }
 )
 
+-- " 原名:zhen-fa-cai-liao"
 data:extend(
         {
             {
                 type = "item-group",
-                name = "阵法材料",
+                name = "zhen-fa-cai-liao",
                 localised_name = "阵法材料",
                 localised_description = "",
                 icon = baseIconPath .. "item/item_22.png",
@@ -59,11 +63,12 @@ data:extend(
         }
 )
 
+-- " 原名:fu-lu"
 data:extend(
         {
             {
                 type = "item-group",
-                name = "符箓",
+                name = "fu-lu",
                 localised_name = "符箓",
                 localised_description = "",
                 icon = baseIconPath .. "fulu.png",
@@ -73,11 +78,12 @@ data:extend(
         }
 )
 
+-- " 原名:ling-cao-ling-yao"
 data:extend(
         {
             {
                 type = "item-group",
-                name = "灵草灵药",
+                name = "ling-cao-ling-yao",
                 localised_name = "灵草灵药",
                 localised_description = "",
                 icon = baseIconPath .. "item/item_308.png",
@@ -87,11 +93,12 @@ data:extend(
         }
 )
 
+-- " 原名:gu-zhong"
 data:extend(
         {
             {
                 type = "item-group",
-                name = "蛊冢",
+                name = "gu-zhong",
                 localised_name = "蛊冢",
                 localised_description = "蛊虫生活的环境",
                 icon = baseIconPath .. "obj/object_20.png",
@@ -101,11 +108,12 @@ data:extend(
         }
 )
 
+-- " 原名:ran-liao"
 data:extend(
         {
             {
                 type = "item-group",
-                name = "燃料",
+                name = "ran-liao",
                 localised_name = "燃料",
                 localised_description = "各种各样的燃料",
                 icon = baseIconPath .. "cfother/hou.png",
@@ -115,14 +123,15 @@ data:extend(
         }
 )
 
+-- " 原名:xiu-lian-dan-fang"
 data:extend(
         {
             {
                 type = "item-group",
-                name = "修炼丹方",
+                name = "xiu-lian-dan-fang",
                 localised_name = "修炼丹方",
                 localised_description = "修炼用",
-                icon = baseIconPath .. "占位图.png",
+                icon = baseIconPath .. "aplaceholder.png",
                 icon_size = 128,
 
             }

@@ -7,51 +7,51 @@ data:extend(
             {
                 type = "damage-type",
                 localised_name = "穿甲",
-                name = "穿甲"
+                name = "chuan-jia"
             },
 
             {
                 type = "damage-type",
                 localised_name = "神魂",
-                name = "神魂"
+                name = "shen-hun"
             },
 
-            {
-                type = "damage-type",
-                localised_name = "金",
-                name = "金"
-            },
+            --{
+            --    type = "damage-type",
+            --    localised_name = "金",
+            --    name = "金"
+            --},
             {
                 type = "damage-type",
                 localised_name = "木",
-                name = "木"
+                name = "mu"
             },
-            {
-                type = "damage-type",
-                localised_name = "水",
-                name = "水"
-            },
-            {
-                type = "damage-type",
-                localised_name = "火",
-                name = "火"
-            },
-            {
-                type = "damage-type",
-                localised_name = "土",
-                name = "土"
-            },
-            {
-                type = "damage-type",
-                localised_name = "冰",
-                name = "冰"
-            },
-
-            {
-                type = "damage-type",
-                localised_name = "雷",
-                name = "雷"
-            },
+            --{
+            --    type = "damage-type",
+            --    localised_name = "水",
+            --    name = "水"
+            --},
+            --{
+            --    type = "damage-type",
+            --    localised_name = "火",
+            --    name = "火"
+            --},
+            --{
+            --    type = "damage-type",
+            --    localised_name = "土",
+            --    name = "土"
+            --},
+            --{
+            --    type = "damage-type",
+            --    localised_name = "冰",
+            --    name = "冰"
+            --},
+            --
+            --{
+            --    type = "damage-type",
+            --    localised_name = "雷",
+            --    name = "雷"
+            --},
 
             {
                 type = "damage-type",

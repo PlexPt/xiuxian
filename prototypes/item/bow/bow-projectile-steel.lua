@@ -18,7 +18,7 @@
 --                            },
 --                            {
 --                                type = "damage",
---                                damage = { amount = 20, type = "穿甲" }
+--                                damage = { amount = 20, type = "chuan-jia" }
 --                            },
 --
 --                        }

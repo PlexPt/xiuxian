@@ -1,16 +1,15 @@
-local noise = require("noise")
 local resource_autoplace = require("resource-autoplace")
 --local sounds = require("prototypes.entity.sounds")
 
 data:extend({
     {
         type = "resource",
-        name = "阴魂窟",
+        name = "yin-hun-ku",
         icon = ConstEnum.entity .. "/dong.png",
         icon_size = 300,
         flags = { "placeable-neutral" },
-        category = "修仙资源",
-        subgroup = "修仙材料",
+        category = "xiu-xian-zi-yuan",
+        subgroup = "xiu-xian-cai-liao",
         order = "a-y-a",
         infinite = true,
         highlight = true,
@@ -25,7 +24,7 @@ data:extend({
             results = {
                 {
                     type = "item",
-                    name = "妖兽魂",
+                    name = "yao-shou-hun",
                     amount_min = 10,
                     amount_max = 10,
                     probability = 1

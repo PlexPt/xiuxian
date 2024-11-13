@@ -1,7 +1,7 @@
 local itemUtil = {}
 local sounds = require("__base__.prototypes.entity.sounds")
 local danyao_pic = "__xiuxian-graphics__/graphics/icons/danyao/dan-juqi.png"
-local dihuo_pic = "__xiuxian-graphics__/graphics/icons/地火.png"
+local dihuo_pic = "__xiuxian-graphics__/graphics/icons/dihuo.png"
 
 function itemUtil.createDanyao(item_name)
     data:extend(
@@ -12,7 +12,7 @@ function itemUtil.createDanyao(item_name)
                     icon = danyao_pic,
                     icon_size = 128,
                     --icon_mipmaps = 3,
-                    subgroup = "服用的丹药",
+                    subgroup = "fu-yong-de-dan-yao",
                     durability = 1,
                     stack_size = 100
                 }
@@ -28,7 +28,7 @@ function itemUtil.createDanyaoFu(item_name)
                     icon = danyao_pic,
                     icon_size = 128,
                     --icon_mipmaps = 3,
-                    subgroup = "服用的丹药",
+                    subgroup = "fu-yong-de-dan-yao",
                     capsule_action = {
                         type = "use-on-self",
                         attack_parameters = {
@@ -71,8 +71,11 @@ function itemUtil.createDanyaoRecipe(item_name)
                     type = "recipe",
                     name = item_name,
                     enabled = false,
-                    ingredients = { { "灵石", 50 } },
-                    result = item_name
+                    ingredients = {
+                        {type = "item", name = "ling-shi", amount = 50},
+                         },
+                    results = {{type="item", name= item_name, amount=1}}
+
                 }
             })
 end
@@ -87,12 +90,14 @@ function itemUtil.createModule(item_name, tier)
                     name = item_name,
                     icon = dihuo_pic,
                     icon_size = 60,
-                    subgroup = "地火",
-                    category = "地火",
+                    subgroup = "di-huo",
+                    category = "di-huo",
                     tier = tier,
-                    effect = { speed = { bonus = 0.5 }, consumption = { bonus = 0.5 } },
+                    effect = {speed = 0.5, consumption = 0.5, quality = -0.1},
 
-                    ingredients = { { "灵石", 50 } },
+                    ingredients = {
+                        {type = "item", name = "ling-shi", amount = 50},
+                    },
                     stack_size = 100
                 }
             })
@@ -105,9 +110,13 @@ function itemUtil.createModuleRecipe(item_name, tier)
                     type = "recipe",
                     name = item_name,
                     enabled = false,
-                    subgroup = "地火",
-                    ingredients = { { "火灵石矿", 100 * tier } },
-                    result = item_name
+                    subgroup = "di-huo",
+                    ingredients = {
+                        {type = "item", name = "huo-ling-shi-kuang", amount = 100 * tier},
+                        --{type = "item", name = "ling-shi", amount = 100 * tier},
+                    },
+                    results = {{type="item", name= item_name, amount=1}}
+
                 }
             })
 end

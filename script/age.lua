@@ -413,8 +413,6 @@ function InitPlayerGui(player)
 end
 
 ----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
 
 
 function RatioXP(player)
@@ -936,29 +934,7 @@ function UpdatePlayerLvStats(player, skip_inv)
 
     if player.character then
 
-        player.character.character_crafting_speed_modifier = player.character.character_crafting_speed_modifier + storage.personalxp.LV_Craft_Speed[name] * storage.RPG_Bonus['LV_Craft_Speed'] / 100
-        player.character.character_mining_speed_modifier = player.character.character_mining_speed_modifier + storage.personalxp.LV_Mining_Speed[name] * storage.RPG_Bonus['LV_Mining_Speed'] / 100
-        player.character.character_running_speed_modifier = player.character.character_running_speed_modifier + storage.personalxp.LV_Run_Speed[name] * storage.RPG_Bonus['LV_Run_Speed'] / 100
 
-        player.character.character_build_distance_bonus = player.character.character_build_distance_bonus + storage.personalxp.LV_Reach_Dist[name] * storage.RPG_Bonus['LV_Reach_Dist']
-        player.character.character_reach_distance_bonus = player.character.character_reach_distance_bonus + storage.personalxp.LV_Reach_Dist[name] * storage.RPG_Bonus['LV_Reach_Dist']
-        player.character.character_item_drop_distance_bonus = player.character.character_item_drop_distance_bonus + storage.personalxp.LV_Reach_Dist[name] * storage.RPG_Bonus['LV_Reach_Dist']
-        player.character.character_resource_reach_distance_bonus = player.character.character_resource_reach_distance_bonus + storage.personalxp.LV_Reach_Dist[name] * storage.RPG_Bonus['LV_Reach_Dist']
-
-        if not skip_inv then
-            player.character.character_inventory_slots_bonus = player.character.character_inventory_slots_bonus + storage.personalxp.LV_Inv_Bonus[name] * storage.RPG_Bonus['LV_Inv_Bonus']
-        end
-        player.character.character_trash_slot_count_bonus = player.character.character_trash_slot_count_bonus + storage.personalxp.LV_InvTrash_Bonus[name] * storage.RPG_Bonus['LV_InvTrash_Bonus']
-        player.character.character_maximum_following_robot_count_bonus = player.character.character_maximum_following_robot_count_bonus + storage.personalxp.LV_Robot_Bonus[name] * storage.RPG_Bonus['LV_Robot_Bonus']
-        player.character.character_health_bonus = player.character.character_health_bonus + storage.personalxp.LV_Health_Bonus[name] * storage.RPG_Bonus['LV_Health_Bonus']
-
-        if storage.personalxp.opt_Pick_Extender[name] then
-            player.character.character_item_pickup_distance_bonus = player.character.character_reach_distance_bonus
-            player.character.character_loot_pickup_distance_bonus = player.character.character_reach_distance_bonus
-            --	else
-            --player.character.character_item_pickup_distance_bonus = 0
-            --	player.character.character_loot_pickup_distance_bonus = 0
-        end
 
     end
 end
@@ -975,123 +951,9 @@ local p_attribs = { 'character_crafting_speed_modifier',
     'character_health_bonus',
     'character_item_pickup_distance_bonus' }
 
-function CopyPlayerStats(name)
-    local player = game.players[name]
-    if player and player.valid then
-        local character_attribs = {}
-
-        if player.character and player.character.valid then
-            for a = 1, #p_attribs do
-                table.insert(character_attribs, player.character[p_attribs[a]])
-            end
-        end
-
-        local rpg_stats = { storage.personalxp.Level[name],
-            storage.personalxp.XP[name],
-            storage.personalxp.Death[name],
-            storage.personalxp.opt_Pick_Extender[name],
-            storage.personal_kill_units[name],
-            storage.personal_kill_spawner[name],
-            storage.personal_kill_turrets[name],
-        }
-        for k = 1, #storage.Player_Attributes do
-            local attrib = storage.Player_Attributes[k]
-            table.insert(rpg_stats, storage.personalxp[attrib][name])
-        end
-        return { character_attribs = character_attribs, rpg_stats = rpg_stats }
-    end
-end
-
-function PastePlayerStats(name, status)
-    local player = game.players[name]
-    if player and player.valid and status then
-        local character_attribs = status.character_attribs
-
-        if player.character and player.character.valid then
-            for a = 1, #p_attribs do
-                player.character[p_attribs[a]] = character_attribs[a]
-            end
-        end
-
-        local rpg_stats = status.rpg_stats
-        storage.personalxp.Level[name] = rpg_stats[1]
-        storage.personalxp.XP[name] = rpg_stats[2]
-        storage.personalxp.Death[name] = rpg_stats[3]
-        storage.personalxp.opt_Pick_Extender[name] = rpg_stats[4]
-        storage.personal_kill_units[name] = rpg_stats[5]
-        storage.personal_kill_spawner[name] = rpg_stats[6]
-        storage.personal_kill_turrets[name] = rpg_stats[7]
-
-        for k = 1, #storage.Player_Attributes do
-            local attrib = storage.Player_Attributes[k]
-            storage.personalxp[attrib][name] = rpg_stats[k + 7]
-        end
-        UpdatePanel(player)
-    end
-end
-
-function LevelUPPlayer(player, btname)
-
-    local name = player.name
-
-    for A = 1, #storage.Player_Attributes do
-        local attrib = storage.Player_Attributes[A]
-
-        if btname == 'btLVU_storage.personalxp.' .. attrib then
-            storage.personalxp[attrib][name] = storage.personalxp[attrib][name] + 1
-
-            if btname == 'btLVU_storage.personalxp.LV_Craft_Speed' then
-                player.character.character_crafting_speed_modifier = player.character.character_crafting_speed_modifier + storage.RPG_Bonus[attrib] / 100
-            end
-            if btname == 'btLVU_storage.personalxp.LV_Mining_Speed' then
-                player.character.character_mining_speed_modifier = player.character.character_mining_speed_modifier + storage.RPG_Bonus[attrib] / 100
-            end
-            if btname == 'btLVU_storage.personalxp.LV_Run_Speed' then
-                player.character.character_running_speed_modifier = player.character.character_running_speed_modifier + storage.RPG_Bonus[attrib] / 100
-            end
-
-            if btname == 'btLVU_storage.personalxp.LV_Reach_Dist' then
-                player.character.character_build_distance_bonus = player.character.character_build_distance_bonus + storage.RPG_Bonus[attrib]
-                player.character.character_reach_distance_bonus = player.character.character_reach_distance_bonus + storage.RPG_Bonus[attrib]
-                player.character.character_item_drop_distance_bonus = player.character.character_item_drop_distance_bonus + storage.RPG_Bonus[attrib]
-                player.character.character_resource_reach_distance_bonus = player.character.character_resource_reach_distance_bonus + storage.RPG_Bonus[attrib]
-            end
-
-            if btname == 'btLVU_storage.personalxp.LV_Inv_Bonus' then
-                player.character.character_inventory_slots_bonus = player.character.character_inventory_slots_bonus + storage.RPG_Bonus[attrib]
-            end
-
-            --		if btname=='btLVU_storage.personalxp.LV_InvLog_Bonus' then
-            --		player.character.character_logistic_slot_count_bonus = player.character.character_logistic_slot_count_bonus + storage.RPG_Bonus[attrib] end
-
-            if btname == 'btLVU_storage.personalxp.LV_InvTrash_Bonus' then
-                player.character.character_trash_slot_count_bonus = player.character.character_trash_slot_count_bonus + storage.RPG_Bonus[attrib]
-            end
-
-            if btname == 'btLVU_storage.personalxp.LV_Robot_Bonus' then
-                player.character.character_maximum_following_robot_count_bonus = player.character.character_maximum_following_robot_count_bonus + storage.RPG_Bonus[attrib]
-            end
-
-            if btname == 'btLVU_storage.personalxp.LV_Health_Bonus' then
-                player.character.character_health_bonus = player.character.character_health_bonus + storage.RPG_Bonus[attrib]
-            end
-
-            --script.raise_event(on_player_updated_status, { player_index = player.index, player_level = storage.personalxp.Level[name], attribute = attrib })
-
-            break
-        end
-    end
-
-    if storage.personalxp.opt_Pick_Extender[name] then
-        player.character.character_item_pickup_distance_bonus = player.character.character_reach_distance_bonus
-        player.character.character_loot_pickup_distance_bonus = player.character.character_reach_distance_bonus
-    else
-        player.character.character_item_pickup_distance_bonus = 0
-        player.character.character_loot_pickup_distance_bonus = 0
-    end
 
 
-end
+
 
 --TODO
 Event.on_nth_tick(60 * 5, function(event)
@@ -1409,38 +1271,6 @@ end
 
 --TODO 杀敌
 --Event.register(defines.events.on_entity_died, function(event)
---    if true then
---        return
---    end
---
---    if not event.force then
---        return
---    end
---
---    local force = event.force  -- force that kill
---    local killer = event.cause
---
---
---    --if event.entity.force.name == 'enemy' and force~='neutral' and force~='enemy' then --aliens
---    if killer and killer.valid and storage.kills_units[force.name] and event.entity.force ~= game.forces.neutral then
---        if event.entity.prototype and event.entity.prototype.max_health and (not force.get_friend(event.entity.force)) then
---
---            if killer.type == 'car' then
---                if killer.get_driver() and killer.get_driver().valid then
---                    killer = killer.get_driver()
---                elseif killer.get_passenger() and killer.get_passenger().valid then
---                    killer = killer.get_passenger()
---                end
---            end
---            GetXPByKill(event.entity, killer, force)
---        end
---    end
---
---    if not killer then
---        if storage.kills_units[force.name] and event.entity.force ~= game.forces.neutral then
---            GetXPByKill(event.entity, killer, force)
---        end
---    end
 --
 --end,
 --        { { filter = "type", type = "unit" }, { filter = "type", type = "unit-spawner" },
@@ -1458,20 +1288,6 @@ Event.register(defines.events.on_research_finished, function(event)
         return
     end
 
-    if storage.setting_allow_xp_by_tech and game.tick > 3600 * 2 then
-
-        if event.research.force then
-            local force = event.research.force.name
-            if force ~= 'neutral' and force ~= 'enemy' then
-                if storage.XP_TECH[force] then
-                    local techXP = event.research.research_unit_count * #event.research.research_unit_ingredients
-                    techXP = math.ceil(storage.XP_Mult * techXP * (1 + (6 * game.forces["enemy"].evolution_factor)))
-                    storage.XP_TECH[force] = storage.XP_TECH[force] + techXP
-                    storage.XP[force] = storage.XP[force] + techXP
-                end
-            end
-        end
-    end
 end)
 
 --todo 挖矿折寿
@@ -1522,61 +1338,5 @@ end
 
 -- 吃东西
 Event.register(defines.events.on_player_used_capsule, function(event)
-    if event then
-        return
-    end
-    local player = game.players[event.player_index]
-    local item = event.item
-
-    if item.name == 'rpg_small_xp_potion' then
-        --remote.call("RPG","PlayerXPPerc",player.name,15)
-        remote.call("RPG", "PlayerXPPercCurrentBar", player.name, 0.3)
-        player.print({ 'feel_better' }, colors.yellow)
-
-    elseif item.name == 'rpg_big_xp_potion' then
-        remote.call("RPG", "PlayerXPPercCurrentBar", player.name, 0.6)
-
-        -- remote.call("RPG","PlayerXPPerc",player.name,25)
-        player.print({ 'feel_better' }, colors.yellow)
-
-    elseif item.name == 'rpg_level_up_potion' then
-        remote.call("RPG", "PlayerGainLevel", player.name)
-        player.print({ 'feel_better' }, colors.yellow)
-
-    elseif item.name == 'rpg_amnesia_potion' then
-        local XP = math.ceil(storage.personalxp.XP[player.name] * 0.7)
-        SetupPlayer(player)
-        storage.personalxp.XP[player.name] = XP
-        XP_UPDATE_tick()
-        player.print({ 'feel_strange' }, colors.lightgreen)
-
-
-    elseif item.name == 'rpg_speed_potion' then
-        player.print({ 'feel_faster' }, colors.lightgreen)
-        storage.potion_effects[player.name] = storage.potion_effects[player.name] or {}
-        if storage.potion_effects[player.name]['speed'] then
-            storage.potion_effects[player.name]['speed'] = storage.potion_effects[player.name]['speed'] + potion_duration
-        else
-            storage.potion_effects[player.name]['speed'] = game.tick + potion_duration
-            player.character.character_running_speed_modifier = player.character.character_running_speed_modifier + potion_speed_bonus
-        end
-
-
-    elseif item.name == 'rpg_crafting_potion' then
-        player.print({ 'feel_faster' }, colors.lightgreen)
-        storage.potion_effects[player.name] = storage.potion_effects[player.name] or {}
-        if storage.potion_effects[player.name]['craft'] then
-            storage.potion_effects[player.name]['craft'] = storage.potion_effects[player.name]['craft'] + potion_duration
-        else
-            storage.potion_effects[player.name]['craft'] = game.tick + potion_duration
-            player.character.character_crafting_speed_modifier = player.character.character_crafting_speed_modifier + potion_speed_bonus
-        end
-
-    elseif item.name == 'rpg_curse_cure_potion' then
-        remote.call('death_curses', 'RemoveCurse', player.name)
-
-
-    end
-
 
 end)

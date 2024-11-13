@@ -19,27 +19,22 @@ local GraphicsEnum = require("prototypes.enums.GraphicsEnum")
 --临时
 
 --create_entity7("四方炼丹炉","炼丹炉")
-create_entity7("四方炼器室","炼器室")
-
+create_entity7("si-fang-lian-qi-shi", "四方炼器室", "lian-qi-shi")
 
 local sticker = {
     type = "sticker",
-    name = "秘境-sticker",
+    name = "mijing-sticker",
     flags = {},
     animation = GraphicsEnum.trans32,
     duration_in_ticks = 1,
     --target_movement_modifier = 1
 }
 
-local mijing_flying_text = util.table.deepcopy(data.raw["flying-text"]["tutorial-flying-text"])
-mijing_flying_text.name = "mijing-flying-text"
-
 data:extend({
     sticker,
-    mijing_flying_text,
     {
         type = "land-mine",
-        name = "秘境入口",
+        name = "mi-jing-ru-kou",
         localised_name = "秘境入口",
         icon = GraphicsEnum.entity.mijing,
         icon_size = 512,
@@ -73,7 +68,7 @@ data:extend({
                 target_effects = {
                     {
                         type = "create-sticker",
-                        sticker = "秘境-sticker",
+                        sticker = "mijing-sticker",
                         trigger_created_entity = true
                     }
                 }
@@ -87,11 +82,11 @@ data:extend({
 data:extend({
     {
         type = "furnace",
-        name = "九品炼丹炉",
+        name = "alchemy-furnace-9",
         icon = "__base__/graphics/icons/stone-furnace.png",
         icon_size = 64, icon_mipmaps = 4,
         flags = { "placeable-neutral", "placeable-player", "player-creation" },
-        minable = { mining_time = 0.2, result = "九品炼丹炉" },
+        minable = { mining_time = 0.2, result = "alchemy-furnace-9" },
         max_health = 20000,
         corpse = "stone-furnace-remnants",
         dying_explosion = "stone-furnace-explosion",
@@ -135,24 +130,15 @@ data:extend({
         source_inventory_size = 1,
         energy_source = {
             type = "burner",
-            fuel_category = "chemical",
+            fuel_categories = { "chemical" },
+
             effectivity = 1,
             fuel_inventory_size = 1,
-            emissions_per_minute = 2,
+            emissions_per_minute = { pollution = 10 },
             light_flicker = {
                 color = { 0, 0, 0 },
                 minimum_intensity = 0.6,
                 maximum_intensity = 0.95
-            },
-            smoke = {
-                {
-                    name = "smoke",
-                    deviation = { 0.1, 0.1 },
-                    frequency = 5,
-                    position = { 0.0, -0.8 },
-                    starting_vertical_speed = 0.08,
-                    starting_frame_deviation = 60
-                }
             }
         },
         animation = {
@@ -290,7 +276,7 @@ data:extend({
     -- 八品丹炉 --
     {
         type = "assembling-machine",
-        name = "八品炼丹炉",
+        name = "alchemy-furnace-8",
         --order = "g-b",
         icon = ConstEnum.graphics .. "/icons/danlu-128.png",
         icon_size = 128,
@@ -302,7 +288,7 @@ data:extend({
         close_sound = sounds.machine_close,
         tile_width = 15, tile_height = 15,
         flags = { "not-rotatable", "placeable-neutral", "placeable-player", "player-creation", "not-flammable", "not-upgradable" },
-        minable = { mining_time = 5, result = "八品炼丹炉" },
+        minable = { mining_time = 5, result = "alchemy-furnace-8" },
         --working_sound = {
         --    sound = {
         --        filename = "__xiuxian-graphics__/sounds/reactor-running.ogg",
@@ -311,7 +297,7 @@ data:extend({
         --    fade_in_ticks = 30,
         --    fade_out_ticks = 10
         --},
-        crafting_categories = { "聚灵阵" },
+        crafting_categories = { "ju-ling-zhen" },
         crafting_speed = 1,
         collision_box = { { -4.25, -4.25 }, { 4.25, 4.25 } },
         selection_box = { { -4.5, -4.5 }, { 4.5, 4.5 } },
@@ -328,12 +314,12 @@ data:extend({
             --    minimum_temperature = 178516, --see fluid.lua
             --    maximum_temperature = 178516,
             --},
+
             {
-                base_area = 1,
-                base_level = 1,
+                volume = 1000,
                 --pipe_covers = pipecoverspictures(),
                 pipe_connections = {
-                    { type = "output", position = { 0, 5 } }
+                    { direction = defines.direction.south, flow_direction = "output", position = { 0, 4 } }
                 },
                 production_type = "output",
             },
@@ -369,34 +355,36 @@ data:extend({
             --    production_type = "input"
             --}
         },
-        working_visualisations = { { animation = {
-            width = 152,
-            height = 120,
-            line_length = 5,
-            frame_count = 60,
-            shift = { -0.53125, -0.4375 },
-            priority = "high",
-            animation_speed = 0.5,
-            filename = "__base__/graphics/entity/smoke/smoke.png",
-            flags = { "smoke" }
-        }, fadeout = true } },
-        always_draw_idle_animation = true,
-        idle_animation = {
-            layers = {
-                {
-                    filename = ConstEnum.graphics .. "/entity/building_danlu8.png",
-                    size = 594,
-                    scale = 0.5,
+        graphics_set = {
+            working_visualisations = { { animation = {
+                width = 152,
+                height = 120,
+                line_length = 5,
+                frame_count = 60,
+                shift = { -0.53125, -0.4375 },
+                priority = "high",
+                animation_speed = 0.5,
+                filename = "__base__/graphics/entity/smoke/smoke.png",
+                flags = { "smoke" }
+            }, fadeout = true } },
+            idle_animation = {
+                layers = {
+                    {
+                        filename = ConstEnum.graphics .. "/entity/building_danlu8.png",
+                        size = 594,
+                        scale = 0.5,
+                    }
                 }
-            }
+            },
         },
+        always_draw_idle_animation = true,
         energy_usage = "100W",
         energy_source = {
             type = "burner",
-            fuel_category = "灵力",
+            fuel_categories = { "ling-li" },
             effectivity = 1,
             fuel_inventory_size = 2,
-            emissions_per_minute = 2,
+            emissions_per_minute = { pollution = 10 },
             light_flicker = {
                 color = { 0, 0, 0 },
                 minimum_intensity = 0.6,
@@ -415,16 +403,14 @@ data:extend({
         },
         result_inventory_size = 1000,
         source_inventory_size = 1000,
-        module_specification = {
-            module_slots = 1
-        },
+        module_slots = 1,
         allowed_effects = { 'consumption', 'speed', 'pollution' },
         se_allow_in_space = true
     },
     -- 聚灵阵 --
     {
         type = "assembling-machine",
-        name = "聚灵阵",
+        name = "ju-ling-zhen",
         --order = "g-b",
         icon = ConstEnum.graphics .. "/icons/julingzhen.png",
         icon_size = 80,
@@ -436,7 +422,7 @@ data:extend({
         close_sound = sounds.machine_close,
         tile_width = 15, tile_height = 15,
         flags = { "not-rotatable", "placeable-neutral", "placeable-player", "player-creation", "not-flammable", "not-upgradable" },
-        minable = { mining_time = 5, result = "聚灵阵" },
+        minable = { mining_time = 5, result = "ju-ling-zhen" },
         --working_sound = {
         --    sound = {
         --        filename = "__xiuxian-graphics__/sounds/reactor-running.ogg",
@@ -445,7 +431,7 @@ data:extend({
         --    fade_in_ticks = 30,
         --    fade_out_ticks = 10
         --},
-        crafting_categories = { "聚灵阵", "灵药种植" },
+        crafting_categories = { "ju-ling-zhen", "ling-yao-zhong-zhi" },
         crafting_speed = 1,
         collision_box = { { -6.25, -6.25 }, { 6.25, 6.25 } },
         selection_box = { { -6.5, -6.5 }, { 6.5, 6.5 } },
@@ -462,12 +448,12 @@ data:extend({
             --    minimum_temperature = 178516, --see fluid.lua
             --    maximum_temperature = 178516,
             --},
+
             {
-                base_area = 1,
-                base_level = 1,
+                volume = 1000,
                 --pipe_covers = pipecoverspictures(),
                 pipe_connections = {
-                    { type = "output", position = { 0, 7 } }
+                    { direction = defines.direction.south, flow_direction = "output", position = { 0, 6 } }
                 },
                 production_type = "output",
             },
@@ -503,30 +489,33 @@ data:extend({
             --    production_type = "input"
             --}
         },
-        working_visualisations = { { animation = {
-            filename = ConstEnum.graphics .. "/entity/star-working.png",
-            size = 900,
-            shift = util.by_pixel(0, -36),
-            scale = 0.5,
-        }, fadeout = true } },
-        always_draw_idle_animation = true,
-        idle_animation = {
-            layers = {
-                {
-                    filename = ConstEnum.graphics .. "/entity/star800.png",
-                    size = 900,
-                    shift = util.by_pixel(0, -36),
-                    scale = 0.5,
+        graphics_set = {
+
+            working_visualisations = { { animation = {
+                filename = ConstEnum.graphics .. "/entity/star-working.png",
+                size = 900,
+                shift = util.by_pixel(0, -36),
+                scale = 0.5,
+            }, fadeout = true } },
+            idle_animation = {
+                layers = {
+                    {
+                        filename = ConstEnum.graphics .. "/entity/star800.png",
+                        size = 900,
+                        shift = util.by_pixel(0, -36),
+                        scale = 0.5,
+                    }
                 }
-            }
+            },
         },
+        always_draw_idle_animation = true,
         energy_usage = "100W",
         energy_source = {
             type = "burner",
-            fuel_category = "灵力",
+            fuel_categories = { "ling-li" },
             effectivity = 1,
             fuel_inventory_size = 2,
-            emissions_per_minute = 2,
+            emissions_per_minute = { pollution = 10 },
             light_flicker = {
                 color = { 0, 0, 0 },
                 minimum_intensity = 0.6,

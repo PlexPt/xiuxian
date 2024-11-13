@@ -1,14 +1,13 @@
-
-function create_entity7(name, category)
+function create_entity7(name, localised_name, category)
 
 
     ITEM {
         type = "item",
         name = name,
-        localised_name = name,
+        localised_name = localised_name,
         icon = ConstEnum.graphics .. "/entity/7x7.png",
         icon_size = 288,
-        subgroup = "建筑物",
+        subgroup = "jian-zhu-wu",
         place_result = name,
         stack_size = 100,
     }
@@ -31,41 +30,43 @@ function create_entity7(name, category)
         fluid_boxes = {
 
             {
-                base_area = 1,
-                base_level = 1,
+                volume = 1000,
                 --pipe_covers = pipecoverspictures(),
                 pipe_connections = {
-                    { type = "output", position = { 0, 7 } }
+                    { direction = defines.direction.south, flow_direction = "output", position = { 0, 6 } }
                 },
                 production_type = "output",
             },
 
         },
-        working_visualisations = { {
-                                       animation = {
-                                           filename = ConstEnum.graphics .. "/entity/7x7.png",
-                                           size = 288,
-                                           --shift = util.by_pixel(0, -36),
-                                           scale = 2,
-                                       },
-                                       fadeout = true } },
-        idle_animation = {
-            layers = {
-                {
-                    filename = ConstEnum.graphics .. "/entity/7x7.png",
-                    size = 288,
-                    --shift = util.by_pixel(0, -36),
-                    scale = 2,
+        graphics_set = {
+
+            working_visualisations = { {
+                                           animation = {
+                                               filename = ConstEnum.graphics .. "/entity/7x7.png",
+                                               size = 288,
+                                               --shift = util.by_pixel(0, -36),
+                                               scale = 2,
+                                           },
+                                           fadeout = true } },
+            idle_animation = {
+                layers = {
+                    {
+                        filename = ConstEnum.graphics .. "/entity/7x7.png",
+                        size = 288,
+                        --shift = util.by_pixel(0, -36),
+                        scale = 2,
+                    }
                 }
-            }
+            },
         },
         energy_usage = "100W",
         energy_source = {
             type = "burner",
-            fuel_category = "灵力",
+            fuel_categories = { "ling-li" },
             effectivity = 1,
             fuel_inventory_size = 2,
-            emissions_per_minute = 2,
+            emissions_per_minute = { pollution = 10 },
             light_flicker = {
                 color = { 0, 0, 0 },
                 minimum_intensity = 0.6,

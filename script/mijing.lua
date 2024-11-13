@@ -5,14 +5,19 @@ local function teleport_player_safely(player, surface, position)
         ) or position
     end
     player.teleport(position, surface)
-    --global.last_player_teleport[player.index] = game.tick
+    --storage.last_player_teleport[player.index] = game.tick
     --update_camera(player)
 end
 
 local init = function()
-    global.mijing = global.mijing or game.create_surface("mijing", { width = 200, height = 200 })
-    global.mijing.daytime = 0.5
-    global.mijing.freeze_daytime = true
+    storage.mijing = storage.mijing or game.create_surface("mijing", { width = 200, height = 200 })
+    storage.mijing.daytime = 0.5
+    storage.mijing.freeze_daytime = true
+    for k, v in pairs(game.forces) do
+        if v then
+            v.set_surface_hidden(storage.mijing, true)
+        end
+    end
 end
 
 local teleporter_triggered = function(entity, character)
@@ -37,7 +42,7 @@ local teleporter_triggered = function(entity, character)
 
     init()
 
-    teleport_player_safely(player, global.mijing, { 0, 0 })
+    teleport_player_safely(player, storage.mijing, { 0, 0 })
 end
 
 Event.register(defines.events.on_trigger_created_entity, function(event)
@@ -45,7 +50,7 @@ Event.register(defines.events.on_trigger_created_entity, function(event)
     if not (entity and entity.valid) then
         return
     end
-    if entity.name ~= "秘境-sticker" then
+    if entity.name ~= "mijing-sticker" then
         return
     end
     local source = event.source
@@ -58,6 +63,12 @@ Event.register(defines.events.on_trigger_created_entity, function(event)
     end
     teleporter_triggered(source, stuck_to)
 
+end)
+Event.register(defines.events.on_force_created, function(event)
+    local force = event.force
+    if force then
+        force.set_surface_hidden(storage.mijing, true)
+    end
 end)
 
 Event.on_init(init)

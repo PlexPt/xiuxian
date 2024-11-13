@@ -1,4 +1,4 @@
-require('__stdlib__/stdlib/data/data').Util.create_data_globals()
+require('__kry_stdlib__/stdlib/data/data').Util.create_data_globals()
 
 require("prototypes.enums.ConstEnum")
 require("prototypes.enums.GraphicsEnum")
@@ -15,6 +15,7 @@ require("prototypes.item")
 require("prototypes.item.huanhundan")
 require("prototypes.recipe")
 require("prototypes.technology")
+
 require("prototypes.lingshi.lingshi-ore")
 require("prototypes.lingshi.lingshi-ore-particle")
 require("prototypes.lingshi.lingshi-gold-ore")
@@ -47,3 +48,8 @@ require("prototypes.sprites")
 require("prototypes.sprites-auto")
 require("prototypes.sprites-auto2")
 require("prototypes.animations")
+
+
+require("prototypes.planet.planet-small")
+require("prototypes.planet.more")
+require("prototypes.planet.space")

@@ -5,14 +5,14 @@ data:extend(
     {
         {
             type = "gun",
-            name = "龙舌弓",
+            name = "long-she-gong",
             icon = ConstEnum.entity .. "/bow/bow-icon.png",
             icon_size = 128,
             subgroup = "gun",
             order = "a[basic-clips]-b[vehicle-machine-gun]",
             attack_parameters = {
                 type = "projectile",
-                ammo_category = "箭-ammo",
+                ammo_category = "jian-ammo",
                 cooldown = 90,
                 movement_slow_down_factor = 0.25,
                 shell_particle = {
@@ -41,7 +41,7 @@ data:extend(
         --------------------
         {
             type = "explosion",
-            name = "射箭",
+            name = "she-jian",
             flags = { "not-on-map" },
             animation_speed = 0.1,
             animations = {
@@ -60,21 +60,23 @@ data:extend(
 
         {
             type = "ammo",
-            name = "木箭",
+            name = "mu-jian",
             icon = ConstEnum.entity .. "/bow/arrows-icon.png",
             icon_size = 128,
+            ammo_category = "jian-ammo",
             ammo_type = {
-                category = "箭-ammo",
+                category = "jian-ammo",
+                ammo_category = "jian-ammo",
                 target_type = "direction", -- "entity", "position" or "direction"
                 action = {
                     type = "direct",
                     action_delivery = {
                         type = "projectile",
-                        projectile = "飞箭-木箭",
+                        projectile = "projectile-mu-jian",
                         starting_speed = 0.05,
                         source_effects = {
                             type = "create-entity",
-                            entity_name = "射箭"
+                            entity_name = "she-jian"
                         }
                     }
                 }
@@ -91,7 +93,7 @@ data:extend(
         --    icon = ConstEnum.entity .. "/bow/arrows-icon.png",
         --    icon_size = 128,
         --    ammo_type = {
-        --        category = "箭-ammo",
+        --        category = "jian-ammo",
         --        action = {
         --            type = "direct",
         --            action_delivery = {

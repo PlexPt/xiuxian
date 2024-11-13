@@ -3,48 +3,51 @@ data:extend(
             {
                 type = "recipe",
                 category = "crafting",
-                name = "龙舌弓",
+                name = "long-she-gong",
                 enabled = true, -- craft time
                 energy_required = 15,
                 ingredients = {
 
-                    { "wood", 30 },
-                    { "iron-plate", 2 },
+                    {type="item", name="wood", amount=30},
+                    {type="item", name="iron-plate", amount=2},
 
 
                 },
-                result = "龙舌弓"
+                results = { { type = "item", name = "long-she-gong", amount = 1 } }
+
             },
 
             {
                 type = "recipe",
                 category = "crafting",
-                name = "木箭",
+                name = "mu-jian",
                 enabled = true, -- craft time
                 energy_required = 4,
                 ingredients = {
 
-                    { "wood", 10 },
-                    { "stone", 5 },
+                    {type="item", name="wood", amount=10},
+                    {type="item", name="stone", amount=5},
 
 
                 },
-                result = "木箭"
+                results = { { type = "item", name = "mu-jian", amount = 1 } }
+
             },
             {
                 type = "recipe",
                 category = "crafting",
-                name = "追星踏月箭",
+                name = "zhui-xing-ta-yue-jian",
                 enabled = true, -- craft time
                 energy_required = 6,
                 ingredients = {
 
-                    { "wood", 10 },
-                    { "steel-plate", 3 },
+                    {type="item", name="wood", amount=10},
+                    {type="item", name="steel-plate", amount=3},
 
 
                 },
-                result = "追星踏月箭"
+                results = { { type = "item", name = "zhui-xing-ta-yue-jian", amount = 1 } }
+
             }
         }
 )

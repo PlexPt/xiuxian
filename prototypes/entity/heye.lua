@@ -4,13 +4,13 @@ data:extend(
         {
             {
                 type = "fish",
-                name = "荷叶",
+                name = "he-ye",
                 localised_name = "荷叶",
-                icon = path .. "/icons/荷叶.png",
+                icon = path .. "/icons/heye.png",
                 icon_size = 128,
                 active = false,
                 flags = { "placeable-neutral", "not-on-map", "placeable-off-grid" },
-                minable = { mining_time = 1, result = "荷叶", count = 1 },
+                minable = { mining_time = 1, result = "he-ye", count = 1 },
                 max_health = 200,
                 subgroup = "creatures",
                 order = "heye",
@@ -90,6 +90,8 @@ data:extend(
                 },
                 autoplace = {
                     order = "heye",
+                    probability_expression = 0.025,
+
                     --max_probability = 0.025,
                     peaks = {
                         {

@@ -11,34 +11,34 @@ data:extend({
     {
         type = "item-subgroup",
         name = "danyao",
-        group = "灵丹妙药",
+        group = "ling-dan-miao-yao",
         order = "d-d"
     },
     {
         type = "item-subgroup",
-        name = "地火",
-        group = "天地灵火",
+        name = "di-huo",
+        group = "tian-di-ling-huo",
         order = "d-d"
     },
     {
         type = "item-subgroup",
-        name = "隐藏",
-        group = "天地灵火",
+        name = "ying-chang",
+        group = "tian-di-ling-huo",
         order = "a-a"
     },
     ---------------------
     {
         type = "ammo-category",
-        name = "箭-ammo"
+        name = "jian-ammo"
     },
 
-    {
-        type = "recipe-category",
-        name = "空组",
-    }
+    --{
+    --    type = "recipe-category",
+    --    name = "空组",
+    --}
     --{
     --    type = "module-category",
-    --    name = "地火"
+    --    name = "di-huo"
     --},
 })
 
@@ -46,62 +46,52 @@ data:extend(
         {
             {
                 type = "fuel-category",
-                localised_name = "化学",
-                name = "化学"
-            },
-            {
-                type = "fuel-category",
-                localised_name = "灵能",
-                name = "灵能"
-            },
-            {
-                type = "fuel-category",
                 localised_name = "灵力",
-                name = "灵力"
+                name =  "ling-li"
             },
-            {
-                type = "fuel-category",
-                localised_name = "金灵力",
-                name = "金灵力"
-            },
-            {
-                type = "fuel-category",
-                localised_name = "木灵力",
-                name = "木灵力"
-            },
-            {
-                type = "fuel-category",
-                localised_name = "水灵力",
-                name = "水灵力"
-            },
-            {
-                type = "fuel-category",
-                localised_name = "火灵力",
-                name = "火灵力"
-            },
-            {
-                type = "fuel-category",
-                localised_name = "土灵力",
-                name = "土灵力"
-            },
-            {
-                type = "fuel-category",
-                localised_name = "仙灵力",
-                name = "仙灵力"
-            },
-            {
-                type = "fuel-category",
-                localised_name = "魔气",
-                name = "魔气"
-            },
-            {
-                type = "fuel-category",
-                localised_name = "血气",
-                name = "血气"
-            },
+            --{
+            --    type = "fuel-category",
+            --    localised_name = "金灵力",
+            --    name = "金灵力"
+            --},
+            --{
+            --    type = "fuel-category",
+            --    localised_name = "木灵力",
+            --    name = "木灵力"
+            --},
+            --{
+            --    type = "fuel-category",
+            --    localised_name = "水灵力",
+            --    name = "水灵力"
+            --},
+            --{
+            --    type = "fuel-category",
+            --    localised_name = "火灵力",
+            --    name = "火灵力"
+            --},
+            --{
+            --    type = "fuel-category",
+            --    localised_name = "土灵力",
+            --    name = "土灵力"
+            --},
+            --{
+            --    type = "fuel-category",
+            --    localised_name = "仙灵力",
+            --    name = "仙灵力"
+            --},
+            --{
+            --    type = "fuel-category",
+            --    localised_name = "魔气",
+            --    name = "魔气"
+            --},
+            --{
+            --    type = "fuel-category",
+            --    localised_name = "血气",
+            --    name = "血气"
+            --},
             {
                 type = "resource-category",
-                name = "修仙资源"
+                name = "xiu-xian-zi-yuan"
             },
         }
 )

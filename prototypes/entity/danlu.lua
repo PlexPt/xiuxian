@@ -1,15 +1,16 @@
-local imgpath = ConstEnum.entity .. "/丹炉/.png"
+local imgpath = ConstEnum.entity .. "/danlu/.png"
 
-local name = "四方炼丹炉"
-local category = "炼丹炉"
+local name = "si-fang-lian-dan-lu"
+local localised_name = "四方炼丹炉"
+local category = "lian-dan-lu"
 
 ITEM {
     type = "item",
     name = name,
-    localised_name = name,
-    icon = ConstEnum.entity .. "/丹炉/1.png",
+    localised_name = localised_name,
+    icon = ConstEnum.entity .. "/danlu/1.png",
     icon_size = 400,
-    subgroup = "建筑物",
+    subgroup = "jian-zhu-wu",
     place_result = name,
     stack_size = 100,
 }
@@ -17,8 +18,8 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = name,
-    localised_name = name,
-    icon = ConstEnum.entity .. "/丹炉/1.png",
+    localised_name = localised_name,
+    icon = ConstEnum.entity .. "/danlu/1.png",
     icon_size = 400,
     max_health = 500,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -42,33 +43,34 @@ ENTITY {
     --    },
     --
     --},
-    animation = getStripesAnimation("entity/丹炉/", 80, 400, 400, nil, util.by_pixel(0, -100)),
+    graphics_set = {
+        animation = getStripesAnimation("entity/danlu/", 80, 400, 400, nil, util.by_pixel(0, -100)),
+    },
     energy_usage = "100W",
     energy_source = {
         type = "burner",
-        fuel_category = "灵力",
+        fuel_categories = { "ling-li" },
+
         effectivity = 1,
         fuel_inventory_size = 2,
-        emissions_per_minute = 2,
+        emissions_per_minute = { pollution = 10 },
         light_flicker = {
             color = { 0, 0, 0 },
             minimum_intensity = 0.6,
             maximum_intensity = 0.95
         },
-        smoke = {
-            {
-                name = "smoke",
-                deviation = { 0.1, 0.1 },
-                frequency = 5,
-                position = { 0.0, -0.8 },
-                starting_vertical_speed = 0.08,
-                starting_frame_deviation = 60
-            }
-        }
+        --smoke = {
+        --    {
+        --        name = "smoke",
+        --        deviation = { 0.1, 0.1 },
+        --        frequency = 5,
+        --        position = { 0.0, -0.8 },
+        --        starting_vertical_speed = 0.08,
+        --        starting_frame_deviation = 60
+        --    }
+        --}
     },
-    module_specification = {
-        module_slots = 4
-    },
+        module_slots = 4,
     allowed_effects = { 'consumption', 'speed', 'pollution' },
     result_inventory_size = 0,
     source_inventory_size = 0

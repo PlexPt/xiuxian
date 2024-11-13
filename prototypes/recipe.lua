@@ -1,62 +1,64 @@
 data:extend({
     {
         type = "recipe",
-        name = "九品炼丹炉", --丹炉9
+        name = "alchemy-furnace-9", --丹炉9
         enabled = true,
-        ingredients = { { "stone", 50 },
-                        { "iron-ore", 50 },
-                        { "火灵石矿", 4 },
-                        { "土灵石矿", 4 } },
-        result = "九品炼丹炉"
+        ingredients = { {type="item", name="stone", amount=50},
+                        {type="item", name="iron-ore", amount=50},
+                        {type="item", name="huo-ling-shi-kuang", amount=4},
+                        {type="item", name="tu-ling-shi-kuang", amount=4} },
+        results = {{type="item", name=  "alchemy-furnace-9", amount=1}}
     },
     {
         type = "recipe", --丹炉8
-        name = "八品炼丹炉",
+        name = "alchemy-furnace-8",
         enabled = true,
-        ingredients = { { "stone", 100 },
-                        { "iron-ore", 100 },
-                        { "火灵石矿", 100 },
-                        { "土灵石矿", 100 } },
-        result = "八品炼丹炉"
+        ingredients = { {type="item", name="stone", amount=100},
+                        {type="item", name="iron-ore", amount=100},
+                        {type="item", name="huo-ling-shi-kuang", amount=100},
+                        {type="item", name="tu-ling-shi-kuang", amount=100} },
+        results = {{type="item", name=  "alchemy-furnace-8", amount=1}}
     },
     {
         type = "recipe", --丹炉8
-        name = "法阵",
+        name = "fazhen",
         enabled = true,
-        ingredients = { { "stone", 100 },
-                        { "iron-ore", 100 },
-                        { "火灵石矿", 100 },
-                        { "土灵石矿", 100 } },
-        result = "法阵"
+        ingredients = { {type="item", name="stone", amount=100},
+                        {type="item", name="iron-ore", amount=100},
+                        {type="item", name="huo-ling-shi-kuang", amount=100},
+                        {type="item", name="tu-ling-shi-kuang", amount=100} },
+        results = {{type="item", name= "fazhen", amount=1}}
+
     },
     {
         type = "recipe",
-        name = "聚灵阵",
+        name = "ju-ling-zhen",
         icon = "__xiuxian-graphics__/graphics/icons/julingzhen.png",
         icon_size = 80,
         enabled = true,
         energy_required = 15,
         ingredients = {
-            { "金灵石矿", 10 },
-            { "木灵石矿", 10 },
-            { "水灵石矿", 10 },
-            { "火灵石矿", 10 },
-            { "土灵石矿", 10 }
+            {type="item", name="jin-ling-shi-kuang", amount=10},
+            {type="item", name="mu-ling-shi-kuang", amount=10},
+            {type="item", name="shui-ling-shi-kuang", amount=10},
+            {type="item", name="huo-ling-shi-kuang", amount=10},
+            {type="item", name="tu-ling-shi-kuang", amount=10}
         },
-        result = "聚灵阵",
+        results = {{type="item", name= "ju-ling-zhen", amount=1}}
+
         --enabled = false
     },
     {
         type = "recipe",
-        name = "灵气",
+        name = "ling-qi",
         enabled = true,
-        category = "聚灵阵",
+        category = "ju-ling-zhen",
         icon = "__xiuxian-graphics__/graphics/icons/lingqi.png",
         icon_size = 80,
         ingredients = {
-            { "灵石", 10 }
+            {type="item", name="ling-shi", amount=10}
         },
-        results = { { type = "fluid", name = "灵气", amount = 100 } },
+        results = { { type = "fluid", name = "ling-qi", amount = 100 } },
         subgroup = "fluid",
         always_show_made_in = true,
         --enabled = false

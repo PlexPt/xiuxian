@@ -1,57 +1,57 @@
 local itemUtil = require("prototypes.itemUtil")
 local ConstEnum = require("prototypes.enums.ConstEnum")
 
-itemUtil.createDanyao("黄龙丹")
-itemUtil.createDanyao("金髓丸")
-itemUtil.createDanyao("清灵散")
-itemUtil.createDanyao("养精丹")
-itemUtil.createDanyao("腐心丸")
-itemUtil.createDanyao("抽髓丸")
-itemUtil.createDanyao("合欢丹")
-itemUtil.createDanyao("合气丹")
-itemUtil.createDanyao("真元丹")
-itemUtil.createDanyao("聚灵丹")
-itemUtil.createDanyao("炼气散")
-itemUtil.createDanyao("降尘丹")
-itemUtil.createDanyao("分元丹")
-itemUtil.createDanyao("定灵丹")
-itemUtil.createDanyao("增元丹")
-itemUtil.createDanyao("造化丹")
-itemUtil.createDanyao("绎云丹")
-itemUtil.createDanyao("雪魄丸")
-itemUtil.createDanyao("昊元丹")
-itemUtil.createDanyao("培婴丹")
-itemUtil.createDanyao("清虚丹")
-itemUtil.createDanyao("火阳丹")
-itemUtil.createDanyao("碧焰丹")
-itemUtil.createDanyao("九曲灵参丹")
-itemUtil.createDanyaoFu("寿元丹")
+itemUtil.createDanyao("huang-long-dan")
+itemUtil.createDanyao("jin-sui-wan")
+itemUtil.createDanyao("qing-ling-san")
+itemUtil.createDanyao("yang-jing-dan")
+itemUtil.createDanyao("fu-xin-wan")
+itemUtil.createDanyao("chou-sui-wan")
+itemUtil.createDanyao("he-huan-dan")
+itemUtil.createDanyao("he-qi-dan")
+itemUtil.createDanyao("zhen-yuan-dan")
+itemUtil.createDanyao("ju-ling-dan")
+itemUtil.createDanyao("lian-qi-san")
+itemUtil.createDanyao("jiang-chen-dan")
+itemUtil.createDanyao("fen-yuan-dan")
+itemUtil.createDanyao("ding-ling-dan")
+itemUtil.createDanyao("zeng-yuan-dan")
+itemUtil.createDanyao("zao-hua-dan")
+itemUtil.createDanyao("yi-yun-dan")
+itemUtil.createDanyao("xue-po-wan")
+itemUtil.createDanyao("hao-yuan-dan")
+itemUtil.createDanyao("pei-ying-dan")
+itemUtil.createDanyao("qing-xu-dan")
+itemUtil.createDanyao("huo-yang-dan")
+itemUtil.createDanyao("bi-yan-dan")
+itemUtil.createDanyao("jiu-qu-ling-can-dan")
+itemUtil.createDanyaoFu("shou-yuan-dan")
 
-itemUtil.createDanyaoRecipe("黄龙丹")
-itemUtil.createDanyaoRecipe("金髓丸")
-itemUtil.createDanyaoRecipe("清灵散")
-itemUtil.createDanyaoRecipe("养精丹")
-itemUtil.createDanyaoRecipe("腐心丸")
-itemUtil.createDanyaoRecipe("抽髓丸")
-itemUtil.createDanyaoRecipe("合欢丹")
-itemUtil.createDanyaoRecipe("合气丹")
-itemUtil.createDanyaoRecipe("真元丹")
-itemUtil.createDanyaoRecipe("聚灵丹")
-itemUtil.createDanyaoRecipe("炼气散")
-itemUtil.createDanyaoRecipe("降尘丹")
-itemUtil.createDanyaoRecipe("分元丹")
-itemUtil.createDanyaoRecipe("定灵丹")
-itemUtil.createDanyaoRecipe("增元丹")
-itemUtil.createDanyaoRecipe("造化丹")
-itemUtil.createDanyaoRecipe("绎云丹")
-itemUtil.createDanyaoRecipe("雪魄丸")
-itemUtil.createDanyaoRecipe("昊元丹")
-itemUtil.createDanyaoRecipe("培婴丹")
-itemUtil.createDanyaoRecipe("清虚丹")
-itemUtil.createDanyaoRecipe("火阳丹")
-itemUtil.createDanyaoRecipe("碧焰丹")
-itemUtil.createDanyaoRecipe("九曲灵参丹")
-itemUtil.createDanyaoRecipe("寿元丹")
+itemUtil.createDanyaoRecipe("huang-long-dan")
+itemUtil.createDanyaoRecipe("jin-sui-wan")
+itemUtil.createDanyaoRecipe("qing-ling-san")
+itemUtil.createDanyaoRecipe("yang-jing-dan")
+itemUtil.createDanyaoRecipe("fu-xin-wan")
+itemUtil.createDanyaoRecipe("chou-sui-wan")
+itemUtil.createDanyaoRecipe("he-huan-dan")
+itemUtil.createDanyaoRecipe("he-qi-dan")
+itemUtil.createDanyaoRecipe("zhen-yuan-dan")
+itemUtil.createDanyaoRecipe("ju-ling-dan")
+itemUtil.createDanyaoRecipe("lian-qi-san")
+itemUtil.createDanyaoRecipe("jiang-chen-dan")
+itemUtil.createDanyaoRecipe("fen-yuan-dan")
+itemUtil.createDanyaoRecipe("ding-ling-dan")
+itemUtil.createDanyaoRecipe("zeng-yuan-dan")
+itemUtil.createDanyaoRecipe("zao-hua-dan")
+itemUtil.createDanyaoRecipe("yi-yun-dan")
+itemUtil.createDanyaoRecipe("xue-po-wan")
+itemUtil.createDanyaoRecipe("hao-yuan-dan")
+itemUtil.createDanyaoRecipe("pei-ying-dan")
+itemUtil.createDanyaoRecipe("qing-xu-dan")
+itemUtil.createDanyaoRecipe("huo-yang-dan")
+itemUtil.createDanyaoRecipe("bi-yan-dan")
+itemUtil.createDanyaoRecipe("jiu-qu-ling-can-dan")
+itemUtil.createDanyaoRecipe("shou-yuan-dan")
 
 --    地火：地肺之火，地火精纯而高温，持久稳定，用地火炼丹比真火炼丹成丹率高，地火也常用于炼器。
 --　　人火：修士本身修炼的真火，结丹修士的丹火，元婴修士的婴火，都是此类火焰。
@@ -59,78 +59,78 @@ itemUtil.createDanyaoRecipe("寿元丹")
 --　  太阳精火：人界三大真灵之火之一，炼制上古秘药回阳真水的主原料，于万丈熔岩下成形。
 --　　太阴真火：人界三大真灵之火之一，和太阳精火相克相生。
 
-itemUtil.createModule("地火", 1)
-itemUtil.createModule("真火", 2)
-itemUtil.createModule("丹火", 3)
-itemUtil.createModule("婴火", 4)
-itemUtil.createModule("天火", 5)
-itemUtil.createModule("乾蓝冰焰", 6)
-itemUtil.createModule("黑水冰焰", 6)
-itemUtil.createModule("风离冰焰", 6)
-itemUtil.createModule("修罗圣火", 7)
-itemUtil.createModule("紫罗极火", 7)
-itemUtil.createModule("太阳精火", 8)
-itemUtil.createModule("太阴真火", 8)
-itemUtil.createModule("纯阳白骨火", 10)
-itemUtil.createModule("青莲地心火", 10)
+itemUtil.createModule("di-huo", 1)
+itemUtil.createModule("zhen-huo", 2)
+itemUtil.createModule("dan-huo", 3)
+itemUtil.createModule("ying-huo", 4)
+itemUtil.createModule("tian-huo", 5)
+itemUtil.createModule("qian-lan-bing-yan", 6)
+itemUtil.createModule("hei-shui-bing-yan", 6)
+itemUtil.createModule("feng-li-bing-yan", 6)
+itemUtil.createModule("xiu-luo-sheng-huo", 7)
+itemUtil.createModule("zi-luo-ji-huo", 7)
+itemUtil.createModule("tai-yang-jing-huo", 8)
+itemUtil.createModule("tai-yin-zhen-huo", 8)
+itemUtil.createModule("chun-yang-bai-gu-huo", 10)
+itemUtil.createModule("qing-lian-di-xin-huo", 10)
 
-itemUtil.createModuleRecipe("地火", 1)
-itemUtil.createModuleRecipe("真火", 2)
-itemUtil.createModuleRecipe("丹火", 3)
-itemUtil.createModuleRecipe("婴火", 4)
-itemUtil.createModuleRecipe("天火", 5)
-itemUtil.createModuleRecipe("乾蓝冰焰", 6)
-itemUtil.createModuleRecipe("黑水冰焰", 6)
-itemUtil.createModuleRecipe("风离冰焰", 6)
-itemUtil.createModuleRecipe("修罗圣火", 7)
-itemUtil.createModuleRecipe("紫罗极火", 7)
-itemUtil.createModuleRecipe("太阳精火", 8)
-itemUtil.createModuleRecipe("太阴真火", 8)
-itemUtil.createModuleRecipe("纯阳白骨火", 10)
-itemUtil.createModuleRecipe("青莲地心火", 10)
+itemUtil.createModuleRecipe("di-huo", 1)
+itemUtil.createModuleRecipe("zhen-huo", 2)
+itemUtil.createModuleRecipe("dan-huo", 3)
+itemUtil.createModuleRecipe("ying-huo", 4)
+itemUtil.createModuleRecipe("tian-huo", 5)
+itemUtil.createModuleRecipe("qian-lan-bing-yan", 6)
+itemUtil.createModuleRecipe("hei-shui-bing-yan", 6)
+itemUtil.createModuleRecipe("feng-li-bing-yan", 6)
+itemUtil.createModuleRecipe("xiu-luo-sheng-huo", 7)
+itemUtil.createModuleRecipe("zi-luo-ji-huo", 7)
+itemUtil.createModuleRecipe("tai-yang-jing-huo", 8)
+itemUtil.createModuleRecipe("tai-yin-zhen-huo", 8)
+itemUtil.createModuleRecipe("chun-yang-bai-gu-huo", 10)
+itemUtil.createModuleRecipe("qing-lian-di-xin-huo", 10)
 
 data:extend(
         {
             {
                 type = "item",
-                name = "九品炼丹炉",
+                name = "alchemy-furnace-9",
                 icon = ConstEnum.graphics .. "/icons/danlu-128.png",
                 icon_size = 128, icon_mipmaps = 3,
                 subgroup = "smelting-machine",
                 order = "a[stone-furnace]",
-                place_result = "九品炼丹炉",
+                place_result = "alchemy-furnace-9",
                 stack_size = 10
             },
             {
                 type = "item",
-                name = "八品炼丹炉",
+                name = "alchemy-furnace-8",
                 icon = ConstEnum.graphics .. "/icons/danlu-128.png",
                 icon_size = 128,
                 subgroup = "smelting-machine",
-                place_result = "八品炼丹炉",
+                place_result = "alchemy-furnace-8",
                 stack_size = 1
             },
             {
                 type = "item",
-                name = "红木凳",
-                icon = ConstEnum.graphics .. "/entity/椅子/1.png",
+                name = "hong-mu-deng",
+                icon = ConstEnum.graphics .. "/entity/chair/1.png",
                 icon_size = 400,
                 subgroup = "smelting-machine",
-                place_result = "红木凳",
+                place_result = "hong-mu-deng",
                 stack_size = 1
             },
             {
                 type = "item",
-                name = "法阵",
+                name = "fazhen",
                 icon = ConstEnum.graphics .. "/entity/fa/1.png",
                 icon_size = 400,
                 subgroup = "smelting-machine",
-                place_result = "法阵",
+                place_result = "fazhen",
                 stack_size = 1
             },
             {
                 type = "fluid",
-                name = "灵气",
+                name = "ling-qi",
                 icon = ConstEnum.graphics .. "/icons/lingqi.png",
                 icon_size = 80,
                 default_temperature = 0,
@@ -141,29 +141,29 @@ data:extend(
             },
             {
                 type = "item",
-                name = "聚灵阵",
+                name = "ju-ling-zhen",
                 --order = "g[fusion-power]-d[reactor]",
                 --group = "production",
                 subgroup = "energy",
                 icon = ConstEnum.graphics .. "/icons/julingzhen.png",
                 icon_size = 80,
                 stack_size = 1,
-                place_result = "聚灵阵",
+                place_result = "ju-ling-zhen",
             },
             {
                 type = "item",
-                name = "灵药园",
+                name = "ling-yao-yuan",
                 order = "lyy",
                 subgroup = "energy",
                 icon = ConstEnum.graphics .. "/entity/7x7.png",
                 icon_size = 288,
                 stack_size = 1,
-                place_result = "灵药园",
+                place_result = "ling-yao-yuan",
             },
             {
                 --    lingshi
                 type = "item",
-                name = "灵石",
+                name = "ling-shi",
                 icon = ConstEnum.graphics .. "/icons/ore/lingshi.png",
                 icon_size = 200,
                 --pictures = {
@@ -173,10 +173,11 @@ data:extend(
                 --    { size = 64, filename = "__base__/graphics/icons/iron-ore-3.png", scale = 0.25, mipmap_count = 4 }
                 --},
                 subgroup = "raw-resource",
-                fuel_category = "灵力",
+                fuel_category = "ling-li",
                 fuel_value = "3MJ",
                 order = "lingshi[lingshi]",
                 stack_size = 200
             }
 
         })
+

@@ -1,18 +1,18 @@
 
 Event.on_init(function(event)
-    global.xiuxian = global.xiuxian or {}
-    global.xiuxian.Level = global.xiuxian.Level or {}
-    global.xiuxian.usedAge = global.xiuxian.usedAge or {}
+    storage.xiuxian = storage.xiuxian or {}
+    storage.xiuxian.Level = storage.xiuxian.Level or {}
+    storage.xiuxian.usedAge = storage.xiuxian.usedAge or {}
 
-    global.xiuxian.chenghao = global.xiuxian.chenghao or {}
+    storage.xiuxian.chenghao = storage.xiuxian.chenghao or {}
 
 end)
 
 --Event.on_load(function(event)
---    global.xiuxian = global.xiuxian or {}
---    global.xiuxian.Level = global.xiuxian.Level or {}
---    global.xiuxian.usedAge = global.xiuxian.usedAge or {}
+--    storage.xiuxian = storage.xiuxian or {}
+--    storage.xiuxian.Level = storage.xiuxian.Level or {}
+--    storage.xiuxian.usedAge = storage.xiuxian.usedAge or {}
 --
---    global.xiuxian.chenghao = global.xiuxian.chenghao or {}
+--    storage.xiuxian.chenghao = storage.xiuxian.chenghao or {}
 --
 --end)

@@ -1,6 +1,5 @@
 local modtool = {}
 
-
 modtool.items = {}
 modtool.icons = {}
 
@@ -11,7 +10,7 @@ modtool.items.item_types = {
     "fluid",
     "gun",
     "item",
-    "mining-tool",
+    --"mining-tool",
     "module",
     "tool",
     "item-with-entity-data",

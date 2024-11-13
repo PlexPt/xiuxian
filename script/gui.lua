@@ -1,6 +1,6 @@
 local gui = require("__flib__.gui")
 --local event = require("__flib__.event")
-local Event = require('__stdlib__/stdlib/event/event')
+local Event = require('__kry_stdlib__/stdlib/event/event')
 
 local function init_gui(player)
     gui.build(player.gui.screen, {
